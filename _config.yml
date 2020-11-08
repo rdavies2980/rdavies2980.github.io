@@ -16,8 +16,8 @@ minimal_mistakes_skin    :  "air" # "default", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "en-UK"
-title                    : "Rose Davies"
-title_separator          : "-"
+title                    : "Condensed Matter Physics Notes"
+title_separator          : "|"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Rose Davies"
 description              : "Physics Notes"
@@ -99,9 +99,9 @@ author:
   location         : "Birmingham, UK"
   email            : "rxd440@student.bham.ac.uk"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "rxd440@student.bham.ac.uk"
+    #- label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
+    #  url: "rxd440@student.bham.ac.uk"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -281,3 +281,9 @@ defaults:
       comments: # true
       share: true
       related: true
+ # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
