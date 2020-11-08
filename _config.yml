@@ -93,11 +93,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "Rose Davies"
+  avatar           : "images/selfie.jpg"
+  bio              : "Trying to understand physics and help others do the same!"
+  location         : "Birmingham, UK"
+  email            : "rxd440@student.bham.ac.uk"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -145,6 +145,8 @@ footer:
 include:
   - .htaccess
   - _pages
+  - images
+  - _posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
