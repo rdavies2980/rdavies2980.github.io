@@ -1,5 +1,5 @@
 ---
-title: "General Physics Notes"
+title: "Physics Notes"
 permalink: /genphys/
 
 ---
@@ -10,6 +10,7 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
 
 
 <div id='clickingOptions' role='main'>
+<article class="splash">
 <div class="feature__item">
       <div class="archive__item">
 
@@ -31,22 +32,18 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
             </div>
 
 
-
-            <p><a href="/books/" class="btn btn--primary">Learn more</a></p>
-
         </div>
       </div>
     </div>
-    <div class="feature__item">
+
+    <a href="/books/">
           <div class="archive__item">
 
               <div class="archive__item-teaser">
                 <img src="/images/working.jpg">
-
               </div>
 
-
-            <div class="archive__item-body">
+              <div class="archive__item-body">
 
                 <h2 class="archive__item-title">Book Notes</h2>
 
@@ -61,7 +58,8 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
 
                 <p><a href="/books/" class="btn btn--primary">Learn more</a></p>
 
-            </div>
-          </div>
-    </div>
+              </div>
+         </div>
+    </a>
+  </article>
 </div>
