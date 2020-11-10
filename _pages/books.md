@@ -1,6 +1,6 @@
 ---
 title: "Notes on Books"
-permalink: "/books/"
+permalink: /books/
 
 ---
 
