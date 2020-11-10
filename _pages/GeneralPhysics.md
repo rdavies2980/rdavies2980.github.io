@@ -36,14 +36,16 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
       </div>
     </div>
 
-    <a href="/books/">
+    <div class="feature__item" style="cursor: pointer;" onclick="/books/">
           <div class="archive__item">
 
               <div class="archive__item-teaser">
                 <img src="/images/working.jpg">
+
               </div>
 
-              <div class="archive__item-body">
+
+            <div class="archive__item-body">
 
                 <h2 class="archive__item-title">Book Notes</h2>
 
@@ -58,8 +60,8 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
 
                 <p><a href="/books/" class="btn btn--primary">Learn more</a></p>
 
-              </div>
-         </div>
-    </a>
+            </div>
+          </div>
+    </div>
   </article>
 </div>
