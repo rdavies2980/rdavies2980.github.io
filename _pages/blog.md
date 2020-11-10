@@ -4,6 +4,12 @@ permalink: /blogDate/
 layout: archive
 ---
 
+
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+{{ t | downcase }}
 <ul>
 {% for post in posts %}
   {% if post.tags contains t %}
