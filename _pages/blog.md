@@ -3,13 +3,28 @@ title: "Blog Post"
 permalink: /blogDate/
 layout: archive
 ---
-{% include base_path %}
-{% include group-by-array collection=site.posts field="tags" %}
 
-{% for tag in group_names %}
-  {% assign posts = group_items[forloop.index0] %}
-  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
+<ul class="tags">
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+  <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
+{% endfor %}
+</ul>
+
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+
+{{ t | downcase }}
+<ul>
+{% for post in posts %}
+  {% if post.tags contains t %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
 {% endfor %}
