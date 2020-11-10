@@ -8,6 +8,8 @@ Here will be a link to other various pages, where my general notes on larger top
 
 The hierarchy can be changed and sorted when **I finally** figure out how to use Ruby.  
 
+
+<div id='clickingOptions' role='main'>
 <div class="feature__item">
       <div class="archive__item">
 
@@ -19,12 +21,12 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
 
         <div class="archive__item-body">
 
-            <h2 class="archive__item-title">Super customizable</h2>
+            <h2 class="archive__item-title">General Physics Notes</h2>
 
 
 
             <div class="archive__item-excerpt">
-              <p>Everything from the menus, sidebars, comments, and more can be configured or set with YAML Front Matter.</p>
+              <p>A selection of typed up notes, on a wide range of topics</p>
 
             </div>
 
@@ -35,3 +37,31 @@ The hierarchy can be changed and sorted when **I finally** figure out how to use
         </div>
       </div>
     </div>
+    <div class="feature__item">
+          <div class="archive__item">
+
+              <div class="archive__item-teaser">
+                <img src="/images/working.jpg">
+
+              </div>
+
+
+            <div class="archive__item-body">
+
+                <h2 class="archive__item-title">Book Notes</h2>
+
+
+
+                <div class="archive__item-excerpt">
+                  <p>Notes that I have taken alongside books, intended to help to understand what the book itself is trying to say. </p>
+
+                </div>
+
+
+
+                <p><a href="/books/" class="btn btn--primary">Learn more</a></p>
+
+            </div>
+          </div>
+    </div>
+</div>
