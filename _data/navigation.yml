@@ -2,12 +2,12 @@
 main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-   - title: "About"
-      url: /about/
-   - title: "Physics Notes"
-      url: /genphys/
-   - title: "Book Notes"
-      url: /books/
+  - title: "About"
+    url: /about/
+  - title: "Physics Notes"
+    url: /genphys/
+  - title: "Book Notes"
+    url: /books/
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
