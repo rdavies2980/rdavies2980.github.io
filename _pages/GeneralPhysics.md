@@ -1,6 +1,6 @@
 ---
 title: "General Physics Notes"
-permalink: /gen-phys/
+permalink: /genphys/
 
 ---
 

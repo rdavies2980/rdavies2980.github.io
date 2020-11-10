@@ -5,7 +5,7 @@ main:
    - title: "About"
       url: /about/
    - title: "Physics Notes"
-      url: /gen-phys/
+      url: /genphys/
    - title: "Book Notes"
       url: /books/
   #   url: /year-archive/
