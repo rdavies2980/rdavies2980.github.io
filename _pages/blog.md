@@ -4,19 +4,6 @@ permalink: /blogDate/
 layout: archive
 ---
 
-<ul class="tags">
-{% for tag in site.tags %}
-  {% assign t = tag | first %}
-  {% assign posts = tag | last %}
-  <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
-{% endfor %}
-</ul>
-
-{% for tag in site.tags %}
-  {% assign t = tag | first %}
-  {% assign posts = tag | last %}
-
-{{ t | downcase }}
 <ul>
 {% for post in posts %}
   {% if post.tags contains t %}
