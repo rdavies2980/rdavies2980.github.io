@@ -1,6 +1,7 @@
 ---
 title: "Blog Post"
 permalink: /blogDate/
+layout: archive
 ---
 {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
