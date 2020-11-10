@@ -6,8 +6,8 @@ main:
     url: /about/
   - title: "Physics Notes"
     url: /genphys/
-  - title: "Book Notes"
-    url: /books/
+  - title: "Blog"
+    url: /blogDate/
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
