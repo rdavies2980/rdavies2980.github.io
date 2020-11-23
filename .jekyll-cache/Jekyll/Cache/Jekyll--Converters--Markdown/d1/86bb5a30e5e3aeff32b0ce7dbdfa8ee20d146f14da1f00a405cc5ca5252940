@@ -1,0 +1,14 @@
+I"J<div class="feature__wrapper">
+  <div class="feature__item--left">
+      <div class="feature__item-teaser" style="width: 40%">
+        <img src="../images/Peierls/Renorm.png" />
+      </div>
+      <div class="feature__item-body">
+      <h2 feature__item-title="">Peierls Instability</h2>
+      <div class="feature__item-excerpt">
+        These notes are on the Peierls Instability, a phenomenon that ensures that simple pictures of metals do not work in 1D. Contains use of second quantised operators throughout, with linear response ideas stated.
+      </div>  
+  </div>
+</div>
+</div>
+:ET

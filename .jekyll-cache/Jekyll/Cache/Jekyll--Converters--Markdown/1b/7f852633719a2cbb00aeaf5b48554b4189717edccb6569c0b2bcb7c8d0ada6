@@ -1,0 +1,94 @@
+I"/
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item--center">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Scroll to see all the various notes that are included with a brief description of what is used within each.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<div class="feature__wrapper">
+
+
+    <div class="feature__item--left">
+      <div class="archive__item--small">
+
+          <div class="archive__item-teaser">
+          <a class="btn btn--background1" href="/Peierls/">
+            <img src="/images/Peierls/Renorm.png" style="backgroundColor: rbga(20,100,200,0.5)" />
+          </a>  
+          </div>
+
+
+        <div class="archive__item-body">
+
+            <h2 class="archive__item-title">Peierls Instability</h2>
+
+
+
+            <div class="archive__item-excerpt">
+              <p>These notes are on the Peierls Instability, a phenomenon that ensures that simple pictures of metals do not work in 1D. Contains use of second quantised operators throughout, with linear response ideas stated.</p>
+              <p>asd</p>
+
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+<div class="feature__wrapper">
+
+
+    <div class="feature__item--right">
+      <div class="archive__item--small">
+
+          <div class="archive__item-teaser">
+          <a class="btn btn--background1" href="/Peierls/">
+            <img src="/images/Peierls/Renorm.png" />
+          </a>  
+          </div>
+
+
+        <div class="archive__item-body">
+
+            <h2 class="archive__item-title">Peierls Instability</h2>
+
+
+
+            <div class="archive__item-excerpt">
+              <p>These notes are on the Peierls Instability, a phenomenon that ensures that simple pictures of metals do not work in 1D. Contains use of second quantised operators throughout, with linear response ideas stated.</p>
+              <p>asd</p>
+
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+</div>
+:ET

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-11-21T22:40:38+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Condensed Matter Physics Notes</title><subtitle>Physics Notes</subtitle><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><entry><title type="html">test blog</title><link href="http://localhost:4000/test/" rel="alternate" type="text/html" title="test blog" /><published>2020-11-10T00:00:00+00:00</published><updated>2020-11-10T00:00:00+00:00</updated><id>http://localhost:4000/test</id><content type="html" xml:base="http://localhost:4000/test/">&lt;h2 id=&quot;letting-you-know-how-it-goes-mdown&quot;&gt;Letting you know how it goes mdown&lt;/h2&gt;
+
+&lt;p&gt;just typing some stuff and testing out things.&lt;/p&gt;
+
+&lt;p&gt;lists for days&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;really?&lt;/li&gt;
+  &lt;li&gt;i doubt it&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/selfie.jpg&quot; /&gt;&lt;/p&gt;
+
+\[\mathcal{D}\phi = \int_{0}^{\infty} dx\]</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="QFT" /><category term="Difficult stuff" /><summary type="html">Testing things ya know</summary></entry></feed>

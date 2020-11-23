@@ -9,8 +9,8 @@
 .btn {
   /* default */
   display: inline-block;
-  margin-bottom: 0.25em;
-  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
+  padding: 1em;
   font-family: $sans-serif;
   font-size: $type-size-6;
   font-weight: bold;
@@ -39,6 +39,7 @@
   (info, $info-color),
   (facebook, $facebook-color),
   (twitter, $twitter-color),
+  (background1, #ededed),
   (linkedin, $linkedin-color);
 
   @each $buttoncolor, $color in $buttoncolors {

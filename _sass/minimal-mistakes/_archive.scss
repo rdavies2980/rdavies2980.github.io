@@ -29,6 +29,10 @@
   a[rel="permalink"] {
     position: static;
   }
+
+  &--small{
+    width: 80%;
+  }
 }
 
 .archive__subtitle {
@@ -92,6 +96,18 @@
 
   img {
     width: 100%;
+  }
+
+}
+
+.archive__item-teaserClick {
+  position: relative;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  img {
+    width: 50%;
+    height: 50%;
   }
 }
 
@@ -246,6 +262,8 @@
   .archive__item-title {
     margin-bottom: 0;
   }
+
+
 }
 
 .feature__item {
@@ -417,6 +435,17 @@
         width: span(7 of 12);
       }
     }
+  }
+
+  &--samesies{
+    min-height: 100%;
+    position: relative;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    clear: both;
+    font-size: 1.125em;
   }
 }
 
