@@ -4,25 +4,25 @@ permalink: /books/
 mathjax: "true"
 layout: "splash"
 feature_row:
-  - image_path: ../images/relax.png
+  - image_path: ../images/relax.jpg
     title: "Reflectionless quantum transport"
     excerpt: "Glazmann et al - JETP Letters 1989"
     url: /Glaz/
     btn_label: "More Info"
     btn_class: "btn--inverse"
-  - image_path: ../images/relax.png
+  - image_path: ../images/relax.jpg
     title: "Applying voltage sources to Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev B 1998"
     url: /Peierls/
     btn_label: "More Info"
     btn_class: "btn--inverse"   
-  - image_path: ../images/relax.png
+  - image_path: ../images/relax.jpg
     title: "Applying voltage sources to Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev B 1998"
     url: /Peierls/
     btn_label: "More Info"
     btn_class: "btn--inverse"  
-  - image_path: ../images/relax.png
+  - image_path: ../images/relax.jpg
     title: "Applying voltage sources to Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev B 1998"
     url: /Peierls/

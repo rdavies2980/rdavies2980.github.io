@@ -1,0 +1,206 @@
+I"8<div class="feature__wrapper">
+
+
+    <div class="feature__item--center">
+      <div class="archive__item">
+
+
+        <div class="archive__item-body">
+
+
+
+            <div class="archive__item-excerpt">
+            <p></p>
+              <p>This is where I have put my notes on various papers and books, these may not be as helpful as my general topic notes, but might be useful to someone! </p>
+              <p></p>
+              <h3>Paper Notes</h3>
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/images/relax.jpg" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Reflectionless quantum transport</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Glazmann et al - JETP Letters 1989</p>
+
+            </div>
+          
+
+          
+            <p><a href="/Glaz/" class="btn btn--inverse">More Info</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/images/relax.jpg" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Applying voltage sources to Luttinger Liquid</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Egger and Grabert - Phys Rev B 1998</p>
+
+            </div>
+          
+
+          
+            <p><a href="/Peierls/" class="btn btn--inverse">More Info</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/images/relax.jgp" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Applying voltage sources to Luttinger Liquid</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Egger and Grabert - Phys Rev B 1998</p>
+
+            </div>
+          
+
+          
+            <p><a href="/Peierls/" class="btn btn--inverse">More Info</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/images/relax.jpg" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Applying voltage sources to Luttinger Liquid</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Egger and Grabert - Phys Rev B 1998</p>
+
+            </div>
+          
+
+          
+            <p><a href="/Peierls/" class="btn btn--inverse">More Info</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<div class="feature__wrapper">
+
+
+    <div class="feature__item--center">
+      <div class="archive__item">
+
+
+        <div class="archive__item-body">
+
+
+
+            <div class="archive__item-excerpt">
+              <p>The notes written on books are more summary of their containing information, explaining the steps in logic that were not so obvious to me, rather than step by step detail</p>
+              <p></p>
+              <h3>Book Notes</h3>
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+</div>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/images/relax.png" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Applying voltage sources to Luttinger Liquid</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Egger and Grabert - Phys Rev B 1998</p>
+
+            </div>
+          
+
+          
+            <p><a href="/Peierls/" class="btn btn--inverse">More Info</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+:ET

@@ -15,10 +15,10 @@
 minimal_mistakes_skin    :  "air" # "default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-UK"
-title                    : "Condensed Matter Physics Notes"
+locale                   : "en-GB"
+title                    : "More is Difficult"
 title_separator          : "|"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Condensed Matter Physics"
 name                     : "Rose Davies"
 description              : "Physics Notes"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -288,4 +288,3 @@ defaults:
     values:
       layout: single
       author_profile: false
-      
