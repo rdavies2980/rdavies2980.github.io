@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Renormalisation Group | Condensed Matter Physics Notes</title>
-<meta name="description" content="These are notes on renormalsation">
+<!-- begin _includes/seo.html --><title>The Renormalisation Group | Condensed Matter Physics Notes</title>
+<meta name="description" content="How to tame the infinities inherent to quantum field theory">
 
 
   <meta name="author" content="Rose Davies">
@@ -20,11 +20,11 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_UK">
 <meta property="og:site_name" content="Condensed Matter Physics Notes">
-<meta property="og:title" content="Renormalisation Group">
+<meta property="og:title" content="The Renormalisation Group">
 <meta property="og:url" content="http://localhost:4000/RG/">
 
 
-  <meta property="og:description" content="These are notes on renormalsation">
+  <meta property="og:description" content="How to tame the infinities inherent to quantum field theory">
 
 
 
@@ -131,7 +131,9 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/genphys/">Physics Notes</a>
+              <a href="/physnote/">Topic Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/books/">Book Notes</a>
             </li><li class="masthead__menu-item">
               <a href="/blogtags/">Blog</a>
             </li><li class="masthead__menu-item">
@@ -160,24 +162,47 @@
 
 
 <div class="page__hero--overlay"
-  style=" background-image: linear-gradient(rgba(100,100,100,0.5), rgba(100,100,100,0.5)), url('/images/RGnotes.png');"
+  style=" background-image: linear-gradient(rgba(213,130,100,0.9), rgba(213,130,100,0.9)), url('/images/RGnotes.png');"
 >
   
     <div class="wrapper">
       <h1 id="page-title" class="page__title" itemprop="headline">
         
-          Renormalisation Group
+          The Renormalisation Group
 
         
       </h1>
       
-        <p class="page__lead">These are notes on renormalsation
+        <p class="page__lead">How to tame the infinities inherent to quantum field theory
 </p>
       
       
 
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          34 minute read
+        
+      </span>
+    
+  </p>
+
 
       
+      
+        <p>
+        
+          <a href="/assets/notes/Renormalisation_Group.pdf" class="btn btn--light-outline btn--large">Download PDF Version</a>
+        
       
     </div>
   
@@ -193,8 +218,8 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Renormalisation Group">
-    <meta itemprop="description" content="These are notes on renormalsation">
+    <meta itemprop="headline" content="The Renormalisation Group">
+    <meta itemprop="description" content="How to tame the infinities inherent to quantum field theory">
     
     
 
@@ -203,31 +228,28 @@
 
       <section class="page__content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-list"></i> Contents</h4></header>
-              <ul class="toc__menu">
-  <li><a href="#phase-transitions">Phase transitions</a>
-    <ul>
-      <li><a href="#history-and-some-scaling-ideas">History And Some Scaling Ideas</a></li>
+        <aside class="sidebar__right sticky">
+<nav class="toc">
+    <header><h4 class="nav__title" style="background: rgb(213,130,100)"><i class="fas fa-list"></i>
+Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#phase-transitions" id="markdown-toc-phase-transitions">Phase transitions</a>    <ul>
+      <li><a href="#history-and-some-scaling-ideas" id="markdown-toc-history-and-some-scaling-ideas">History And Some Scaling Ideas</a></li>
     </ul>
   </li>
-  <li><a href="#general-theory">General Theory</a>
-    <ul>
-      <li><a href="#irrelevant-eigenvalues">Irrelevant Eigenvalues</a></li>
-      <li><a href="#correlations">Correlations</a></li>
-      <li><a href="#scaling-operators-and-dimensions">Scaling Operators and Dimensions</a></li>
-      <li><a href="#cross-over-behaviour---2-examples">Cross Over Behaviour - 2 Examples</a></li>
-      <li><a href="#finite-size-scaling">Finite size scaling</a></li>
+  <li><a href="#general-theory" id="markdown-toc-general-theory">General Theory</a>    <ul>
+      <li><a href="#irrelevant-eigenvalues" id="markdown-toc-irrelevant-eigenvalues">Irrelevant Eigenvalues</a></li>
+      <li><a href="#correlations" id="markdown-toc-correlations">Correlations</a></li>
+      <li><a href="#scaling-operators-and-dimensions" id="markdown-toc-scaling-operators-and-dimensions">Scaling Operators and Dimensions</a></li>
+      <li><a href="#cross-over-behaviour---2-examples" id="markdown-toc-cross-over-behaviour---2-examples">Cross Over Behaviour - 2 Examples</a></li>
+      <li><a href="#finite-size-scaling" id="markdown-toc-finite-size-scaling">Finite size scaling</a></li>
     </ul>
   </li>
-  <li><a href="#renormalisation-using-functional-methods">Renormalisation Using Functional Methods</a></li>
+  <li><a href="#renormalisation-using-functional-methods" id="markdown-toc-renormalisation-using-functional-methods">Renormalisation Using Functional Methods</a></li>
 </ul>
 
-            </nav>
-          </aside>
-        
-        <p><a href="../assets/notes/Renormalisation_Group.pdf">Download PDF</a></p>
+  </nav>
+</aside>
 
 <p>The renormalisation group is not machinery through which you can put in numbers and get out information. It is more a way of approaching a problem and therefore there is no systematic way to apply it to a general problem. There are even non-renormalisable theories for which these ideas can not even be applied! However, for equilibrium critical phenomenon (so phase transitions), there is a systematic way to formulate it. The main tool for finding the phase diagram  of a system now is the renormalisation group (RG) which through a joint development in statistical and particle physics became one of the great successes of 20th century physics.  So introducing the topic will come through exploring how phase transitions work.</p>
 

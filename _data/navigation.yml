@@ -2,8 +2,10 @@
 main:
   #- title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "Physics Notes"
-    url: /genphys/
+  - title: "Topic Notes"
+    url: /physnote/
+  - title: "Book Notes"
+    url: "/books/"
   - title: "Blog"
     url: /blogtags/
   - title: "About"

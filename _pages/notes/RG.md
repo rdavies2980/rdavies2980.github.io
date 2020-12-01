@@ -1,21 +1,28 @@
 ---
-title: "Renormalisation Group"
+title: "The Renormalisation Group"
 permalink: "/RG/"
-mathjax: "true"
-toc: true
-toc_label: "Contents"
-toc_icon: "list"
-toc_sticky: true
+mathjax: true
 classes: single
-excerpt: "These are notes on renormalsation "
+excerpt: "How to tame the infinities inherent to quantum field theory "
 author_profile: false
 header:
   overlay_image: "../images/RGnotes.png"
-  overlay_filter: "rgba(100,100,100,0.5)"
-
+  overlay_filter: "rgba(213,130,100,0.9)"
+  actions:
+  - label: "Download PDF Version"
+    url: "../assets/notes/Renormalisation_Group.pdf"
+read_time: true
 ---
 
-<a href="../assets/notes/Renormalisation_Group.pdf">Download PDF</a>
+<aside class="sidebar__right sticky">
+<nav class="toc" markdown="1">
+<header><h4 class="nav__title" style="background: rgb(213,130,100)"><i class="fas fa-list"></i>
+Contents</h4></header>
+*  Auto generated table of contents
+{:toc .toc__menu}
+</nav>
+</aside>
+
 
 
 The renormalisation group is not machinery through which you can put in numbers and get out information. It is more a way of approaching a problem and therefore there is no systematic way to apply it to a general problem. There are even non-renormalisable theories for which these ideas can not even be applied! However, for equilibrium critical phenomenon (so phase transitions), there is a systematic way to formulate it. The main tool for finding the phase diagram  of a system now is the renormalisation group (RG) which through a joint development in statistical and particle physics became one of the great successes of 20th century physics.  So introducing the topic will come through exploring how phase transitions work.

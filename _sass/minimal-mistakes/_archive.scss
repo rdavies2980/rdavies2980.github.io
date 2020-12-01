@@ -292,7 +292,7 @@
     }
 
     .feature__item-teaser {
-      max-height: 200px;
+      max-height: 150px;
       overflow: hidden;
     }
   }
@@ -338,17 +338,41 @@
     }
 
     @include breakpoint($small) {
+      text-align: right;
+
       .archive__item-teaser {
-        float: left;
-        width: span(5 of 12);
+        float: right;
+        width: span(6 of 12);
+        padding-right: 1em;
+        padding-top: 1em;
       }
 
       .archive__item-body {
-        float: right;
-        padding-left: gutter(0.5 of 12);
+        float: left;
+        width: span(6 of 12);
+        padding-left: 2em;
         padding-right: gutter(1 of 12);
-        width: span(7 of 12);
+
       }
+    }
+
+      @include breakpoint($medium) {
+        text-align: right;
+
+        .archive__item-teaser {
+          float: right;
+          width: span(5 of 12);
+          padding-right: 3em;
+          padding-top: 3em;
+        }
+
+        .archive__item-body {
+          float: left;
+          width: span(7 of 12);
+          padding-left: 3em;
+          padding-right: gutter(1 of 12);
+
+        }
     }
   }
 
@@ -383,15 +407,37 @@
 
       .archive__item-teaser {
         float: right;
-        width: span(5 of 12);
+        width: span(6 of 12);
+        padding-right: 1em;
+        padding-top: 1em;
       }
 
       .archive__item-body {
         float: left;
-        width: span(7 of 12);
-        padding-left: gutter(0.5 of 12);
+        width: span(6 of 12);
+        padding-left: 2em;
         padding-right: gutter(1 of 12);
+
       }
+    }
+
+      @include breakpoint($medium) {
+        text-align: right;
+
+        .archive__item-teaser {
+          float: right;
+          width: span(5 of 12);
+          padding-right: 3em;
+          padding-top: 3em;
+        }
+
+        .archive__item-body {
+          float: left;
+          width: span(7 of 12);
+          padding-left: 3em;
+          padding-right: gutter(1 of 12);
+
+        }
     }
   }
 

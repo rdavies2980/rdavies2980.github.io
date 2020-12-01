@@ -18,7 +18,7 @@
 
   @include breakpoint($large) {
     float: left;
-    width: calc(#{$right-sidebar-width-narrow} - 1em);
+    width: calc(#{$right-sidebar-width-narrow});
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
@@ -141,14 +141,14 @@
   display: table-cell;
   vertical-align: top;
   padding-left: 15px;
-  padding-right: 25px;
+  padding-right: 40px;
   line-height: 1;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 1em;
   }
 
   a {
@@ -343,4 +343,3 @@
     margin-right: initial;
   }
 }
-

@@ -11,6 +11,12 @@
 <loc>http://localhost:4000/genphys/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/Glaz/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/PathInt/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/Peierls/</loc>
 </url>
 <url>
@@ -33,6 +39,14 @@
 </url>
 <url>
 <loc>http://localhost:4000/testingthings/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/notes/Glazman.pdf</loc>
+<lastmod>2020-12-01T16:43:53+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/notes/Path_Integral_Introduction.pdf</loc>
+<lastmod>2020-11-27T10:47:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/notes/Peierls_Ideas.pdf</loc>
