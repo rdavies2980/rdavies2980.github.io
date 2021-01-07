@@ -1,0 +1,396 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Solving without translational invariance - Green’s functions | More is Difficult</title>
+<meta name="description" content="A method for stitching together a patchwork of Green’s functions">
+
+
+  <meta name="author" content="Rose Davies">
+  
+  <meta property="article:author" content="Rose Davies">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="More is Difficult">
+<meta property="og:title" content="Solving without translational invariance - Green’s functions">
+<meta property="og:url" content="http://localhost:4000/_posts/2021-01-05-Stitching/">
+
+
+  <meta property="og:description" content="A method for stitching together a patchwork of Green’s functions">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-05T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/_posts/2021-01-05-Stitching/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Rose Davies",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="More is Difficult Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          More is Difficult
+          <span class="site-subtitle">Condensed Matter Physics</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/physnote/">Topic Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/books/">Paper Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blogtags/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Solving without translational invariance - Green’s functions">
+    <meta itemprop="description" content="A method for stitching together a patchwork of Green’s functions">
+    <meta itemprop="datePublished" content="2021-01-05T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Solving without translational invariance - Green’s functions
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>While I was attempting to rederive some results from a classic 1D transport paper, I got stuck trying to solve for the Green’s function of the system. The main problem wasn’t a horrendous integral or lack of convergence, but that in the system I was considering there was <em>no translational invariance</em>. The whole usual method of Fourier transforming our Green’s function into a diagonal basis, inverting it and transforming back could not be used. Our lack of translational invariance means that the Fourier transform no longer neatly decouples our problem into a diagonal basis.</p>
+
+<p>To be clearer, the usual procedure is to start with our generic Green’s function, \(G(x,x')\), which if we have translational invariance will be a function of the difference of \(x\) and \(x'\) alone, \(G(x-x')\). This reduction of the number of parameters needed means that the Fourier transform only requires one \(k\) to get our answer, \(\tilde{G}(k)\), into a form that we can easily invert. Without translational invariance our Green’s function will depend on \(k\) and \(k'\) in general.</p>
+
+<p>It isn’t often that we lack translational invariance in physics due to the fact that it is what makes many calculations possible, however there is a neat way to solve the issue in certain cases (otherwise I wouldn’t be writing this at all!). Content here has been lifted from my research into Maslov and Stone’s 95 paper, full notes of which may appear at some point.</p>
+
+<p>This short explanation will focus on solving the issue when we are focused on finding the Green’s function to describe the system. Another entry will show a different way in which we can tackle another problem that directly deals with the operators themselves.</p>
+
+<h2 id="greens-function-method">Green’s Function method</h2>
+
+<p>So simply quoting what the mathematical problem is without much context</p>
+
+\[\begin{equation}
+    \Bigg[-\partial_x \frac{v(x)}{K(x)} \partial_x + \frac{\omega^2}{v(x)K(x)} \Bigg] G_{\omega}(x,x') = \delta(x-x')
+\end{equation}\]
+
+<p>where the parameters \(v(x), K(x)\) are constant when \(x&lt;0, x&gt;L\) and have a different constant value when \(0 \le x \le L\). We will call this inside region a wire throughout. Here we see that if we had translational invariance (parameters constant everywhere) we could Fourier transform to get a familiar looking Green’s function of \(G(k,\omega) = 1/(ak^2 +b\omega^2)\) for constants \(a,b\). Through complex analysis this can be transformed back, but we cannot rely on that method now.</p>
+
+<h3 id="conditions-on-the-greens-function">Conditions on the Green’s Function</h3>
+
+<p>Now we will look at what the properties the Green’s function has, by investigating the defining equation. Because it contains no derivatives of delta functions, we see that the Green’s function must be <em>continuous</em> everywhere as if it contains any discontinuities then taking the second spatial derivative of this will produce derivatives of the delta function. Therefore at all possible problem points (\(x=0,x=x',x=L\)) the Green’s function will be continuous. To see the effect of derivatives we integrate in a thin strip of size \(2\delta\) around a certain point \(y= \{ 0,x',L\}\),</p>
+
+\[\begin{equation}
+     \int_{y-\delta}^{y+\delta} dx \Bigg[ -\partial_x \frac{v}{K} \partial_x + \frac{\omega^2}{vK} \Bigg] G_{\omega'}(x,x') = \int_{y-\delta}^{y+\delta}  \delta(x-x')
+\end{equation}\]
+
+<p>We can see that the RHS of the equation will be zero unless \(y=x'\) and then it will equal 1 even as we let \(\delta \rightarrow0\). Turning our attention to the LHS, we see that the factor \((\omega^2/vK) G\) will give zero as we let \(\delta \rightarrow0\) due to the continuity of everything in the integrand. The terms with the spatial derivatives however will give a result of</p>
+
+\[\begin{equation}
+    \Big[ \frac{v(x)}{K(x)}\partial_x G(x,x') \Big]^{y+0}_{y-0} = \left\{
+                \begin{array}{ll}
+                  0 \quad \text{if } y=0,L\\
+                  1 \quad \text{if } y=x'\\
+                \end{array}
+              \right.
+\end{equation}\]
+
+<p>These are all our conditions, so we should now look at what the solutions at various parts are.</p>
+
+<h3 id="finding-our-pieces">Finding our pieces</h3>
+
+<p>We can solve the problem away from the \(x=x'\) point, this can be seen to give an exponential dependence (with terms that diverge being set to zero).</p>
+
+\[\begin{equation}
+    G_0^L = Ae^{\omega x/v}, \quad G_W^L = Be^{\omega x/v} + Ce^{-\omega x/v}, \quad G_1^L = De^{-\omega x/v}
+\end{equation}\]
+
+<p>where \(G_0\) is the region to the left of the wire, \(G_W\) is in the wire and \(G_1\) is to the right of the wire. The \(L\) notation is to denote that these are left of the point \(x'\). To the right of this point we will have similar solutions with different coefficients which will be notated with primes. To simplify the more complicated problem, we will only consider that \(0&lt;x'&lt;L\) which will reduce the complication of stitching the solutions together. So we need to glue together \(G_0^L, G_W^L, G_W^R, G_1^R\) in accordance with the boundary conditions.</p>
+
+<p>To summarise a bit, these boundary conditions mean that (as we have fixed \(x'\) to be within the wire) that we need to make the \(G_0^L, G_W^L\) boundary such that the function is continuous and to the same for \(G_W^R, G_1^R\). Then the gluing together of \(G^L\) and \(G^R\) parts is done by matching the Green’s function with a unit step in the derivative.</p>
+
+<h3 id="gluing-together">Gluing together</h3>
+
+<p>Up to now, I have repeatedly talked about gluing solutions together - but what is mathematically meant by this? Essentially we will use two step functions, \(\Theta(x)\), to ensure that the solutions are non-zero and zero respectively in the correct sections. So for the continuous boundary we will have,</p>
+
+\[G^L(x&lt;x') = A G^L_0(x)\Theta(-x) + B G^L_W(x)\Theta(x)\]
+
+<p>where we can see that action of the step functions kicking in at \(x=0\). Derivatives of this can now be taken, but any worrisome delta function terms that arise from differentiating the step function are killed off by one of the step functions having a negative sign and the continuity requirement meaning that \(A G^L_0(0) = BG^L_W(0)\). For the gluing over the continuous boundaries (\(x=0,L\)), we set the two parts of the functions and their derivatives to be equal at the boundary - much like in the standard QM problem except with the prefactor of the derivatives being different on either side. This allows us to relate the coefficients \(A\) and \(B\) to obtain an expression for \(G^L\) (with the final constant being set by larger considerations of the system, normalisation and whatnot).</p>
+
+<p>The boundary with the derivative step can be solved for in the same way - writing out using theta functions and then relating the coefficients. This time however, the delta function in the derivative will not  So generically we solve for a solution where the coefficients can depend on where \(x'\) is set. This means \(G^L(x,x') = a(x')y_1(x)\) and \(G^R(x,x') = b(x')y_2(x)\) where \(y(x)\) contains the exponential \(x\) dependence of the Green’s function. Relating the two for \(x=x'\), using the conditions on our Green’s function.</p>
+
+\[\begin{align}
+    &amp;G^L(x=x',x') = G^R(x=x',x') = a(x') y_1(x=x') = b(x') y_2(x=x'), \\
+    &amp; b y'_2 - a y'_1 = K(x=x')/v(x=x')
+\end{align}\]
+
+<p>This notation is very ugly but it’s important to be clear on the dependence of various things. This can be solved for \(a,b\) (by just rearranging the above two equations) to give,</p>
+
+\[\begin{equation}
+  b = \frac{K}{v}\frac{y_1}{y_1y'_2 - y_2y'_1} \Big\vert_{x=x'}, \ \quad a = \frac{K}{v}\frac{y_2}{y_1y'_2 - y_2y'_1} \Big\vert_{x=x'}
+\end{equation}\]
+
+<p>which we can then use to get our full expression for the Green’s function which can be checked to satisfy our original differential equation.</p>
+
+\[\begin{equation}
+    G(x,x') = \frac{K}{v} \frac{1}{y_1 y'_2 - y_2y'_1}\Big\vert_{x=x'} \Big(\Theta(x'-x) y_1(x)y_2(x') + \Theta(x-x')y_2(x)y_1(x')\Big)
+\end{equation}\]
+
+<p>where the prefactor that is evaluated at \(x=x'\) is actually the inverse of the Wronskian of the two solutions evaluated at this point. I prefer to write it more explicitly. The generalisation to the \(y\) representation of the exponential dependence does make this particular question a little harder to follow (because of the multiple different exponential parts hidden within) but was used to show the more general technique.</p>
+
+<p>The prefactor of the above equation actually turns out to be constant so we can evaluate its value anywhere! To show this we consider the derivative of the prefactor,</p>
+
+\[\frac{d}{dx}\Big(\frac{v}{K}(y_1 y'_2 - y_2y'_1)\Big) = \frac{d}{dx}\Big(\frac{v}{K} \Big)(y_1 y'_2 - y_2y'_1) + \frac{v}{K}(\underbrace{y'_1y'_2 - y'_2y'_1}_{0} + y_1y''_2 - y_2y''_1)\]
+
+<p>and then consider our defining equation for what \(y_1\) and \(y_2\) must satisfy (ie the Green’s function differential equation away from the delta function spike)</p>
+
+\[\begin{equation}
+    \frac{\omega^2}{v(x)K(x)}y = \partial_x \frac{v(x)}{K(x)} \partial_xy  = \frac{d}{dx}\Big(\frac{v}{K} \Big)y' + \frac{v(x)}{K(x)}y''
+\end{equation}\]
+
+<p>Therefore the spatial derivative of the prefactor can be seen to be</p>
+
+\[\text{Derivative of prefactor} = y_1\frac{\omega^2}{vK}y_2 - y_2\frac{\omega^2}{vK}y_1 = 0\]
+
+<p>so the prefactor itself must be a constant as we vary space - so we have some translational invariance after all!</p>
+
+<p>This technique is quite general and can be shown to be equivalent to the eigenvalue method. This technique is standard in mathematical treatments of solving differential equations, but often in physics our laser focus on eigenvalues means that this method of constructing Green’s functions is overlooked!</p>
+
+<p>So we have managed to stitch it all together and find our translationally variant Green’s function!</p>
+
+<p>There’s good info on this same process at the following link:</p>
+
+<p><a href="http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf">http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf</a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#maths-heavy" class="page__taxonomy-item" rel="tag">Maths Heavy</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#techniques" class="page__taxonomy-item" rel="tag">Techniques</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-05T00:00:00+00:00">January 5, 2021</time></p>
+
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

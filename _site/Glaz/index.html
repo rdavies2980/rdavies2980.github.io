@@ -18,7 +18,7 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:locale" content="en_UK">
+<meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="More is Difficult">
 <meta property="og:title" content="Reflectionless Quantum Transport and Fundamental Ballistic Resistance Steps in Microscopic Constrictions">
 <meta property="og:url" content="http://localhost:4000/Glaz/">
@@ -133,7 +133,7 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/physnote/">Topic Notes</a>
             </li><li class="masthead__menu-item">
-              <a href="/books/">Book Notes</a>
+              <a href="/books/">Paper Notes</a>
             </li><li class="masthead__menu-item">
               <a href="/blogtags/">Blog</a>
             </li><li class="masthead__menu-item">
@@ -286,7 +286,9 @@ Contents</h4></header>
 <p>as this is what obeys the boundary conditions and so the new equation we are dealing with is:</p>
 
 \[\begin{align}
-    -\frac{\hbar^2}{2m} \nabla^2\psi(x) + \epsilon_n(x) =  E \psi(x) + &amp;\frac{\hbar^2}{2m}\Big( 2\partial_x\psi_x(y)\frac{1}{\phi_x(y)}\partial_x\phi_x(y) + \psi_x(y)\frac{1}{\phi_x(y)}\frac{d^2\phi_x(y)}{dx^2} \Big) \\ &amp; where \ \ \epsilon_n(x) = \pi^2n^2\hbar^2/2md^2(x)
+    -\frac{\hbar^2}{2m} \nabla^2\psi(x) + \epsilon_n(x) = E \psi(x) + \frac{\hbar^2}{2m}\Big( 2&amp;\partial_x\psi_x(y)\frac{1}{\phi_x(y)}\partial_x\phi_x(y) \\
+    &amp;+ \psi_x(y)\frac{1}{\phi_x(y)}\frac{d^2\phi_x(y)}{dx^2} \Big) \\
+    \ \ \ \epsilon_n(x) = \pi^2n^2\hbar^2/2md^2(x)
 \end{align}\]
 
 <p>obtained from solving the equation for the quantised part (ie \(\nabla^2\phi_x(y) = E \phi_x(y)\)) to get the usual energy. Note that here in our analysis we have already assumed that there is smooth variation of \(d(x)\) as we have adiabatically separated the wavefunction which assumes there is no component that scatters from the \(\psi(x) \rightarrow \phi_x(y)\).</p>
@@ -359,7 +361,7 @@ n_{max} = [kd/\pi]
 <p>So going to maths books we can find that for an equation:</p>
 
 <p>\begin{equation}
-    -f’‘(z) - \frac{1}{4}z^2f(z) = \mathcal{E}f
+    -f^{\prime\prime}(z) - \frac{1}{4}z^2f(z) = \mathcal{E}f
 \end{equation}</p>
 
 <p>one pair of the asymptotic solutions in energy are:
@@ -489,6 +491,8 @@ F(\mathcal{E}, z\rightarrow-\infty) \sim&amp; i\frac{2}{|y|}\sqrt{1+ e^{-2\pi\ma
         <div class="page__footer-follow">
   <ul class="social-icons">
     
+      <li><strong>Follow:</strong></li>
+    
 
     
       
@@ -510,7 +514,7 @@ F(\mathcal{E}, z\rightarrow-\infty) \sim&amp; i\frac{2}{|y|}\sqrt{1+ e^{-2\pi\ma
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2020 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2021 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

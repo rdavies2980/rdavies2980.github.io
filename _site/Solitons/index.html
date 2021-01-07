@@ -1,0 +1,623 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Solitons in Field Theories | More is Difficult</title>
+<meta name="description" content="A non-linear way to investigate systems">
+
+
+  <meta name="author" content="Rose Davies">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="More is Difficult">
+<meta property="og:title" content="Solitons in Field Theories">
+<meta property="og:url" content="http://localhost:4000/Solitons/">
+
+
+  <meta property="og:description" content="A non-linear way to investigate systems">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/Solitons/BackgroundSolitons.png">
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/Solitons/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Rose Davies",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="More is Difficult Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          More is Difficult
+          <span class="site-subtitle">Condensed Matter Physics</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/physnote/">Topic Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/books/">Paper Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blogtags/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: linear-gradient(rgba(180,29,35,0.9), rgba(180,29,35,0.9)), url('/images/Solitons/BackgroundSolitons.png');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Solitons in Field Theories
+
+        
+      </h1>
+      
+        <p class="page__lead">A non-linear way to investigate systems
+</p>
+      
+      
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          53 minute read
+        
+      </span>
+    
+  </p>
+
+
+      
+      
+        <p>
+        
+          <a href="/assets/notes/Solitons.pdf" class="btn btn--light-outline btn--large">Download PDF Version</a>
+        
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Solitons in Field Theories">
+    <meta itemprop="description" content="A non-linear way to investigate systems">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <aside class="sidebar__right sticky">
+<nav class="toc">
+    <header><h4 class="nav__title" style="background:rgb(180,29,35)"><i class="fas fa-list"></i>
+Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#classical-solitons" id="markdown-toc-classical-solitons">Classical Solitons</a>    <ul>
+      <li><a href="#an-example" id="markdown-toc-an-example">An Example</a></li>
+    </ul>
+  </li>
+  <li><a href="#quantising-the-soliton" id="markdown-toc-quantising-the-soliton">Quantising The Soliton</a>    <ul>
+      <li><a href="#classical-to-quantum-mechanics" id="markdown-toc-classical-to-quantum-mechanics">Classical to Quantum Mechanics</a></li>
+      <li><a href="#quantum-mechanics-to-field" id="markdown-toc-quantum-mechanics-to-field">Quantum Mechanics to Field</a></li>
+    </ul>
+  </li>
+  <li><a href="#mass-of-the-quantum-kink" id="markdown-toc-mass-of-the-quantum-kink">Mass of the Quantum Kink</a></li>
+  <li><a href="#resources" id="markdown-toc-resources">Resources</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>Non-linear equations are infamously hard to solve and in many cases solutions are not completely known. Solitons, however, provide a method through which to solve part (or all!) of the problem. In classical field theory, they are an exact solution to a non-linear equation of motion that cannot be found from perturbing the harmonic oscillator. Their unique property is that they <strong>do not decay</strong> and simply <strong>propagate at a constant velocity</strong>. Its often said that the Scottish physicist, John Scott Russell, when riding his bicycle (or a horse!) alongside a canal, seeing the travelling wave caused by a barge. The mathematics was figured out later by Korteweg and de Vries when they introduced their KdV equation which describes water propagating through a shallow channel.</p>
+
+<p>Their non-dissipative nature arises from a balancing of processes that dissipate the energy and resonant processes that increase the energy of the wave. In some problems they have other nice properties (with the fight between physicists and mathematicians as what strictly counts as a soliton being whether these other properties are present) such as being able to pass through each other and retain their form. This combined with the fact that the solution has a form that interpolates between two distinct values at the boundary (well at least in 1D), leads us to interpret the classical solution as like a particle - a localised disturbance that can scatter off each other.</p>
+
+<p>However, care must be taken when interpreting this a particle as there is no such thing as a particle in classical field theory, despite how tempting it is to say it simply is a particle. Constructing a particle in Quantum Field Theory is done by by quantising oscillations around this classical solution, akin to how harmonic oscillator states are obtained and it is this that the second half of these notes will focus on.</p>
+
+<p>As a final note, everything within relies on the fact that we are in (1+1) dimensions. Higher dimensional solitons are more difficult, mostly because of this thing called <em>Derrick’s theorem</em> which puts a maximum on the number of dimensions (its only 2) in which stable stationary non-trivial soliton solutions can exist. I will not be focusing on this point but I did want to point out why higher dimensions is hard.</p>
+
+<h2 id="classical-solitons">Classical Solitons</h2>
+
+<p>Before we can quantise these solutions, we first need to understand them classically. The main take away point as to what these solutions look like generally is that <strong>solitons in field theory connect multiple minima</strong>. What I mean by this is that if the potential (that is a function of the field) has multiple minima then the soliton solution of the field will be in different minima at the boundaries of the underlying coordinates. So if we are in one minimum of the potential \(\phi^1_{min}\) at \(x=-\infty\), then moving across to the other boundary at \(x=\infty\) we will be in another minimum, \(\phi^2_{min}\). This can happen in the time dimension as well, with these solutions often being called <strong>instantons</strong>. This is in stark contrast to how we normally solve problems with multiple minima which is by confining the solution to stay in one of these minima and the symmetry being spontaneously broken, therefore these soliton solutions will not be the lowest energy solutions of the system. Nevertheless, they are solutions which will have a typical energy scale associated to them.</p>
+
+<p>Now one of the confusing things about this area is that there are multiple, slightly different ways to define these solutions so this will mostly follow Rajaramen and his definitions. They may seem counter intuitive, but this is the set up when we already know the answer and the set up that is easy to generalise. The first point to make is that what we are looking for are localised solutions that move undistorted with constant energy. The fact that these solutions are undistorted means that they keep their shape as time progresses through a careful balancing of the dissipative and accumulation terms. We talk about localisation here in respect to the energy density of the system (we normally deal with Lagrangians/Hamiltonians so this a sensible choice), therefore</p>
+
+\[\begin{equation}
+    \epsilon(x,t) = \epsilon(x-vt).
+\end{equation}\]
+
+<p>where there is some distance \(1/\lambda\) (what the lambda is will become more obvious as we go on) which describes the localisation of the energy density. Note that this implies that there are a family of solutions for various \(v\), including a static solution for which \(v=0\). This is usually the first solution we find and then the generic space-time dependence can be substituted in using one of the usual space-time transformations (ie Galilean, Lorentz, Euclidean). I will ignore the subtlety about whether or not these solutions scatter off each other (this technically distinguishes solitary solutions from solitons) and only mention it when relevant.</p>
+
+<p>Now as we want our solution to be physical we require that a <em>finite energy density</em> is associated to the solution so considering a generic Lagrangian, energy functional and equation of motion,</p>
+
+\[\begin{align}
+    L = \int dx dt \frac{1}{2}(\partial_t \phi)^2 - \frac{1}{2}(\partial_x\phi)^2 - &amp;U(\phi), \quad  H = \int dx dt \frac{1}{2}(\partial_t \phi)^2 + \frac{1}{2}(\partial_x\phi)^2 + U(\phi) \\ &amp;\partial^2_t\phi - \partial^2_x \phi = -\frac{dU}{d\phi}
+\end{align}\]
+
+<p>we can see that the energy functional will be minimised when \(\phi\) is such that it is always in the minimum of \(U(\phi)\). We set that the value of \(U(\phi^i_{min})=0\) by adding constants to the Hamiltonian. The lowest possible energy is the trivial solution \(\phi(x,t)=\phi_{min}\) which corresponds 0 energy and to our vacuum when we pass in a QFT. However, as mentioned before the solutions that we are looking for are not the lowest energy solutions but the soliton solutions. As mentioned at the start, these are determined by the boundary conditions on the field, that the field in is different minima at different boundaries. We then want to minimise the energy with respect to the soliton boundary conditions (which are topological - more on that later).</p>
+
+<p>Investigating this a little further, we notice the soliton boundary conditions means that we can no longer set our field to decay at the boundaries which is what gets us out of most difficulties in normal QFT. Knowing that we are looking for the static solution, we can ignore that term. To not get an infinite energy, we need our integrand to become zero as we go off to infinity which imposes that as \(x \rightarrow \pm\infty\) we must have \(\partial_x \phi, U(\phi) \rightarrow 0\) which implies that \(\phi(x=\pm\infty) = \phi^i_{min}\).</p>
+
+<p>As mentioned earlier, we can look into the static solution first and now we recognise that the equation of motion is just that for a particle moving in potential \(-U\) under Newton’s laws. Multiplying the equation of motion by \(\partial_x\phi\) and integrating over \(x\), gives us</p>
+
+\[\begin{align}
+    \int_{-\infty}^x dx' \partial_{x'}\phi \partial^2_{x'} \phi - \partial_{x'}\phi \frac{dU}{d\phi} &amp;=  \int_{-\infty}^x dx' \ \partial_{x'}\frac{1}{2}(\partial_{x'}\phi)^2 - \frac{dU(\phi)}{dx'} = 0, \\
+    \implies \partial_x\phi &amp;= \pm \sqrt{2U(\phi)}
+\end{align}\]
+
+<p>where the constant is zero at \(-\infty\) due to the boundary conditions. This is a crucial equation when dealing with solitons and allows to to find the form of the solution.</p>
+
+<p>Looking at the equations of motion again for a static solution, we can see it is Newtons equations for a particle moving through a potential \(-U\). Extending this relation further, we can see that for a non-trivial solution to exist there must be multiple minima. This can be understood by considering a particle moving in the potentials in Figure below.</p>
+
+<figure class="align-center">
+<img src="../images/Solitons/particle-U.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>There is no solution that moves away from the single minima and returns as the particle would run off to infinity. Therefore the soliton solution must connect different minima with there being \(2(n-1)\) types of solution for \(n\) degenerate minima. The reason for this specific number is that a solution cannot connect minima 1 and 3 because of all the derivatives vanishing at the second minima (\(\frac{d}{dx^2} \frac{dU}{d\phi} = \frac{d^2U}{dx^2}\partial_x\phi\) etc). This is due to the particle taking infinite time to reach the top of the potential. Having talked in general it is now time to derive our first soliton.</p>
+
+<h3 id="an-example">An Example</h3>
+
+<p>To be concrete, let us consider an integrable system that has all the solitonic properties, the sine-Gordon equation. This has \(U(\phi) = 1 - \cos(m\phi)\) and an infinite number of degenerate minima. This equation actually fulfils the more stringent requirements of having the individual solitons recover their original configuration in the long time limit. Also worthy of note here is that we are now using the Euclidean, not Minkowski metric (as this is what I have to deal with!),</p>
+
+\[\begin{align*}
+    S_{bulk} &amp;= \int d\tau \int dx \Big( (\partial_{\tau}\phi)^2 + v^2(\partial_x \phi)^2 \Big) - \lambda^2(1 - \cos(n\phi))\\
+\end{align*}\]
+
+<p>This particular form is used (with the constant) so that we can use a trig identity when solving for the soliton. As the soliton is a valid equation of motion, it must be an extremum of the action. So first finding the EOM for a static solution,</p>
+
+\[\begin{equation}
+    \frac{\delta S_{bulk}}{\partial \phi} = \partial_x^2 \phi_0 - \frac{d}{d\phi} \lambda^2(1 - \cos(m\phi)) = 0
+\end{equation}\]
+
+<p>which can be solved for by multiplying by \(\partial_x\phi\) and integrating,</p>
+
+\[\begin{align*}
+\int dx \partial_x\phi \partial_x^2 \phi = \int dx \lambda^2\partial_x\phi \frac{d}{d\phi}(1 - \cos(m\phi)) \implies \lambda^2 - \lambda^2\cos(m\phi) = \frac{1}{2}(\partial_x\phi)^2
+\end{align*}\]
+
+<p>So by taking the square root and then integrating we can find the anti/soliton solution (dependent on which sign of the root we take),</p>
+
+\[\begin{align}
+    \int \frac{d\phi}{\lambda\sqrt{2-2\cos(m\phi)}} &amp;= \int \frac{d\phi}{2\lambda\sin(m\phi/2)} = \int dx\\
+    \ln(\tan(m\phi/4)) = \bar{\lambda}(x - x_0) &amp;\implies \phi = \pm \frac{4}{m}\arctan(\exp(\bar{\lambda}(x-x_0)))
+\end{align}\]
+
+<p>This is the stationary solution, so we can introduce time by the ‘Lorentz’ transform (but we are in the Euclidean metric so we’ll have trig function rather than the usual hyperbolic functions). This gives the general form of the classical soliton:</p>
+
+\[\begin{equation}
+    \phi = \pm\frac{4}{m} \arctan(\exp(\lambda \sin(a)(x-x_0) - \lambda \cos(a)(\tau - \tau_0)))
+\end{equation}\]
+
+<p>This solution is represented in the graph, with \(a\) controlling where the shift between the two values occurs, \(l\) controlling the steepness of the change and \(m\) being an overall multiplicative factor. The choice in signs that come from taking square roots correponsds to a kink or anti-kink.</p>
+
+<figure class="align-center">
+<img src="../images/Solitons/solitonba.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>It is also useful to calculate the energy associated with this solution which will come from integrating the Hamiltonian over all space. Remembering that we are still dealing with the static solution, we can use the relationship shown between \(U(\phi)\) and \(\frac{d\phi}{dx}\) to simplify things,</p>
+
+\[\begin{equation}
+    E = \int dx \frac{1}{2}\Big( \frac{d\phi}{dx} \Big)^2 + U(\phi) = \int dx \Big( \frac{d\phi}{dx} \Big)^2
+\end{equation}\]
+
+<p>Differentiating our soliton solution to \(\phi\) we find,</p>
+
+\[\begin{equation}
+    E = \int dx \frac{16}{m^2} \frac{\lambda^2 e^{2\lambda(x-x_0)}}{(1 + e^{2\lambda(x-x_0)})^2} = \frac{8\lambda}{m^2}\frac{1}{1 + e^{\lambda(x-x_0)}} \lvert_{-\infty}^{\infty} = \frac{8\lambda}{m^2}
+\end{equation}\]
+
+<p>The important part here is that the cosine term disappears as \(m\rightarrow0\) but the energy associated with the solution diverges in the same limit. Therefore we cannot obtain this solution from doing perturbative analysis. To make the point even more specific, the solutions are <strong>topologically protected</strong>. This is because if we consider the time-dependent solution at the boundaries \(\phi(\infty,t)\) must be a constant equal to the value of the field in the minimum as otherwise the total energy would be divergent as previously mentioned. Therefore this value cannot continuously be changed into another value without causing divergences - splitting the space of non-singular solutions into multiple distinct sectors.</p>
+
+<p>Often a topological invariant is used to characterise this, being defined as the difference between the fields at the boundary values up to a constant \(Q = A(\phi(\infty) - \phi(-\infty))\) which will have an associated conserved current,</p>
+
+\[\begin{equation}
+    k^{\mu} = A \epsilon^{\mu\nu}\phi_{\nu}, \quad \quad Q = \int dx k_0, \quad \partial_{\mu}k^{\mu} = 0
+\end{equation}\]
+
+<p>This is unlike our usual experience of conserved quantities that arise from continuous symmetries of the Lagrangian - this arises due to the requirement of finite energy and determined by the boundary conditions. This can also be seen as a discrete symmetry of the Lagrangian transforming the different topological sectors into each other.</p>
+
+<p>An important point to note here is that the definition of charge here (that is conserved too!) allows the possibility of <strong>fractions of charge</strong> if the boundaries are quantised appropriately. For example if \(\phi(x=-\infty) = 0\) and \(\phi(x=\infty)= e/2A\) then we would have a charge of a half! See the fractional charge blog post for an example of fracional solitons justified through another line of reasoning.</p>
+
+<p>This ‘rest mass’ energy of the soliton behaves in a similar way to actual rest mass when we include velocity into the solution by using a Lorentz transform \(M = m_{rest}/\sqrt{1-v^2/c^2}\) which if we parameterise it in terms of hyperbolic or Euclidean geometry (depending on what metric we are currently using), ends up giving us \(M/\sin(v)\) as the energy associated with the moving soliton.</p>
+
+<p>Condensed matter has many situations where we have multiple minima (tunnelling, any spontaneous symmetry breaking) so these techniques are useful and often describe domain walls moving. Often if we want to work near the soliton energy, we make the assumption that there are not many solitons and that each kink is sufficiently far away that our solution is a sum of all of these kinks. This is known as the dilute soliton gas which is used despite the fact that the sum of solitons is not a solution to the equations of motion, but is approximately a solution! Mathematicians might be more precise and talk about Modulii spaces, but in any soliton analysis we often end up working with approximate solutions.</p>
+
+<p>One final point is that I have only gone through one-soliton solutions explicitly here. In certain models (like the sine-Gordon) there are doublets and triplets of soliton solutions (find the sine-Gordon equation wiki and look at the nicely animated gifs) but these are specific to the model. In models which can have multiple solitons, we can describe the interaction between the soliton - related to the distance separating the solitons which is why we can ignore them in the dilute gas approximation. Even in models which cannot explicit support multiple solitons, we can explore these interactions. There is plenty of maths literature to trawl through if this is your sort of thing. So having had a very brief overview of how solitons appear as solutions of classical field theories, it is now time to look into how these ideas translate across into the full-blooded quantum field theory.</p>
+
+<h2 id="quantising-the-soliton">Quantising The Soliton</h2>
+
+<p>The first thing to note is that the connection between the particle-like nature of the classical soliton and its quantum particle counterpart is slightly subtle. The classical solution is definitely not the wavefunction of the particle or anything like that. To understand how to do this we need to go over the relation between classical and quantum field theory. In classical field theory the fields are complex numbers that are a function of space and time and these fields determine the state of the system. The concept of a particle does not exist in classical field theory, despite the similarities. The fields in QFT are operator values (unless dealing with path integral bullshit). The solutions of the field equations are again operators, which are not the object that determines the state - it is the vectors on the Hilbert space that determine the state.</p>
+
+<p>Relativistically, particles are the particular states of the system that are on mass shell. This means they satisfy the requirement that the simultaneous eigenvectors of both the Hamiltonian and momentum operators obey the equation \(E^2 - P^2 = M^2\) for some fixed \(M\). The states that do not satify this requirement are known as virtual particles. And the final thing needed for it to be a particle is that it should be localised. The dynamics of the particle are then governed by the field equations. As a note this definition is slightly hazy as particle that are off mass shell have some lifetime associated with them which becomes smaller the further away they are from being on mass shell. By getting closer and closer to being on mass shell we can extend this lifetime until the lifetime is infinite on the mass shell - obviously the distinction between ‘real’ and ‘virtual’ becomes meaningless as the lifetime gets large but this is just to say that the concept of a particle is subtle.</p>
+
+<p>The classical fields and the quantum fields obviously can be related though otherwise we wouldn’t be bothering with all of this! There are numerous techniques to do this (WKB and Bohr-Sommerfeld) that relate quantum levels to classical orbits. So to explain the idea we will go back to regular ol’ quantum mechanics and classical mechanics.</p>
+
+<h3 id="classical-to-quantum-mechanics">Classical to Quantum Mechanics</h3>
+
+<p>Classically, we solve a particles motion by finding \(x(t)\) using Newton’s equations. Quantum mechanically, we describe the situation by giving the wavefunction where the energy eigenstates obey Schrodinger’s equation. Consider some potential with 2 minima at \(x=a,c\) and a maxima inbetween at \(x=b\). Classically the static solutions are that the particle can be at any of these points. Suppose that the global minima is at \(x=a\), then the minimum energy would be \(E=V(a)\).</p>
+
+<figure class="align-center">
+<img src="../images/Solitons/poeten.png" style="width: 70%" class="align-center" />
+<figcaption>Not Figure 9</figcaption>
+</figure>
+
+<p>In QM, this isnt possible due to the uncertainty principle and there will be some zero point motion \(\Delta\). If the potential is approximately harmonic then we can do an expansion and get everyone’s favourite harmonic oscillator equation with the ground state of \(E = V(a) + \hbar \omega/2 + \mathcal{O}(\lambda^a_3)\) where \(\lambda^a_3\) are the higher order coupling constants in the expansion. Therefore we have our first relation between quantum and classical states - and even more relations if we include \(n\hbar\omega\) in our definition of energy, giving a tower of energy states related the the classical solution.</p>
+
+<p>This is however only the energy states and we want the wavefunction and the classical solution can give some information on that. From the correspondence principle we see that the QM average of position will be to first approximation at the classical minima’s position \(\langle x\rangle \approx a\) which again related the classical solution to the quantum one.</p>
+
+<p>Repeating this procedure on the non-global minimum, we can similarly construct a tower of energy states around the minimum. However, we all know that tunnelling should be occurring, but performing any expansion around the minima acts like the other minima does not exist. So tunnelling cannot be constructed through a perturbative scheme (at least in terms of \(\lambda_i^a\) or \(\lambda_i^c\)). This is because the tunnelling is actually described by instantons (Euclidean metric solitons) which have already been shown to be non-perturbative!</p>
+
+<p>The last thing to saw is as we approach an \(x\) independent potential, there cannot be any expansion around a state as all the coupling constants vanish. We know that the solutions to this are \(e^{ikx}\) which span all points on the axis. Now we cannot relate the stationary classical solution to tower of quantum states as all points are classically stationary. So the wavefunctions that span all points are what is associated to a continuous family of static solutions. This seems like more of a random comment but it means that dealing with zero frequency modes (when we have a symmetry when the potential is independent on the coordinate) is tricky as hell and needs special care (which I am not going to deal with here).</p>
+
+<h3 id="quantum-mechanics-to-field">Quantum Mechanics to Field</h3>
+
+<p>Although all of that seemed obvious, it is worth going through as this process is what generalised most easily to field theory. An intermediate step can be taken, of considering a higher dimensional analogue to the above section but I will skip this. One of the important points to take away is that all of this requires higher order coupling constants to be small. The results of performing this may however still be non-perturbative if the classical state that we were expanding around is non-perturbative.</p>
+
+<p>So starting with a Lagrangian and EL equation given by:</p>
+
+\[\begin{equation}
+    \mathcal{L} = \int dx dt \ \ \frac{1}{2} (\partial_t \phi)^2 - \frac{1}{2}(\nabla \phi)^2 - U[\phi], \quad \quad \frac{\partial^2 \phi}{\partial t^2} = -\frac{\delta V[\phi]}{\delta \phi}
+\end{equation}\]
+
+<p>where \(V\) is the total potential functional which includes the spatial gradient term. The static solutions can be found by putting the time derivative equal to zero. Assume that \(\phi_0\) is one of these static solutions, you can then expand about this solutions by introducing fluctuations, \(\eta = \phi - \phi_0\), to obtain</p>
+
+\[\begin{equation}
+  V[\phi]  = V[\phi_0] + \int dx \frac{\eta(x)}{2} \Big( (- \nabla^2 + \frac{d^2 U}{d\phi^2} \vert_{\phi = \phi_0}) \eta(x) + \cdots \Big)
+\end{equation}\]
+
+<p>This is nothing but the functional Taylor expansion, with the second derivative being calculated at a specific configuration. Remember that because this is a second functional derivative where the functional is only an integral over one variable, we will end up with an extra delta function (notice that there is only one integral instead of the normal two in the above expression). This differential equation then is equal to \(\omega^2_i \eta_i(x)\) for all the orthonormal modes of fluctuation \(\eta_i\). We can then expand the \(\eta\) field in terms of this eigenbasis \(\eta = \sum_i c_i (t) \eta_i(x)\) and get the following Lagrangian,</p>
+
+\[\begin{equation}
+    \mathcal{L} = \frac{1}{2} \sum_i \dot{c}^2\eta^2(x) - V[\phi_0] + \frac{1}{2} \sum_i c_i^2 \omega_i^2\eta^2(x) + \cdots
+\end{equation}\]
+
+<p>so now we have a set of all harmonic oscillators, one for each normal mode and the energies of these states will be</p>
+
+\[\begin{equation}
+    E = V[\phi_0] + \hbar \sum_i (n_i + \frac{1}{2} ) \omega^2_i
+\end{equation}\]
+
+<p>which relates the energy of a set quantum levels to the classical solution. The next question we need to ask is what minima are we expanding around, the global or local minima. Expanding about the global minima means that the solution will be independent of space because of the gradient term in the Lagrangian, and doing this yields the familiar results where we relate the tower of quanta to the ‘classical vacuum’. This is all pretty standard, but we now want to find out when there is a local minima who’s solution has a non trivial dependence on x. So do start we need a model that has a local minima. So lets choose a \(\phi^4\) theory where</p>
+
+\[\begin{equation}
+V[\phi] = \int dx \frac{1}{2} (\frac{d^2\phi}{dx^2} )  - \frac{\lambda}{4}(\phi^2 - \frac{m^2}{\lambda})^2
+\end{equation}\]
+
+<p>which has a family of static soliton solutions and energy \(V\), which can be found through a similar process as we used to find the sine-Gordon solutions,</p>
+
+\[\begin{equation}
+    \phi_S(x-a) = \frac{m}{\sqrt{\lambda}} \tanh( m(x-a)/\sqrt{2}), \quad \quad V[\phi_S] = \frac{2\sqrt{2}m^3}{3 \lambda}
+\end{equation}\]
+
+<p>as this is a solution of the EOM, then this solution corresponds to a an extremum of the potential functional. So in our expansion the linear term will be absent,</p>
+
+\[\begin{equation}
+    V[\phi] = V[\phi_S] + \int dx \ \ \frac{\eta(x)}{2} \Big( - \frac{\partial^2}{dx^2} - m^2 + 3\lambda \phi_S^2 \Big) \eta(x) + \lambda \int dx ( \phi_S \eta^3 + \frac{1}{4} \eta^4 )
+\end{equation}\]
+
+<p>where \(\eta = \phi - \phi_S\). The eigenvalues of the second derivative are given by the equation,</p>
+
+\[\begin{align}
+     \Big( - \frac{\partial^2}{dx^2} - m^2 + 3m^2  \Big) \eta_i = \omega^2_i \eta_i \\
+     \Big( - \frac{1}{2}\frac{\partial^2}{dz^2} - (3\tanh^2(z) - 1)  \Big) \bar{\eta}_i = \frac{\omega^2_i}{m^2} \bar{\eta}_i
+\end{align}\]
+
+<p>where we have changed variables to \(z = mx/\sqrt{2}\). The solution to this equation is known which has two discrete solutions and then a continuum,</p>
+
+\[\begin{align}
+    &amp;\omega^2_0 = 0, \ \ where \ \ \bar{\eta}_0 = 1/\cosh^2(z) \\
+    &amp;\omega^2_1 = \frac{3m^2}{2}, \ \ where \ \ \bar{\eta}_1 = \sinh(z)/\cosh^2(z) \\
+    &amp;\omega^2_q = m^2(q^2/2 +2), \ \ where \  \ \bar{\eta}_q = e^{iqz} ( 3\tanh^2(z) - 1-q^2  - 3iq\tanh(z) )
+\end{align}\]
+
+<p>where the \(q\) is fixed by periodic boundary conditions as \(L \rightarrow\infty\). This is done by using the asympototic values of tanh (ie \(\pm1\)) as we are interested in when \(x,z\) are large (this is the period boundaries for a large length) and reexpressing the eigenmode with a phase shift \(\bar{\eta}_q = e^{iqz \pm i\delta(q)}\) with the positive and negative values corresponding to the different boundaries. The phase shift is gien by \(\delta(q) = -2\tan^{-1}(3\sqrt{2}q/2m^2-2q^2)\). The periodic boundary condition then becomes \(q_n (mL/\sqrt{2}) + \delta(q_n) = 2\pi n\) with the discrete \(q\) becoming a continuum as the size of the system tends to infinity.</p>
+
+<p>Therefore the energy of the family of quantum states to be,</p>
+
+\[\begin{equation}
+    E_{N_M} = V[\phi_S] + (N_1 + 1)2\hbar m\sqrt{\frac{3}{2}} + m\hbar \sum_{q_n}(N_{q_n} + 1/2)\sqrt{q_n^2/2 + 2}
+\end{equation}\]
+
+<p>however, this analysis just ignores the zero mode, which was earlier mentioned to cause issues as we are no longer confined to the vicinity of a classical solution. Luckily we can ignore it for the moment, the full treatment is rather subtle and Fadeev-Popov gauge fixing to integrate over the orthogonal sectors. The reason we can ignore it is because when the full treatment is done it is shown to affect the \(O(\lambda)\) order which we ignore here in the limit that the coupling is weak.</p>
+
+<p>We will interpret the zero quanta \({N_m} = 0\) to be the state of the quantum kink particle at rest - so it seems like we could intepret it as a particle!. Well kinda yes, but we can now show that it has the expected features of an extended particle. The next excited mode is when the \(N_1\) mode is excited once, which has energy \(E = E_S + m\hbar\). If this mode is occupied further then we have have a higher excited state of the soliton. If the \(N_{n\ge 2}\) state is excited, these have different interpretations. They can be thought of as the scattering states of the mesons of the theory (the fluctuations around the actual vacuum) in the presence of the kink. The modes \(\bar{\eta}\) can be considered to be the reduced one particle wavefunctions and energies of the mesons when the scatter off the kink, resulting in a phase shift of \(2\delta(q)\). This can be seen from looking at the energy,</p>
+
+\[\begin{equation}
+    \hbar \omega_q = \hbar \sqrt{\frac{1}{2}m^2q^2 + 2m^2}
+\end{equation}\]
+
+<p>which is the kinetic energy for a meson of momentum \(\hbar mq/\sqrt{2}\) and mass \(\sqrt{2}\hbar m\). The mesons arise from performing the exact same analysis, but around the vacuum state rather than the soliton solution. In this interpretation, the kinetic energy of the kink is not included in our expression \(E_{N_M}\), because to this order \(O(\lambda^0)\) the kink is static and the mesons simply scatter off of it. This is because the kink mass (which hasnt been properly shown yet but even from our classical interpretation) goes as \(1/\lambda\) so in the weak coupling limit we can make this assumption.</p>
+
+<h2 id="mass-of-the-quantum-kink">Mass of the Quantum Kink</h2>
+
+<p>So we have, to order \(O(\lambda^0)\) the energy of the particle, so to get around the divergence when calculating the lowest energy level, we normally subtract the lowest energy state of the kink from the vacuum energy. We wont go through in so much detail how to get the vacuum energy because it follows the same route and is easier! We will have the classical energy (which will be zero) and the normal harmonic oscillator states around this energy arising from the operator \((-\partial^2/\partial x^2 + 2m)\) acting on the fluctuations around the minima - it should now hopefully be more clear why the \(N \ge 2\) states are scattering solutions. This has the normal oscillatory solutions with normal periodic boundary conditions \(k_nL = 2\pi n\).</p>
+
+\[\begin{equation}
+    E_0 - E_{vac} = \frac{2\sqrt{2}m^3}{3\lambda} + \frac{1}{2}\hbar \sqrt{\frac{3}{2}} + m\hbar \sum_{n} \frac{1}{2}\sqrt{q_n^2/2 + 2} - \sqrt{k_n^2 + 2m^2}
+\end{equation}\]
+
+<p>So in order to try and deal with the diverging part that we are used to, we now have to carefully subtract two diverging sums by relating the two boundary conditions on \(q_n\) and \(k_n\) and dropping terms of order \(1/L\). Our final result is,</p>
+
+\[\begin{equation}
+    E_0 - E_{vac} = \frac{2\sqrt{2}m^3}{3\lambda} + \frac{1}{2}\hbar \sqrt{\frac{3}{2}} - \frac{3\hbar m}{\pi \sqrt{2}}  - \frac{6m\hbar}{4\pi\sqrt{2}} \int dp \ \frac{p^2 + 2}{(p^2 + 1)\sqrt{p^2 +4}}
+\end{equation}\]
+
+<p>which slightly altrs the constants out the front. It however still ends up diverging - whoops! It is only logarithmically diverging now, so it is here where we can add counter terms to cancel out the infinity. Essentially this process is just normal ordering but on the field squared rather than the constant so \(:\phi^4: = \phi^4 - A\phi^2 - B\) and \(:\phi^2: = \phi^2 - C\). This is how renormalisation was done before Wilson came along and is a standard particle physics technique, with this affecting the vacuum sector of our theory as well.</p>
+
+<p>Going through to solve this I will briefly outline the technique as presented in Rajaramen chapter 5.4 and then present a slightly different one that uses a bit of functional integral knowledge. The effect of this normal ordering on the Hamiltonian is rather simple and just gives,</p>
+
+\[\begin{equation}
+    :H: = H - \int dx \ \frac{1}{2} \delta m \phi^2 + D
+\end{equation}\]
+
+<p>and we just need to work out what these constants are through performing perturbation theory to order \(\lambda\) (which is equivalent to only counting one loop diagrams). This will then give a shift of all energy levels \(\bar{E}_0\) and \(\bar{E}_{vac}\), and the energy of the kink will be the difference of these new renormalised energies. In a weird way this procedure slightly makes sense where any divergence can be dealt with by introducing another term that diverges in a similar way (ie is the same function with a different constant) and resulting in an overall shift of variables. Interestingly these constants can be infinite, resulting in a changing of the infinite bare mass by an infinite shifting which results in the actual parameter \(M\) that is possible to measure in experiment.</p>
+
+<p>We are essentially trying to figure out how much our squared term diverges, we are finding the 2 point Greens function which gives the average of this. Expanding this to order \(\lambda\) gives the one loop diagram which will be given by the Feynman rules, and is found to be</p>
+
+\[\begin{equation}
+  \int \frac{dpd\omega}{(2\pi^2)} \frac{e^{ikx + i\omega t}}{\omega^2 + p^2 + 2m^2} = A\int \frac{dp}{2\pi} \frac{1}{\sqrt{p^2 + 2m^2}} + O(\lambda^2)
+\end{equation}\]
+
+<p>However all this talk of shifting and perturbation is not my strong point - I much prefer some functional integration. So by performing saddle point analysis on our expanded action around the classical configuration, we can express this as an effective action.</p>
+
+\[\begin{align}
+S_{eff} &amp;= S_0 + \int dxdt \eta (\Delta^2 + \frac{d^2V}{d\phi^2}) \eta = s_0 + Tr(\ln(\omega^2 + p^2 + \frac{d^2V}{d\phi^2})) \\
+&amp; = S_0 + Tr(\ln(G_0) + \ln(1+ G^{-1}_0(\frac{d^2V}{d\phi^2} - 2m^2)))  
+\end{align}\]
+
+<p>where \(G_0 = \omega^2 - p^2 + m^2\). From which we can identify the mass shift as being from the second logarithm in the trace. which can be expanded in terms of Feynman diagrams as the one loop with various external potential connections - sort of similar to an RPA approximation type thing. We can therefore use this expansion to get the contribution to order \(\lambda\) which turns out to be a tadpole diagram as explained earlier. Lifting the next bit from one of the cited papers (the first link given),</p>
+
+<figure class="align-center">
+<img src="../images/Solitons/expansion.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>it is the trace that enforces the loop, as we take the sum over the Green’s function that start and end at the same point due to us taking the diagonal elements. So having obtained what the renormalised constant energy difference is we can finally find our rest mass when none of the quantum modes are occupied.</p>
+
+\[\begin{equation}
+    M = \frac{2\sqrt{2}m^3}{3\lambda} + \frac{1}{2}\hbar \sqrt{\frac{3}{2}} - \frac{3\hbar m}{\pi \sqrt{2}} - \frac{3\sqrt{2}m\hbar}{4\pi} \int dp \frac{p^2 + 2}{\sqrt{p^2 +1}(p^2 +4) } - \frac{1}{\sqrt{p^2 + 2}}
+\end{equation}\]
+
+<p>Believe it or not, this integral is now do-able and the final result is</p>
+
+\[\begin{equation}
+    M = \frac{2\sqrt{2}m^3}{3\lambda} + m\hbar ( \frac{\sqrt{3}}{6\sqrt{2}} - \frac{3}{\pi\sqrt{2}}) + O (\lambda \hbar^2)
+\end{equation}\]
+
+<p>So after quite a lot of effort we have quantised the soliton!!</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>Rajaramen’s book really is the best resource on this stuff, there isnt many other resources that are as readable! I have mainly focused on chapter 2 and 5. Instanton techniques which describe similar behaviour are also in Altland and Simon Chapter 3 - but this is before going into a full field description but is useful nonetheless. I have put in some webpages that go through this topic, the first is a more thorough examination of the renormalisation of the soliton mass</p>
+
+<p><a href="https://cds.cern.ch/record/558052/files/0206047.pdf">https://cds.cern.ch/record/558052/files/0206047.pdf</a></p>
+
+<p>The second is a more thorough lecture course, with what I covered more focused on the first section</p>
+<p><a href="https://www.damtp.cam.ac.uk/user/examples/3P11e.pdf">https://www.damtp.cam.ac.uk/user/examples/3P11e.pdf</a></p>
+
+<p>David Tong has notes but this strays pretty rapidly into higher dimensional trickery.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

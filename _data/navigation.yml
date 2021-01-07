@@ -4,7 +4,7 @@ main:
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "Topic Notes"
     url: /physnote/
-  - title: "Book Notes"
+  - title: "Paper Notes"
     url: "/books/"
   - title: "Blog"
     url: /blogtags/

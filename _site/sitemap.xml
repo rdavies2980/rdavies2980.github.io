@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/test/</loc>
-<lastmod>2020-11-10T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/Soliton/</loc>
+<lastmod>2020-12-02T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/_posts/2020-11-10-test/</loc>
+<loc>http://localhost:4000/Stitching/</loc>
+<lastmod>2021-01-05T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Operators/</loc>
+<lastmod>2021-01-06T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/_posts/2020-12-02-Soliton/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/_posts/2021-01-05-Stitching/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/_posts/2021-01-07-Operators/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/EG98/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/genphys/</loc>
@@ -23,6 +40,9 @@
 <loc>http://localhost:4000/RG/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/Solitons/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -36,9 +56,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/physnote/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/testingthings/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/notes/Glazman.pdf</loc>
@@ -55,5 +72,9 @@
 <url>
 <loc>http://localhost:4000/assets/notes/Renormalisation_Group.pdf</loc>
 <lastmod>2020-11-19T09:29:57+00:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/notes/Solitons.pdf</loc>
+<lastmod>2020-12-19T00:24:18+00:00</lastmod>
 </url>
 </urlset>

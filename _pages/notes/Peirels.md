@@ -29,7 +29,7 @@ These notes will go through the response functions for generic 1D systems, showi
 
 ## Response Function of a 1DEG #
 
-### Responding To External Field At Zero Temperature
+### External Field At Zero Temperature
 
 To understand the reason why the phenomenon occurs, we need to examine the response of a 1D Electron Gas. This is done within the confines of linear response theory by asking how a time independent potential, $$\phi(r)$$, affects an electron gas. This will cause the charge density to rearrange to a more optimal position, and we express this as an induced charge $$\rho_{ind}(r)$$.  These two quantity are related by the Lindhard response function (for static perturbations),
 
@@ -297,7 +297,7 @@ Therefore we have managed to show the two most distinctive features of the charg
 
 
 
-## Competing Instabilities - This Town Isn't Big Enough For The Two Of Us
+## Competing Instabilities
 
 As a final note about this analysis shown above, we have shown that the susceptibility of a 1D electron gas diverges at a certain wavevector and formulated how it diverges at a non-zero temperature. We then found a temperature at which this diverging susceptibility causes problems with the induced density of electrons is infinitely changed by an external field. Having done this, an actual system was considered and shown to be described by the Fròlich Hamiltonian and the equations of motion for the lattice found. This showed that the energy cost of occupying a certain phonon mode becomes zero and so this mode will become macroscopically occupied and a temperature at which this occurs was found.
 

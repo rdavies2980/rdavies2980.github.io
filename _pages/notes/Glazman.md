@@ -60,7 +60,9 @@ as this is what obeys the boundary conditions and so the new equation we are dea
 
 $$
 \begin{align}
-    -\frac{\hbar^2}{2m} \nabla^2\psi(x) + \epsilon_n(x) =  E \psi(x) + &\frac{\hbar^2}{2m}\Big( 2\partial_x\psi_x(y)\frac{1}{\phi_x(y)}\partial_x\phi_x(y) + \psi_x(y)\frac{1}{\phi_x(y)}\frac{d^2\phi_x(y)}{dx^2} \Big) \\ & where \ \ \epsilon_n(x) = \pi^2n^2\hbar^2/2md^2(x)
+    -\frac{\hbar^2}{2m} \nabla^2\psi(x) + \epsilon_n(x) = E \psi(x) + \frac{\hbar^2}{2m}\Big( 2&\partial_x\psi_x(y)\frac{1}{\phi_x(y)}\partial_x\phi_x(y) \\
+    &+ \psi_x(y)\frac{1}{\phi_x(y)}\frac{d^2\phi_x(y)}{dx^2} \Big) \\
+    \ \ \ \epsilon_n(x) = \pi^2n^2\hbar^2/2md^2(x)
 \end{align}
 $$
 
@@ -136,7 +138,7 @@ and as we only care about solutions when $$E$$ (which is the parameter we can ch
 So going to maths books we can find that for an equation:
 
 \begin{equation}
-    -f''(z) - \frac{1}{4}z^2f(z) = \mathcal{E}f
+    -f^{\prime\prime}(z) - \frac{1}{4}z^2f(z) = \mathcal{E}f
 \end{equation}
 
 one pair of the asymptotic solutions in energy are:

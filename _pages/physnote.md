@@ -24,70 +24,6 @@ feature_row:
 
 <div class="feature__wrapper">
 
-    <div class="feature__item--left">
-      <div class="archive__item">
-
-          <div class="archive__item-teaser" >
-            <img src="/images/Peierls/Renormcolor.png"/>
-          </div>
-
-
-        <div class="archive__item-body">
-
-            <h2 class="archive__item-title" style="padding-top: -1em">Peierls Instability</h2>
-
-
-
-            <div class="archive__item-excerpt">
-              <p>These notes are on the Peierls Instability, a phenomenon that ensures that simple pictures of metals do not work in 1D. The process outlined of diverging susceptibility resulting in a new phase is quite general and the analysis here mirrors that done in superconductors but in a more physically intuitive way. </p>
-              <p>Contains use of second quantised operators throughout, with linear response ideas stated.</p>
-              <p style="text-align: center"><a class="btn btn--Peierls btn--large" href="/Peierls/">Read More</a> </p>
-
-            </div>
-
-
-
-        </div>
-      </div>
-    </div>
-
-</div>
-
-<div class="feature__wrapper">
-
-
-    <div class="feature__item--right">
-      <div class="archive__item">
-
-          <div class="archive__item-teaser" >
-            <img src="/images/RGnotescolour.png"/>
-          </div>
-
-
-        <div class="archive__item-body">
-
-            <h2 class="archive__item-title">Renormalisation Group</h2>
-
-
-
-            <div class="archive__item-excerpt">
-              <p>The Renormalisation Group is often said to be one of the crowning achievements of physics, tying up issues of divergences in many theories and giving an appealing basis for them. It is a theory about theories and deserves its placement in the pantheon of theoretical physics.</p>
-              <p>Contains a wide variety of techniques, with the first half of the notes requiring knowledge of partition functions and quantum mechanics to an undergraduate level. The latter half uses functional integration but is not crucial to understanding the basic principle.</p>
-              <p style="text-align: center"><a class="btn btn--RG btn--large" style="text-align: center" href="/RG/">Read More</a></p>
-
-            </div>
-
-
-
-        </div>
-      </div>
-    </div>
-
-
-</div>
-
-<div class="feature__wrapper">
-
 
     <div class="feature__item--left">
       <div class="archive__item">
@@ -119,6 +55,72 @@ feature_row:
 
   </div>
 
+
+<div class="feature__wrapper">
+
+    <div class="feature__item--left">
+      <div class="archive__item">
+
+          <div class="archive__item-teaser" >
+            <img src="/images/Peierls/Renormcolor.png"/>
+          </div>
+
+
+        <div class="archive__item-body">
+
+            <h2 class="archive__item-title" style="padding-top: -1em">Peierls Instability</h2>
+
+
+
+            <div class="archive__item-excerpt">
+              <p>These notes are on the Peierls Instability, a phenomenon that ensures that simple pictures of metals do not work in 1D. The process outlined of diverging susceptibility resulting in a new phase is quite general and the analysis here mirrors that done in superconductors but in a more physically intuitive way. </p>
+              <p>Contains use of second quantised operators throughout, with linear response ideas stated.</p>
+              <p style="text-align: center"><a class="btn btn--Peierls btn--large" href="/Peierls/">Read More</a> </p>
+
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- <div class="feature__wrapper">
+
+
+    <div class="feature__item--right">
+      <div class="archive__item">
+
+          <div class="archive__item-teaser" >
+            <img src="/images/RGnotescolour.png"/>
+          </div>
+
+
+        <div class="archive__item-body">
+
+            <h2 class="archive__item-title">Renormalisation Group</h2>
+
+
+
+            <div class="archive__item-excerpt">
+              <p>The Renormalisation Group is often said to be one of the crowning achievements of physics, tying up issues of divergences in many theories and giving an appealing basis for them. It is a theory about theories and deserves its placement in the pantheon of theoretical physics.</p>
+              <p>Contains a wide variety of techniques, with the first half of the notes requiring knowledge of partition functions and quantum mechanics to an undergraduate level. The latter half uses functional integration but is not crucial to understanding the basic principle.</p>
+              <p style="text-align: center"><a class="btn btn--RG btn--large" style="text-align: center" href="/RG/">Read More</a></p>
+
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+</div> -->
+
+
   <div class="feature__wrapper">
 
 
@@ -126,7 +128,7 @@ feature_row:
         <div class="archive__item">
 
             <div class="archive__item-teaser" >
-              <img src="/images/PathInt/FieldIntegral.png"/>
+              <img src="/images/Solitons/BackgroundSolitons1.png"/>
             </div>
 
 
@@ -139,7 +141,7 @@ feature_row:
               <div class="archive__item-excerpt">
                 <p> Solitons present a unique non-linear solution to certain differential equations and crucially allow us to access solutions that cannot be obtained perturbatively.</p>
                 <p> This is mean to be a more gentle introduction at a latter year undergraduate but comfort with operators is crucial. The introduction of field integrals in the second half of the notes is more an aside an again more of an introduction to the idea.</p>
-                <p style="text-align: center"><a class="btn btn--Path btn--large" style="text-align: center" href="/PathInt/">Read More</a></p>
+                <p style="text-align: center"><a class="btn btn--Solitons btn--large" style="text-align: center" href="/Solitons/">Read More</a></p>
 
                 </div>
 
