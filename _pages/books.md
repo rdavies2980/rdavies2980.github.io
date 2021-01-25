@@ -11,24 +11,13 @@ feature_row:
     btn_label: "More Info"
     btn_class: "btn--inverse"
 feature_row2:
-  - image_path: ../images/relax.jpg
+  - image_path: ../images/chillvibes.jpg
     title: "Applying voltage sources to Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev B 1998"
-    url: /Peierls/
+    url: /EG98/
     btn_label: "More Info"
     btn_class: "btn--inverse"   
-  - image_path: ../images/relax.jpg
-    title: "Electroneutrality and the Friedel Sum Rule in a Luttinger Liquid"
-    excerpt: "Egger and Grabert - Phys Rev Lett 1997"
-    url: /Peierls/
-    btn_label: "More Info"
-    btn_class: "btn--inverse"  
-  - image_path: ../images/relax.jpg
-    title: "Voltage-Biased Quantum Wire with Impurities"
-    excerpt: "Egger and Grabert - Phys Rev Lett 1996"
-    url: /Peierls/
-    btn_label: "More Info"
-    btn_class: "btn--inverse"
+
 
 feature_row1:
   - image_path: ../images/relax.png
@@ -38,6 +27,19 @@ feature_row1:
     btn_label: "More Info"
     btn_class: "btn--inverse"
 ---
+
+<!-- - image_path: ../images/relax.jpg
+  title: "Electroneutrality and the Friedel Sum Rule in a Luttinger Liquid"
+  excerpt: "Egger and Grabert - Phys Rev Lett 1997"
+  url: /Peierls/
+  btn_label: "More Info"
+  btn_class: "btn--inverse"  
+- image_path: ../images/relax.jpg
+  title: "Voltage-Biased Quantum Wire with Impurities"
+  excerpt: "Egger and Grabert - Phys Rev Lett 1996"
+  url: /Peierls/
+  btn_label: "More Info"
+  btn_class: "btn--inverse" -->
 
 <div class="feature__wrapper">
 
@@ -52,9 +54,9 @@ feature_row1:
 
             <div class="archive__item-excerpt">
             <p></p>
+            <h3>Paper Notes</h3>
               <p>This is where I have put my notes on various papers and books, these may not be as helpful as my general topic notes, but might be useful to someone! <span style="color: red"> Throughout these notes, parts that are written in red font are notes to myself so take these with a grain of salt.</span> </p>
               <p></p>
-              <h3>Paper Notes</h3>
             </div>
 
 

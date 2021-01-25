@@ -1,0 +1,677 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Solving without translational invariance - Operators | More is Difficult</title>
+<meta name="description" content="Dealing with localised terms in the Hamiltonian by stitching operators">
+
+
+  <meta name="author" content="Rose Davies">
+  
+  <meta property="article:author" content="Rose Davies">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="More is Difficult">
+<meta property="og:title" content="Solving without translational invariance - Operators">
+<meta property="og:url" content="http://localhost:4000/maths%20heavy/techniques/Operators/">
+
+
+  <meta property="og:description" content="Dealing with localised terms in the Hamiltonian by stitching operators">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-01-07T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/maths%20heavy/techniques/Operators/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Rose Davies",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="More is Difficult Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          More is Difficult
+          <span class="site-subtitle">Condensed Matter Physics</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/physnote/">Topic Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/books/">Paper Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+  <div class="sidebars_underline">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/selfie.jpg" alt="Rose Davies" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Rose Davies</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Trying to understand physics and help others do the same!</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Birmingham, UK</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:rxd440@student.bham.ac.uk">
+            <meta itemprop="email" content="rxd440@student.bham.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Solving without translational invariance - Operators">
+    <meta itemprop="description" content="Dealing with localised terms in the Hamiltonian by stitching operators">
+    <meta itemprop="datePublished" content="2021-01-07T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Solving without translational invariance - Operators
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.</p>
+
+<p>The way that will be looked into here is due to terms in the Hamiltonian of our system being local. The overall technique remains the same, solving either side and then gluing the pieces together. This time, however, instead of performing this to the Green’s function we will glue operators. There are many parallels between the two techniques though!</p>
+
+<p>In fact the technique that will be explored shares a lot of similarities with the simpler quantum mechanics problem of a particle with a potential barrier. Through application of the conditions of continuity of the wavefunction and its derivatives we can relate the coefficients of the wavefunction. The generalisation of this to a full field theory perspective is interesting as again it now requires us to deal with a situation without full translational symmetry - meaning the usual approach must be altered slightly.</p>
+
+<p>This example is taken from the notes on refermionisation in my Egger-Grabert 1998 paper, although Chamon, Freed, and Wen’s 1996 paper is a lot more clear.</p>
+
+<h2 id="the-hamiltonian">The Hamiltonian</h2>
+
+<p>So we introduce our Hamiltonian with no context</p>
+
+\[\begin{equation}
+    H = \int dx \psi^{\dagger}\partial_x \psi + V(c + c^{\dagger})(\psi(0) + \psi^{\dagger}(0))
+\end{equation}\]
+
+<p>The kinetic term has that particular form as it is a sum over modes with a linear dispersion (thats been Fourier transformed back). There is an infinitely thin barrier at the origin that separates two regions in which the system is non-interacting. Interestingly because this comes from a refermionisation there is a Majorana mode from \(c + c^{\dagger}\) (which can be seen to be equal it Hermitian conjugate and therefore is its own antiparticle) meant to ensure that the combination in the Hamiltonian behaves in a fermionic manner. This is because \(\psi\) is actually the exponential of a bosonic field and can therefore cannot possess fermionic statistics.</p>
+
+<p>So after all these caveats about what the system is, we now just have a scattering problem which can be solved in a variety of ways. Here we will find the equations of motion for the system, where the majorana mode has been renamed \(f\)</p>
+
+\[\begin{equation}
+    -i\partial_t \phi = [H, \phi] = i\partial_x \phi + Vf\delta(x), \quad \quad -i\partial_t \phi^{\dagger} = [H, \phi] = i\partial_x \phi^{\dagger} - Vf\delta(x),
+\end{equation}\]
+
+<p>and the time dependence of the Majorana mode must also be found and solved for,</p>
+
+\[\begin{equation}
+    -i\partial_t f = [H,f] = V(\psi(0) - \psi^{\dagger}(0))
+\end{equation}\]
+
+<h3 id="solving-the-individual-pieces">Solving the individual pieces</h3>
+
+<p>Away from \(x=0\) the field can be found and solved for as it must satisfy the equation \((i\partial_t + i\partial_x)\psi = 0\), with the form of \(\psi\) being able to be found by taking the Fourier transform into frequency space.</p>
+
+\[\sum_{\omega} e^{i\omega t} (\omega + i\partial_x)A_{\omega}(x) = 0\]
+
+<p>As this is true for all \(\omega\) we can see that \(-\omega A_{\omega}(x) = i\partial_xA_{\omega}(x)\). This can be solved to get \(A_{\omega}(x) = a_{\omega}e^{i\omega x}\).</p>
+
+<p>This must can be different either side of \(x=0\) so in general our solution will be,</p>
+
+\[\begin{equation}
+    \psi(x,t) = \frac{1}{L}\sum_{\omega} e^{i\omega(t -x)} \left\{
+                \begin{array}{ll}
+                  a_{\omega}, \quad (x&lt;0)\\
+                  b_{\omega}, \quad (x&gt;0)\\
+                \end{array} = \frac{1}{L}\sum_k e^{i\omega(t -x)} \ ( \Theta(-x)a_{\omega} + \Theta(x)b_{\omega})
+              \right.
+\end{equation}\]
+
+<h3 id="joining-the-parts-together">Joining the parts together</h3>
+
+<p>To find the boundary condition to join these two solutions together we must solve for \(f\) which involves defining \(\psi(0)\). This must contain parts from our operators either side of our discontinuity and to ensure that our definition of \(\psi(0)\) commutes with its Hermitian conjugate to give a delta function (not 4 times the delta function or whatever). We define \(\psi(0) = (\psi(0^+) + \psi(0^-))/2\), as \(\{a_{\omega},b^{\dagger}_{\omega}\}=1\) in addition to the more obvious commutation relations - hence the \(1/2\). Therefore solving for \(f\) with this definition we can find that,</p>
+
+\[\begin{equation}
+    f_{\omega} = \frac{V}{2\omega}(\psi_{\omega}(0) - \psi_{\omega}^{\dagger}(0)) =  \frac{V}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{\dagger}_{-\omega})
+\end{equation}\]
+
+<p>The \(-\omega\) arises from making sure that the exponentials in our definition of the Fourier series are the same for the operator and its conjugate. Now we plug back into the equations of motion, splitting the full solution up into \(\psi_L(x,t) = \frac{1}{L} \sum_{\omega} e^{i\omega(t- x)} a_{\omega}\) and \(\psi_R\) respectively, joined together by a theta function. This gives,</p>
+
+\[\begin{equation}
+    (i\partial_t + i\partial_x)(\psi_L\Theta(-x) + \psi_R\Theta(x)) = -Vf\delta(x)
+\end{equation}\]
+
+<p>Expanding out and differentiating the step functions gives</p>
+
+\[\begin{equation}
+    \Theta(-x)(i\partial_t + i\partial_x)\psi_L + \Theta(x)(i\partial_t + i\partial_x)\psi_R + i\psi_L\partial_x\Theta(-x) + i\psi_R\partial_x\Theta(x) =  -Vf\delta(x)
+\end{equation}\]
+
+<p>From the defining differential equation for \(\psi\), we can see that the first two terms will be zero to give.</p>
+
+\[\begin{equation}
+    i(\psi_R - \psi_L)\delta(x) = -2Vf(x)\delta(x)
+\end{equation}\]
+
+<p>therefore we can equate the two coefficients of the delta function. For the mathematicians, everything is secretly under an integral so this process actually makes sense. Finally we take the Fourier transform of our result to get a relation between \(a_{\omega}, b_{\omega}, a^{\dagger}_{\omega}, b^{\dagger}_{\omega}\),</p>
+
+\[\begin{equation}
+    i(b_{\omega} - a_{\omega}) = -\frac{V^2}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{\dagger}_{-\omega})
+\end{equation}\]
+
+<p>and the procedure can be repeated on the equation of motion for the conjugate \(\psi^{\dagger}\).</p>
+
+\[\begin{equation}
+    i(b^{\dagger}_{-\omega} - a^{-\dagger}_{\omega}) = \frac{V^2}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{-\dagger}_{\omega})
+\end{equation}\]
+
+<p>This gives two equations from which we can add to find an expression for \(b^{\dagger}_{\omega}\). Substituting in and performing the trick of adding and subtracting 1 in the from of \(i\omega +V^2/i\omega +V^2\) to obtain a relations between the scattering components,</p>
+
+\[\begin{equation}
+    2b_{\omega} = ( 1 + \frac{i\omega- V^2}{i\omega + V^2})a_{\omega} + ( 1 - \frac{i\omega - V^2}{i\omega+ V^2})a^{-\dagger}_k
+\end{equation}\]
+
+<h3 id="small-sprinkle-of-analysis">Small sprinkle of analysis</h3>
+
+<p>So what we have done here is relate the operators either side of a barrier - the typical quantum mechanical problem in the field theoretic way. Solving this problem in QM (see this stack exchange - well up to a minus sign<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>) is a little easier and follows the previous blog post by requiring a discontinuity in the derivative. This problem just requires a little more care to derive.</p>
+
+<p>Just to close this out, I’ll mention some ways in which this relationship is useful and what it can tell us.</p>
+
+<p>As \(b_{\omega}\) creates a particle moving to the left from the right hand side, we can see that the difference between the coefficients of the operators on the left hand side of the discontinuity is the phase shift caused by scattering. A particle incident on the barrier will be reflected with a shift of its coefficient. We can summarise the shift as</p>
+
+\[e^{i\alpha_{\omega}} = e^{-i\alpha_{\omega}} = \frac{i\omega - V^2}{i\omega + V^2}\]
+
+<p>This can be picked out from the form of our relation and this phase shift is the same as in the quantum mechanical problem. As another point of what we can do with this relation is that expectation values of \(\langle b^{\dagger}b \rangle\) can be evaluated in terms of the other operators (and vice versa) which allows us to solve some problems.</p>
+
+<p>So the one that appears in the Egger-Grabert notes (which this point is lifted from) has boundary conditions of our problem expressed in terms of \(\langle b^{\dagger}b \rangle, \langle a^{\dagger}a \rangle\). This relation is what allows us to relate the two to actually solve the effect of the boundaries on our system.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://physics.stackexchange.com/questions/441616/scattering-by-a-delta-function-well-in-1d">https://physics.stackexchange.com/questions/441616/scattering-by-a-delta-function-well-in-1d</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#boundary-conditions" class="page__taxonomy-item" rel="tag">Boundary Conditions</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#operators" class="page__taxonomy-item" rel="tag">Operators</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#maths-heavy" class="page__taxonomy-item" rel="tag">Maths Heavy</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#techniques" class="page__taxonomy-item" rel="tag">Techniques</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-01-07T00:00:00+00:00">January 7, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Solving+without+translational+invariance+-+Operators%20http%3A%2F%2Flocalhost%3A4000%2Fmaths%2520heavy%2Ftechniques%2FOperators%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmaths%2520heavy%2Ftechniques%2FOperators%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmaths%2520heavy%2Ftechniques%2FOperators%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/maths%20heavy/techniques/Stitching/" class="pagination--pager" title="Solving without translational invariance - Green’s functions
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20heavy/techniques/Stitching/" rel="permalink">Solving without translational invariance - Green’s functions
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          14 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A method for stitching together a patchwork of Green’s functions
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20light/arguments/Soliton/" rel="permalink">Showing that solitons carry fractional charge
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short, intuitive reason can be given to understand why the charge of solitons fractionalise.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

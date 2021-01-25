@@ -40,8 +40,8 @@ feature_row:
 
 
             <div class="archive__item-excerpt">
-              <p> This alternative formulation of quantum physics is a powerful way to formulate problems, especially non-pertubative ones. Attributed to Feynman, it provides some understanding of how quantum behaviour occurs in language removed from linear algebra.</p>
-              <p> This is mean to be a more gentle introduction at a latter year undergraduate but comfort with operators is crucial. The introduction of field integrals in the second half of the notes is more an aside an again more of an introduction to the idea.</p>
+              <p> This alternative formulation of quantum physics is a powerful way to formulate problems. Attributed to Feynman, it provides some understanding of how quantum behaviour occurs in language removed from linear algebra.</p>
+              <p> This is meant to be a more complete set of notes on all of path integrals but is more of an introduction at the moment. The intro is intended to be readable to all. The path integrals is accessible to latter year undergraduates but the field integrals are harder and at a postgrad level.  </p>
               <p style="text-align: center"><a class="btn btn--Path btn--large" style="text-align: center" href="/PathInt/">Read More</a></p>
 
               </div>
@@ -74,7 +74,7 @@ feature_row:
 
             <div class="archive__item-excerpt">
               <p>These notes are on the Peierls Instability, a phenomenon that ensures that simple pictures of metals do not work in 1D. The process outlined of diverging susceptibility resulting in a new phase is quite general and the analysis here mirrors that done in superconductors but in a more physically intuitive way. </p>
-              <p>Contains use of second quantised operators throughout, with linear response ideas stated.</p>
+              <p>Contains use of second quantised operators throughout, with linear response ideas stated. This provides a concrete example of how we investigate a condensed matter model by employing various descriptions of the physics. </p>
               <p style="text-align: center"><a class="btn btn--Peierls btn--large" href="/Peierls/">Read More</a> </p>
 
             </div>
@@ -140,7 +140,7 @@ feature_row:
 
               <div class="archive__item-excerpt">
                 <p> Solitons present a unique non-linear solution to certain differential equations and crucially allow us to access solutions that cannot be obtained perturbatively.</p>
-                <p> This is mean to be a more gentle introduction at a latter year undergraduate but comfort with operators is crucial. The introduction of field integrals in the second half of the notes is more an aside an again more of an introduction to the idea.</p>
+                <p> The first part of these notes is understandable to latter year undergraduates but the full quantisation of the soliton in the second half requires higher level QFT techniques.</p>
                 <p style="text-align: center"><a class="btn btn--Solitons btn--large" style="text-align: center" href="/Solitons/">Read More</a></p>
 
                 </div>

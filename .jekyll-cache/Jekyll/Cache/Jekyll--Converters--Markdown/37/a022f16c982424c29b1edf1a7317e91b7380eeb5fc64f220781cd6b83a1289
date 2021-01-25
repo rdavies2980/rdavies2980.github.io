@@ -1,0 +1,84 @@
+I"B#<p>The concept of a soliton is often only introduced at a graduate level, due to the difficulty of the topics that it appears in. It is probably because of this difficulty that there are many interesting features of a soliton, which is why it’s a shame that it is left til so late to be introduced.</p>
+
+<p>The feature that will be looked at here is about the fractional charge that a soliton carries. Fractional charge means here that the ‘particle’ carries fractions of the bare electric charge \(e\), and this is in spite of an electron not being made up of more fundamental particles (at least it was the last time I checked what high energy physicists are doing). So what is happening here is a different from how a proton is made up of multiple quarks which have fractions of the electric charge \(e\) - this is why these objects are interesting!</p>
+
+<p>The proof of this normally involves quantum field theoretic techniques and was pioneered by Jackiw and Rebbi <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and Su, Schrieffer, and Heeger<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>. The latter group were attempting to describe a material, polyacetylene, and their model became known as the SSH model. It is SSH model that we are going to look at.</p>
+
+<p>The only knowledge needed here is some basic understanding of how chemical bonds work and belief that lowest energy ground state has the form that I will state, which is why this short proof is so unique!</p>
+
+<h2 id="ssh-model">SSH Model</h2>
+
+<p>In physics it is often our task to find the lowest energy state of the system as this is what our system would like to be doing. The SSH model is defined on a linear chain of atoms with chemical bonds being between each site. The lowest energy state turns out to be an alternating pattern of single and double bonds (corresponding to one or two electrons being shared between the atoms<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>) as drawn below for a section of the chain.</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/SSh-A.jpg" style="width: 70%" class="align-center" />
+</figure>
+
+<p>There however is a degeneracy and another possible arrangement of chemical bonds has the exact same energy as the previous state. The degeneracy is whether the alternating single and double bonds starts with a double or single bond</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/SSh-B.jpg" style="width: 70%" class="align-center" />
+</figure>
+
+<p>We will label these two different configurations as \(A\) and \(B\)</p>
+
+<h3 id="adding-kinks">Adding Kinks</h3>
+
+<p>So having found the lowest energy state of the system, we now ask what happens if we mess with them and introduce differences in the pattern of single and double bonds. One of the most simple differences we can imagine is to have two double bonds next to each other and then have the system alternate as normal. This state is perfectly plausible but just may not be the lowest energy state of our system.</p>
+
+<p>These ‘differences’ are called kinks and correspond to our soliton. There are two ways of adding these in as either an extra double bond which here has been placed between sites 3-4</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/SSh-kink.jpg" style="width: 70%" class="align-center" />
+</figure>
+
+<p>or we can introduce an extra single bond in a similar manner - these are the first two types of soliton. The are however kinks also anti-kinks and these depend on which configuration is either side of the defect (or difference). In the above example we have \(A\) on the left and \(B\) on the right, which we will call a kink. The opposite case of \(B\) on the left and \(A\) on the right is called an anti kink.</p>
+
+<p>So we can see that this kink separates a region of the \(A\) configuration and begins the onset of the \(B\) configuration. In 1D these are what solitons are - they are barriers that separate two different regions. Often these are called domain walls (there a lot of terminology for essentially the same thing here). A more familiar example is in magnets where the direction of magnetisation can point in different directions and the way to describe how the regions of different magnetisation move around is through solitons!</p>
+
+<p>A point to note is that these solitons are topological. To figure out why, we need to know that electrons and bonds can hop around - what quantum mechanics says is that there will always be fluctuations around the ground state. There is no way to however try to rearrange the bonds through swapping them that will change our chain with a kink in into a chain of configuration \(A\) (or configuration \(B\)) only. Although you could swap configuration \(A\) to have two double bonds next to each other (ie swapping 4-5 and 3-4) there would be three single bonds next to each other which isnt the same as the kink state.</p>
+
+<p>This is what is meant by topological, that there is no way that the system, when left to its own devices (ie swapping bonds), can get rid of a kink without an external input (ie removing the bond entirely).</p>
+
+<h3 id="normal-is-having-2-kinks">Normal Is Having 2 Kinks</h3>
+
+<p>Having gone through adding one of these solitons, let us now add two double bond defects. From the description of a kink and antikink having different configurations either side of them, adding a kink and an anti-kink must be the only way to have two of these defects in our system</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/SSh-2kink.jpg" style="width: 70%" class="align-center" />
+</figure>
+
+<p>Now for no apparently reason, let us consider what adding one normal electron to configuration \(B\) would look like, and we will specifically add it at sites 2-3,</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/SSh-1elec.jpg" style="width: 70%" class="align-center" />
+</figure>
+
+<p>Comparing the two, in a coincidence noone could have seen coming, they turn out to be identical if we swapped bonds 3-4 and 4-5 (which is an allowed action). Therefore in some way the two kink state is equivalent to adding one electron to the ground state. This means that each kink must carry half the charge of an electron!</p>
+
+<p>Supporting this final step is that we can move each of these kinks arbitrarily far apart by swapping bonds but the system in total will always only have an extra charge of 1. If the 2 solitons were not in the system the there would be one less electron charge and therefore each soliton must be carrying half of the charge.</p>
+
+<h3 id="wrapping-up">Wrapping Up</h3>
+
+<p>So this short little demonstration managed to show that a soliton (as we have defined here as a domain wall between different configurations) carries fractional charge which is quite a deep result. If we changed the ground state on the geometry to be a pattern of bonds that repeated every 3 sites (single-single-double) then the same argument can be applied to show that ‘solitons’ here carry a third of an electron charge.</p>
+
+<p>The solitons in the latter case will correspond to a different model (as SSH doesnt have that ground state!) but a model could be described which contains this triple repeating structure. This can be generalised more to get \(1/n\) of an electron charge for the solitons of various models.</p>
+
+<p>If you’re feeling brave, my notes on solitons are on this site and will explain in a field theoretic way the other strange properties that these excitations have.</p>
+
+<p style="text-align: center"><a class="btn btn--Solitons btn--large" style="text-align: center" href="/Solitons/">Go to Soliton notes</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>R. Jackiw and C. Rebbi, Phys. Rev. D 13, 3398 (1976). <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>W. P. Su, J. R. Schrieffer, and A. J. Heeger, Phys. Rev. Lett. 42, 1698 (1979), and Phys. Rev. B 22, 2099 (1980) <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>There is a subtlty about this as single and double bonds involve two and four electrons respectively, but it is that one of the electrons involved in the bond is bound tightly to the atom/sites and cannot move or hop. The other electron involve can move freely and swap with electrons involved in other bonds and as what we are describing in SSH is conduction electrons these are the only ones we actually care about. This requires a bit more knowledge on how physical chemistry works so I haven’t talked about it in detail - just to point out that there is no contradiction here! <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

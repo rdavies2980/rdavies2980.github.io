@@ -114,6 +114,13 @@
    Author profile and links
    ========================================================================== */
 
+.sidebars_underline {
+  border-bottom: 1px solid $border-color;
+    @include breakpoint($large){
+      border-bottom: none
+    }
+}
+
 .author__avatar {
   display: table-cell;
   vertical-align: top;
@@ -160,6 +167,7 @@
 .author__name {
   margin: 0;
 
+
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -183,6 +191,7 @@
   position: relative;
   display: table-cell;
   vertical-align: middle;
+  padding-bottom: 5px;
   font-family: $sans-serif;
   z-index: 20;
   cursor: pointer;
@@ -204,8 +213,8 @@
   }
 
   button {
-    position: relative;
     margin-bottom: 0;
+
 
     &:before {
       @supports (pointer-events: none) {

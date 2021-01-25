@@ -135,7 +135,7 @@
             </li><li class="masthead__menu-item">
               <a href="/books/">Paper Notes</a>
             </li><li class="masthead__menu-item">
-              <a href="/blogtags/">Blog</a>
+              <a href="/categories/">Blog</a>
             </li><li class="masthead__menu-item">
               <a href="/about/">About</a>
             </li></ul>
@@ -190,7 +190,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          45 minute read
+          57 minute read
         
       </span>
     
@@ -245,7 +245,10 @@ Contents</h4></header>
     </ul>
   </li>
   <li><a href="#integrating-out-around-the-impurity" id="markdown-toc-integrating-out-around-the-impurity">Integrating out around the impurity</a></li>
-  <li><a href="#refermionisation" id="markdown-toc-refermionisation">Refermionisation</a></li>
+  <li><a href="#refermionisation" id="markdown-toc-refermionisation">Refermionisation</a>    <ul>
+      <li><a href="#analysing-the-refermions" id="markdown-toc-analysing-the-refermions">Analysing the refermions</a></li>
+    </ul>
+  </li>
   <li><a href="#references" id="markdown-toc-references">References</a></li>
 </ul>
 
@@ -253,6 +256,8 @@ Contents</h4></header>
 </aside>
 
 <p><em>This paper aims to generalise the Landauer transmission approach to 1D wires where there is strong interactions between the electrons. A single channel wire with a single impurity that is adiabatically connected to external voltage sources is investigated. They look into whether the voltage drop across the impurity is always localised to the impurity. They claim that this approach is more general than Kubo based investigations<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">2</a></sup> and doesnt require the assumption that \(K=1\) models ideal reservoirs. </em></p>
+
+<p>The main interesting part of this paper is in the ‘<strong>looking into reservoirs</strong>’ section which is where the conditions are derived and the ‘<strong>examples of applying</strong>’ section gives some simple results (that were expected) that can be obtained. The two later sections ‘<strong>integrating out</strong>’ and ‘<strong>refermionisation</strong>’ are much more subtle and involved examples of applying the boundary conditions, showing that there is a wide range of application. The intro section just goes into a bit more depth as to how the Luttinger Liquid Hamiltonian is set up but the main point is to state our starting Hamiltonian. Good luck with this!</p>
 
 <h2 id="setting-up-our-hamiltonian">Setting Up Our Hamiltonian</h2>
 
@@ -265,20 +270,24 @@ Contents</h4></header>
     \partial_x\theta)^2 ]
 \end{equation}</p>
 
-<p>(see Luttinger Liquid notes for details). We can include interactions with \(H_{int} = u_0/2 \int dx \rho^2(x)\) (so already assuming contact interactions from the usual 4 electron operator form) where \(\rho(x)\)is the difference in density from its usual equilibrium value \(k_F/\pi\). The backscattering processes (ie the \(2k_F\) part in the interaction) is found to be RG irrelevant and the density in the interacting part of the Hamiltonian can be taken to be the lowest order \(\rho = \rho_L + \rho_R\) and means that the spacial derivative of our displacement field is the density \(\sqrt{\pi}\rho = \partial_x \theta\). We therefore get our full interacting Hamiltonian,</p>
+<p>We can include interactions with \(H_{int} = u_0/2 \int dx \rho^2(x)\) (so already assuming contact interactions from the usual 4 electron operator form) where \(\rho(x)\)is the difference in density from its usual equilibrium value \(k_F/\pi\). The backscattering processes (ie the \(2k_F\) part in the interaction) is found to be RG irrelevant and the density in the interacting part of the Hamiltonian can be taken to be the lowest order \(\rho = \rho_L + \rho_R\) and means that the spacial derivative of our displacement field is the density \(\sqrt{\pi}\rho = \partial_x \theta\). We therefore get our full interacting Hamiltonian,</p>
 
 <p>\begin{equation}
     H_{LL} = \frac{\hbar \nu}{2} \int_{-L/2}^{L/2} dx  [ K(\partial_x\phi)^2 + (
     \partial_x\theta)^2/K ]
 \end{equation}</p>
 
-<p>where we assume translational symmetry in our system so that our velocity of excitations equals \(v = v_F/K\). An impurity is included in its usual form of electron backscattering, which when bosonised gives \(H_{imp} = \lambda \cos(\sqrt{4\pi}\theta(x=0))\).</p>
+<p>where we assume translational symmetry in our system so that our velocity of excitations equals \(v = v_F/K\). An impurity is included in its usual form of electron backscattering, which when bosonised gives \(H_{imp} = \lambda \cos(\sqrt{4\pi}\theta(x=0))\). All of this is a standard set up for Luttinger Liquids and any resource on Luttinger liquids will show in more detail how this is constructed. For this specific case, the link at the end of these notes shows a very explicit construction.</p>
 
 <h2 id="looking-into-reservoirs">Looking Into Reservoirs</h2>
 
 <p>This wire is connected to reservoirs held at chemical potentials \(\mu_{L,R}\), where good screening of higher dimensional (\(d&gt;1\)) Fermi liquids means that the difference between the two chemical potentials divided by charge is the two terminal voltage (<span style="color:red"> Not quite sure why the screening is needed? Seems pretty valid to say quite generally, I guess its sort of assuming the two reservoirs are far enough apart</span>).</p>
 
-<p>Our aim here is to re-express the interaction of the Luttinger Liquid as an interaction with a spatially varying electrochemical field, which we will call \(\varphi(x)\). This reformulation allows us to visualise the system as a capacitor, with its two ends held at their respective voltages separated by a dielectric. This allows to to relate how the capacitor system would behave with extra charge to the underlying question of how Luttinger Liquids behave.</p>
+<p>Our aim here is to re-express the interaction of the Luttinger Liquid as an interaction with a spatially varying electrochemical field, which we will call \(\varphi(x)\). This reformulation allows us to visualise the system and the gate that provides the constriction as a capacitor shown in the figure below <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">3</a></sup></p>
+
+<figure class="align-center">
+<img src="../images/EG/capactior.png" style="width: 70%" class="align-center" />
+</figure>
 
 <p>The Luttinger Liquid parameter has its usual form \(K=(1+u_0/\pi\hbar v_F)^{-1/2}\), where \(u_0\) is the strength of the contact interaction. They then relate the interaction term of the Hamiltonian to the charging energy of a capacitor,</p>
 
@@ -315,15 +324,15 @@ Contents</h4></header>
     \rho(x) = K^2[\rho^0_L + \rho^0_R] =  \rho_L(x) + \rho_R(x)
 \end{equation}</p>
 
-<p>as our full density can always be split up into left and right movers. This is the crucial expression that is examined in the other papers, and in my notes on those papers! Note that the electrostatic potential only enters the equations as the sum of the densities of right and left movers, which implies that the difference of these densities (current) remains invariant,</p>
+<p>as our full density can always be split up into left and right movers. This is the crucial expression of this paper! Note that the electrostatic potential only enters the equations as the sum of the densities of right and left movers, which implies that the difference of these densities (current) remains invariant,</p>
 
 <p>\begin{equation}
     \rho_R - \rho_L = \rho^0_R - \rho^0_L.
 \end{equation}</p>
 
-<p>Multiplying this by the charge and Fermi velocity gives the current which can be computed at any point because of the continuity equation.</p>
+<p>Multiplying this by the charge and Fermi velocity gives the current which can be computed at any point because of the continuity equation. Therefore charge in a Luttinger Liquid connected to leads is not renormalised by the interaction - a point that will be made and showed multiple times.</p>
 
-<p>Having got these relations between the bare and full densities, we can rewrite our equations in terms of the bare left/right densities.</p>
+<p>Having got these relations between the bare and full densities, we can rewrite our equations in terms of the bare left/right densities with a bit of algebra,</p>
 
 \[\begin{align}
     2\rho^0_R(x) &amp;= (K^{-2} +1)\rho_R(x) + (K^{-2} -1) \rho_L(x)\\
@@ -351,7 +360,7 @@ Contents</h4></header>
 
 <h3 id="displacement-field-formulation">Displacement Field Formulation</h3>
 
-<p>Returning to the actual boundary conditions, they can be rewritten in a more familiar way by using the correspondence between the sum and difference of the full right/left densities and the density and current. They chose the normalise it in the following way,</p>
+<p>Returning to the actual boundary conditions, they can be rewritten in a more familiar way by using the correspondence between the sum and difference of the full right/left densities and the density and current (again a standard Luttinger Liquid approach). They choose to normalise it in the following way,</p>
 
 <p>\begin{equation}
     \rho_R + \rho_L = \partial_x\theta/\sqrt{\pi}, \quad \quad \rho_R - \rho_L = \partial_t\theta/v_F\sqrt{\pi}
@@ -360,8 +369,8 @@ Contents</h4></header>
 <p>These densities (the sum) and current (the difference) can be expressed as the time/spatial derivative of the bosonic displacement field \(\theta\). We therefore arrive at the radiative boundary conditions:</p>
 
 \[\begin{align}
-    \Big( \frac{1}{K^2}\partial_x + \frac{1}{v_F}\partial_t \Big) |\theta(x=-L/2, t)\rangle &amp;= \frac{eU_1}{\sqrt{\pi}\hbar v_F}\\
-    \Big( \frac{1}{K^2}\partial_x - \frac{1}{v_F}\partial_t \Big) |\theta(x=L/2, t)\rangle &amp;= \frac{eU_2}{\sqrt{\pi}\hbar v_F}
+    \Big( \frac{1}{K^2}\partial_x + \frac{1}{v_F}\partial_t \Big) \langle \theta(x=-L/2, t)\rangle &amp;= \frac{eU_1}{\sqrt{\pi}\hbar v_F}\\
+    \Big( \frac{1}{K^2}\partial_x - \frac{1}{v_F}\partial_t \Big) \rangle \theta(x=L/2, t)\rangle &amp;= \frac{eU_2}{\sqrt{\pi}\hbar v_F}
 \end{align}\]
 
 <p>These conditions have to be fulfilled for all times in the stationary non-equilibrium state. “They hold provided that <strong>ideal reservoirs</strong> are <strong>adiabatically connected</strong> to the QW and we are in the <strong>low-energy regime</strong> where both the applied voltage and temperature are very small in comparison to Fermi energy.”</p>
@@ -376,7 +385,7 @@ Contents</h4></header>
     2\rho_L &amp;= (\rho^0_L - \rho^0_R) + K^2 (\rho^0_R + \rho^0_L)
 \end{align}\]
 
-<p>which outlines the effect of charging on the full densities - that there will always be left movers in the wire, even if there is none being injected from the left into the wire because of this shift of the bottom of the band. Subtracting these two expressions gives the current (although as the current is not changed by the charging effects this can be done from much earlier on in our analysis) as \(I=e^2U/h\) which gives the quantisation of conductance in terms of the conductance quantum.</p>
+<p>which outlines the effect of charging on the full densities - that there will always be left movers in the wire, even if there is none being injected from the left into the wire because of this shift of the bottom of the band. Subtracting these two expressions gives the current as \(I=e^2U/h\) which gives the quantisation of conductance in terms of the conductance quantum.</p>
 
 <p>The excess density that charges the capacitor system can be found and through our short range Poisson equation, and the overall electrostatic field that acts on the system can also be seen</p>
 
@@ -384,33 +393,33 @@ Contents</h4></header>
     \rho = \frac{K^2e(U_1+U_2)}{2\pi\hbar v_F}, \quad \quad \varphi = (1-K^2)\frac{U_1 + U_2}{2}.
 \end{equation}</p>
 
-<p>The electrostatic field does not fully compensate for the average potential shift \(U_1+U_2/2\) which leaves the fraction \(K^2\) of the bare density being present in the wire. For any value of \(K\) there is no associated electric field as the electrostatic potential, being defined by the density, is independent of coordinate.</p>
+<p>The electrostatic field does not fully compensate for the average potential shift \(U_1+U_2/2\) which leaves the fraction \(K^2\) of the bare density present in the wire. For any value of \(K\) there is no associated electric field as the electrostatic potential, being defined by the density, is independent of coordinate.</p>
 
 <h3 id="perfect-backscattering">Perfect Backscattering</h3>
 
-<p>The same analysis can be done for a case with perfect backscattering, but the condition is now that no current may flow hence \(\rho_L = \rho_R\). Therefore the two densities will be constant either side of the barrier,</p>
+<p>The same analysis can be done for a case with perfect backscattering, but the condition is now that no current may flow hence \(\rho_L = \rho_R\). Therefore if the two chiral densities are equal either side of the barrier, the full density can be caluclated either side as,</p>
 
 <p>\begin{equation}
     \rho(x&lt;0) = \frac{K^2eU_1}{\pi\hbar v_F}, \quad \quad \rho(x&gt;0) = \frac{K^2eU_2}{\pi\hbar v_F}
 \end{equation}</p>
 
-<p>the density drop across the barrier is therefore the difference between these two quantities \(\Delta \rho = K^2 e (U_1 - U_2) / \pi\hbar v_F\). From our short-range Poisson equation we can find the voltage drop over the impurity</p>
+<p>The density drop across the barrier is therefore the difference between these two quantities \(\Delta \rho = K^2 e (U_1 - U_2) / \pi\hbar v_F\). From our short-range Poisson equation we can find the voltage drop over the impurity</p>
 
 <p>\begin{equation}
     \Delta\varphi = (1 - K^2) (U_1 - U_2)
 \end{equation}</p>
 
-<p>which is the two terminal voltage drop multiplied by the underscreening factor. If we considered it in a slightly different way, with the potential drop between the screening backgate and the wire, then to the left of the impurity we would have \((1-K^2)U_1\) and correspondingly \((1-K^2)U_2\) to the left. Then because the screening backgate will all be at the same voltage, we can change this situation into the voltage drop across the impurity by subtracting these two. Rewriting the density drop in another way,</p>
+<p>which is the two terminal voltage drop multiplied by the underscreening factor. If we considered it in a slightly different way, starting from the potential drop between the screening backgate and the wire, then to the left of the impurity we would have \((1-K^2)U_1\) and correspondingly \((1-K^2)U_2\) to the right. Then because the screening backgate will all be at the same voltage, we can change this situation into the voltage drop across the impurity by subtracting these two. Rewriting the density drop in another way,</p>
 
 <p>\begin{equation}
     \Delta \rho = \frac{e\Delta U - e\Delta\varphi}{\pi\hbar v_F}
 \end{equation}</p>
 
-<p>showing how much of the density change comes from the change in chemical potential and how much comes from the electrostatic field.</p>
+<p>we can show how much of the density change comes from the change in chemical potential and how much comes from the electrostatic field.</p>
 
 <h2 id="integrating-out-around-the-impurity">Integrating out around the impurity</h2>
 
-<p>Now the paper moves to a much more mathematical section, where the quadratic modes around the impurity is integrated out in order to investigate precisely how the voltage drop occurs and how it should be added into the Hamiltonian. The procedure for doing this is outlined in a couple of different places - the 96 paper by the duo and a 95 paper<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">3</a></sup>. Only the results will be mentioned, go check out the notes on the 96 paper to see the gory details. This paper does however use the Keldysh contour, although this does not really affect things as we are simply finding an effective action. Another difference that instead over being left in Matsubara form as in the paper in 96, they explicitly change back to real frequencies - which is why there is a \(\tanh\) looking term in this later paper.</p>
+<p>Now the paper moves to a much more mathematical section, where the quadratic modes around the impurity is integrated out in order to investigate precisely how the voltage drop occurs and how it should be added into the Hamiltonian. The procedure for doing this is outlined in a couple of different places - the 96 paper by the duo and a 95 paper<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>. Only the results will be mentioned, go check out the notes on the 96 paper to see the gory details. This paper does however use the Keldysh contour, although this does not really affect things as we are simply finding an effective action. Another difference that instead over being left in Matsubara form as in the paper in 96, they explicitly change back to real frequencies - which is why there is a \(\tanh\) looking term in this later paper.</p>
 
 <p>Integrating out the theta field at all points apart from the impurity, is a standard technique (despite being a quite difficult). A delta function is included so that our new variable is always equal to the field at the impurity. Solving this with respect to the boundary conditions means we have a part of the field (the particular solution and the homogeneous part) and it turns out that the average density is given by the derivative of the particular solution (again see the notes on 96 for details). This has the form,</p>
 
@@ -436,155 +445,261 @@ Contents</h4></header>
 
 <p>and looks like a Josephson-esque term. We have a term that is linear in time \(Vz\) inside the cosine that cannot be incorporated into a model by simply adding terms into the Hamiltonian. Now to consider what happens to the four terminal voltage in the two extremal cases.</p>
 
-<p>In the clean case, the field \(q\) describes a massless particle - there will be no mass term in the action. This arises because of the infrared divergence in the kinetic term (as the Green’s function is proportional to \(1/\omega\) so and the excitations are the poles so as \(\omega\rightarrow0\).)</p>
+<p>In the clean case, the field \(q\) describes a massless particle - there will be no mass term in the action. This arises because of the infrared divergence in the Green’s function (inverse of the quadratic term in the lagrangian) as it is proportional to \(1/\omega\) so diverges as \(\omega\rightarrow0\). Therefore there is only a linear term in the action and the field would take advantage of this to minimise the action to \(-\infty\) which is unphysical. Therefore the coefficient of the linear term must be zero in this case and so \(V=0\) - essentially there is no drop in voltage across an impurity if there is no impurity.</p>
 
-<p>In the perfect backscattering case, when \(\lambda \rightarrow\infty\), the action term above will start to have an infinite action cost to it. So it will want to be minimised, especially in time. This enforces that \(U_1 - U_2 = V\) and the two terminal voltage is equal to the four terminal one. There should be a crossover between these behaviours as we vary the impurity strength \(\lambda\). Therefore to investigate further, we can solve the problem exactly for a specific value of \(K\) which will give us an idea of how the cross over between these behaviour occurs and the rest can be argued by continuity.</p>
+<p>In the perfect backscattering case, when \(\lambda \rightarrow\infty\), the action term above will start to have an infinite action cost to it. So it will want to be minimised, especially in time. This enforces that \(U_1 - U_2 = V\) and the two terminal voltage is equal to the four terminal one. There should be a crossover between these behaviours as we vary the impurity strength \(\lambda\).</p>
+
+<p>To investigate further, we can solve the problem exactly for a specific value of \(K\) which will give us an idea of how the cross over between these behaviour occurs and the rest can be argued by continuity.</p>
 
 <h2 id="refermionisation">Refermionisation</h2>
 
-<p>The 98 paper then looks at the exact solution to the problem that can be found when refermionising the problem when \(K=1/2\). They start this by giving the boundary conditions on the field in terms of the chiral bosonic fields (rather than the usual \(\theta\) and \(\phi\)) which are defined as</p>
+<p>The exact solution can be found by refermionising the problem for \(K=1/2\). They start this by giving the boundary conditions on the field in terms of the chiral bosonic fields (rather than the usual \(\theta\) and \(\phi\)) which are defined as</p>
 
-<p>\begin{equation}
-    \phi_R(x) = \sqrt{\pi} \Big( \theta(x)/ \sqrt{K} + \sqrt{K}\phi(x) \Big), \quad \quad \phi_L(x) = \sqrt{\pi} \Big( -\theta(x)/ \sqrt{K} + \sqrt{K}\phi(x) \Big),
-\end{equation}</p>
+\[\begin{equation}
+    \phi_R(x) = \sqrt{\pi} \Big( \frac{\theta(x)}{\sqrt{K}} + \sqrt{K}\phi(x) \Big), \quad \phi_L(x) = \sqrt{\pi} \Big( -\frac{\theta(x)}{\sqrt{K}} + \sqrt{K}\phi(x) \Big),
+\end{equation}\]
 
 <p>this results in the Hamiltonian becoming,</p>
 
-<p>\begin{equation}
+\[\begin{equation}
     H = \frac{\hbar \nu}{8\pi} \int dx (\partial_x\phi_L)^2 + (\partial_x\phi_R)^2 + \lambda \delta(x)\cos(\sqrt{K}(\phi_R - \phi_L))
-\end{equation}</p>
+\end{equation}\]
 
-<p>and the boundary conditions as defined in Eq \ref{eq:barefull} - essentially returning to our original description. We then define slightly weird non-local fields in the following way,</p>
+<p>and the boundary conditions as defined with the density of right and left movers. We then define slightly weird non-local fields in the following way,</p>
 
-<p>\begin{equation}
-    \tilde{\phi}<em>{\pm}(x) = \frac{1}{\sqrt{2}}( \phi_R(x) \mp \phi_L(-x)), \quad \quad \tilde{\rho}</em>{\pm} = \frac{1}{2\pi}\partial_x\tilde{\phi}_{\pm} = \frac{1}{\sqrt{2K}}(\rho_R(x) \mp \rho_L(-x))
-\end{equation}</p>
+\[\begin{align}
+    \tilde{\phi}_{\pm}(x) = \frac{1}{\sqrt{2}}( \phi_R(x) \mp \phi_L(-x)), \\
+     \tilde{\rho}_{\pm} = \frac{1}{2\pi}\partial_x\tilde{\phi}_{\pm} = \frac{1}{\sqrt{2K}}(\rho_R(x) \mp \rho_L(-x))
+\end{align}\]
 
-<p>which then results in the new Hamiltonian where we have successfully decomposed it into separate fields, now choosing \(K=1/2\),</p>
+<p>which then results in the new Hamiltonian where we have successfully decomposed it into separate fields rather than having the cosine of the difference of the fields (now we also set \(K=1/2\)),</p>
 
-<p>\begin{equation}
-    H = \frac{\hbar \nu}{8\pi} \int dx (\partial_x\tilde{\phi}<em>{+})^2 + (\partial_x\tilde{\phi}</em>{-})^2 + \lambda \delta(x)\cos(\tilde{\phi}_{+})
-\end{equation}</p>
+\[\begin{equation}
+    H = \frac{\hbar \nu}{8\pi} \int dx (\partial_x\tilde{\phi}_{+})^2 + (\partial_x\tilde{\phi}_{-})^2 + \lambda \delta(x)\cos(\tilde{\phi}_{+})
+\end{equation}\]
 
-<p>with the following boundary conditions obtained from adding and subtracting eq \ref{eq:barefull}.</p>
+<p>with the following boundary conditions obtained from adding and subtracting the boundary conditions (which are defined with \(\rho_{R/L}(\pm x))\) so adding and subtracting them will result in the definition of our new density \(\tilde{\rho}\).</p>
 
-<p>\begin{equation}
-    5\tilde{\rho}<em>{-}(-L/2) + 3\tilde{\rho}</em>{-}(L/2) = e(U_1+U_2)/\pi\hbar v_F, \quad \quad 5\tilde{\rho}<em>{+}(-L/2) + 3\tilde{\rho}</em>{+}(L/2) = e(U_1-U_2)/\pi\hbar v_F,
-\end{equation}</p>
+\[\begin{align}
+    5\tilde{\rho}_{-}(-L/2) + 3\tilde{\rho}_{-}(L/2) = e(U_1+U_2)/\pi\hbar v_F,\\
+     5\tilde{\rho}_{+}(-L/2) + 3\tilde{\rho}_{+}(L/2) = e(U_1-U_2)/\pi\hbar v_F,
+\end{align}\]
 
 <p>so it is these equations which we are now trying to solve. Here it is clear to see that the impurity term only couples to the \(\tilde{\phi}_{+}\) sector and the applied voltage difference only affects this sector too. The corresponding \(\tilde{\phi}_{-}\) sector is associated with the shift in density that arises from \(U_1 \ne -U_2\) and we will from now assume that the voltage drop is symmetric across the wire, essentially setting \(U_1 = -U_2\) allowing us to ignore this term. There is also no impurity in the - sector so the density must be constant along the wire. Having reduced the complexity of the problem, we now can start to refermionise \(\tilde{\phi}_{+}\).</p>
 
 <p>They do this by introducing,</p>
 
 <p>\begin{equation}
-    \psi = (c + c^{\dagger})\sqrt{\frac{1}{2\pi a}}\exp( i\tilde{\phi}_{+})
+    \tilde{\psi} = (c + c^{\dagger})\sqrt{\frac{1}{2\pi a}}\exp( i\tilde{\phi}_{+}) = (c + c^{\dagger})\psi
 \end{equation}</p>
 
-<p>where to ensure the commutation relations of fermions we have included \(c + c^{\dagger}\) which is a Majorana mode (as it is its own Hermitian conjugate). This then results in the refermionised Hamiltonian of</p>
+<p>where to ensure the commutation relations of fermions we have included \(c + c^{\dagger}\) which is a Majorana mode (as it is its own Hermitian conjugate). Therefore the \(\psi\) we use is actually a bosonic field, whereas \(\tilde{\psi}\) is a fermionic one. This essentially is setting the Klein factor explicitly when we bosonise (well un-bosonise). This then results in the refermionised Hamiltonian of</p>
 
 <p>\begin{equation}
     H = -i\hbar \nu \int dx \psi^{\dagger}\partial_x \psi + \sqrt{\hbar \nu \lambda_B/2}(c + c^{\dagger})(\psi(0) + \psi^{\dagger}(0))
 \end{equation}</p>
 
-<p>with the effective impurity strength of \(\lambda_B = \pi a \lambda^2/ \hbar \nu\). The kinetic term has that particular form as that is a sum over the modes with a linear dispersion (see Luttinger Liquid notes for context). Owing to the choosing of \(K=1/2\), the ‘refermions’ are now free rather than interacting and we have a delta function interacting barrier at \(x=0\). Therefore this is now just a scattering problem, which can be solve in a variety of ways. In this paper they choose use the equation of motion method and essentially find the equations of motion for the system, where the majorana mode has been renamed \(f\)</p>
+<p>with the effective impurity strength of \(\lambda_B = \pi a \lambda^2/ \hbar \nu\). The kinetic term has that particular form as that is a sum over the modes with a linear dispersion (see Luttinger Liquid notes for context). Owing to the choosing of \(K=1/2\), the ‘refermions’ are now free rather than interacting and we have a delta function interacting barrier at \(x=0\). Therefore this is now just a scattering problem, which can be solve in a variety of ways. After all these caveats about what the system is, we now just have a scattering problem which can be solved in a variety of ways. Here we will find the equations of motion for the system, where the majorana mode has been renamed \(f\) and we have collected up the constants into \(V\).</p>
 
-<p>\begin{equation}
-    -i\partial_t \phi = [H, \phi] = i\partial_x \phi + \sqrt{\hbar \nu \lambda_B/2}f\delta(x), \quad \quad -i\partial_t \phi^{\dagger} = [H, \phi] = i\partial_x \phi^{\dagger} + \sqrt{\hbar \nu \lambda_B/2}f\delta(x),
-\end{equation}</p>
+\[\begin{equation}
+    -i\partial_t \psi = [H, \psi] = i\partial_x \psi + Vf\delta(x), \quad -i\partial_t \psi^{\dagger} = [H, \psi] = i\partial_x \psi^{\dagger} - Vf\delta(x),
+\end{equation}\]
 
 <p>and the time dependence of the Majorana mode must also be found and solved for,</p>
 
-<p>\begin{equation}
-    -i\partial_t f = [H,f] = \sqrt{\hbar \nu \lambda_B/2}(\psi(0) + \psi^{\dagger}(0))
-\end{equation}</p>
+\[\begin{equation}
+    -i\partial_t f = [H,f] = V(\psi(0) - \psi^{\dagger}(0))
+\end{equation}\]
 
-<p>Away from \(x=0\) the field can be found and solved for as it must satisfy the equation \((i\partial_t + i\partial_x)\psi = 0\), with the form of \(\psi\) being able to be found by taking the Fourier transform. This must can be different either side of \(x=0\) so in general our solution will be,</p>
+<p>Away from \(x=0\) the field can be found and solved for as it must satisfy the equation \((i\partial_t + i\partial_x)\psi = 0\), with the form of \(\psi\) being able to be found by taking the Fourier transform into frequency space.</p>
 
-<p>\begin{equation}
-    \psi(x,t) = \frac{1}{L}\sum_k e^{ik(\nu t -x)} \left{
+\[\sum_{\omega} e^{i\omega t} (\omega + i\partial_x)A_{\omega}(x) = 0\]
+
+<p>Where the sum is as usual over integer multiples of \(2\pi/L\) (and this is also true for \(k\) when we relate them later as our dispersion is \(k=\omega\)). As this is true for all \(\omega\) we can see that \(-\omega A_{\omega}(x) = i\partial_xA_{\omega}(x)\). This can be solved to get \(A_{\omega}(x) = a_{\omega}e^{i\omega x}\).</p>
+
+<p>This must can be different either side of \(x=0\) so in general our solution will be,</p>
+
+\[\begin{equation}
+    \psi(x,t) = \frac{1}{L}\sum_{\omega} e^{i\omega(t -x)} \Big\lbrace
                 \begin{array}{ll}
-                  a_k, \quad \quad (x&lt;0)<br />
-                  b_k, \quad \quad (x&gt;0)<br />
-                \end{array} = \frac{1}{L}\sum_k e^{ik(\nu t -x)} \ ( \Theta(-x)a_{k} + \Theta(x)b_k)
-              \right.
-\end{equation}</p>
+                  a_{\omega}, \quad (x&lt;0)\\
+                  b_{\omega}, \quad (x&gt;0)\\
+                \end{array}
 
-<p>To find the boundary condition to join these two solutions together we must solve for \(f\) which involves defining \(\psi(0)\). To ensure commutation relations are satisfied (as \(\psi\) is bosonic and \(f\) makes the combination \(f\psi\) fermionic) we define \(\psi(0) = (\psi(0^+) + \psi(0^-))/2\). Therefore solving for \(f\) with this definition we can find that,</p>
+\end{equation}\]
 
-<p>\begin{equation}
-    f_{\omega} = \frac{\sqrt{\hbar \nu \lambda_B/2}}{\omega}(\psi_{\omega}(0) + \psi_{\omega}^{\dagger}(0)) =  \frac{\sqrt{\hbar \nu \lambda_B/2}}{2\omega}(a_k + b_k + a^{\dagger}_k + b^{\dagger}_k)
-\end{equation}</p>
+\[\begin{equation}
+    \psi = \frac{1}{L}\sum_k e^{i\omega(t -x)} \ ( \Theta(-x)a_{\omega} + \Theta(x)b_{\omega})
+\end{equation}\]
 
-<p>Now we plug back into the equations of motion, splitting it up into \(\psi_L(x,t) = \frac{1}{L} \sum_{k} e^{ik(\nu t- x)} a_k\) and \(\psi_R\) respectively, joined together by a theta function. This gives,</p>
+<p style="color:red">Weirdly, the operators here are actually fermion operators despite our previous definitions of as bosonic. I think it's a sleight of hand to line up with the fact that we were always dealing with fermions.</p>
+
+<p>To find the boundary condition to join these two solutions together we must solve for \(f\) which involves defining \(\psi(0)\). This must contain parts from our operators either side of our discontinuity and to ensure that our definition of \(\psi(0)\) commutes with its Hermitian conjugate to give a delta function (not 4 times the delta function or whatever). We define \(\psi(0) = (\psi(0^+) + \psi(0^-))/2\), as \(\{a_{\omega},b^{\dagger}_{\omega}\}=1\) in addition to the more obvious commutation relations - hence the \(1/2\). Therefore solving for \(f\) with this definition we can find that,</p>
+
+\[\begin{equation}
+    f_{\omega} = \frac{V}{2\omega}(\psi_{\omega}(0) - \psi_{\omega}^{\dagger}(0)) =  \frac{V}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{-\dagger}_{\omega})
+\end{equation}\]
+
+<p>The \(-\omega\) arises from making sure that the exponentials in our definition of the Fourier series are the same for the operator and its conjugate. Now we plug back into the equations of motion, splitting the full solution up into \(\psi_L(x,t) = \frac{1}{L} \sum_{\omega} e^{i\omega(t- x)} a_{\omega}\) and \(\psi_R\) respectively, joined together by a theta function. This gives,</p>
+
+\[\begin{equation}
+    (i\partial_t + i\partial_x)(\psi_L\Theta(-x) + \psi_R\Theta(x)) = -Vf\delta(x)
+\end{equation}\]
+
+<p>Expanding out and differentiating the step functions gives</p>
 
 \[\begin{align}
-    (i\partial_t + i\partial_x)(\psi_L\Theta(-x) + \psi_R\Theta(x)) &amp;= 2\sqrt{\hbar \nu \lambda_B/2}f\delta(x)\\
-    \Theta(-x)(i\partial_t + i\partial_x)\psi_L + \Theta(x)(i\partial_t + i\partial_x)\psi_R + i\psi_L\partial_x\Theta(-x) + i\psi_R\partial_x\Theta(x) &amp;=  2\sqrt{\hbar \nu \lambda_B/2}f\delta(x) \\
-    i(\psi_R - \psi_L)\delta(x) = 2\sqrt{\hbar \nu \lambda_B/2}f(x)\delta(x)
+    \Theta(-x)(i\partial_t + i\partial_x)\psi_L + \Theta(x)(i\partial_t &amp;+ i\partial_x)\psi_R + i\psi_L\partial_x\Theta(-x) \\
+    &amp;+ i\psi_R\partial_x\Theta(x) =  -Vf\delta(x)
 \end{align}\]
 
-<p>therefore we can equate the two coefficients of the delta function and take the Fourier transform to obtain,</p>
+<p>From the defining differential equation for \(\psi\), we can see that the first two terms will be zero to give.</p>
+
+\[\begin{equation}
+    i(\psi_R - \psi_L)\delta(x) = -2Vf(x)\delta(x)
+\end{equation}\]
+
+<p>therefore we can equate the two coefficients of the delta function. Finally we take the Fourier transform of our result to get a relation between \(a_{\omega}, b_{\omega}, a^{\dagger}_{\omega}, b^{\dagger}_{\omega}\),</p>
+
+\[\begin{equation}
+    i(b_{\omega} - a_{\omega}) = -\frac{V^2}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{\dagger}_{\omega})
+\end{equation}\]
+
+<p>and the procedure can be repeated on the equation of motion for the conjugate \(\psi^{\dagger}\).</p>
+
+\[\begin{equation}
+    i(b^{\dagger}_{-\omega} - a^{-\dagger}_{\omega}) = \frac{V^2}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{\dagger}_{\omega})
+\end{equation}\]
+
+<p>This gives two equations from which we can add to find an expression for \(b^{\dagger}_{\omega}\). Substituting in and performing the trick of adding and subtracting 1 in the from of \(i\omega +V^2/i\omega +V^2\) to obtain a relations between the scattering components,</p>
+
+\[\begin{equation}
+    2b_{\omega} = ( 1 + \frac{i\omega- V^2}{i\omega + V^2})a_{\omega} + ( 1 - \frac{i\omega - V^2}{i\omega+ V^2})a^{\dagger}_{-\omega}
+\end{equation}\]
+
+<p>From which we can put in our \(V\) back and use the linear dispersion to get</p>
+
+\[\begin{equation}
+    2b_{k} = ( 1 + \frac{i\hbar \nu k - \lambda_B}{i\hbar\nu k + \lambda_B})a_{k} + ( 1 - \frac{i\hbar\nu k - \lambda_B}{i\hbar\nu k + \lambda_B})a^{\dagger}_{-k}
+\end{equation}\]
+
+<p>Finally it is common to express our fraction as a phase shift (as from the structure of the equation we can see the effect of reflection off the barrier).</p>
+
+\[e^{i\alpha_k} = e^{-i\alpha_{-k}} = \frac{i\hbar \nu k - \lambda_B}{i\hbar\nu k + \lambda_B}\]
+
+<h3 id="analysing-the-refermions">Analysing the refermions</h3>
+
+<p>From here they then incorporate the boundary conditions using their ‘non local density’ \(\tilde{\rho}_{+}\) which represented as  \(\psi^{\dagger}\psi(\pm L/2)\). The tilde doesnt matter here as a fermion bilinear acts in the same way as a fermionic one. This therefore translates into the boundary condition,</p>
 
 <p>\begin{equation}
-    i(b_k - a_k) = -\frac{\hbar \nu \lambda_B}{2\omega}(a_k + b_k + a^{\dagger}_k + b^{\dagger}_k)
+    \frac{1}{L} \sum_k 5\langle a^{\dagger}_ka_k\rangle -3 \langle b^{\dagger}b_k\rangle = e(U_1 - U_2)/\pi\hbar v_F
 \end{equation}</p>
 
-<p>and the procedure can be repeated on the equation of motion for the conjugate \(\psi^{\dagger}\). This gives two equations from which we can eliminate \(b^{\dagger}_k\) to obtain a relations between the scattering components,</p>
+<p>where we have used the boundary conditions of \(\tilde{\rho}(x)\). The averages are non-equilibrium ones and as we have chosen the Luther-Emery point to refermionise, our \(a_k\) operators correspond to non-interacting fermions and therefore their average is the Fermi distribution for some self consistently determined \(k^*\) (ie the \(k\) corresponding to the chemical potential).</p>
 
-<p>\begin{equation}
-    2b_k = ( 1 + \frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B})a_k + ( 1 - \frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B})a^{\dagger}_k
-\end{equation}</p>
+\[\begin{equation}
+\langle a^{\dagger}_ka_k\rangle \equiv n_k(k^*) = (1 + \exp(\hbar\nu\beta(k - k^*)))^{-1}
+\end{equation}\]
 
-<p>As a quick note, this method is a lot more clear in reference \cite{PhysRevB.53.4033} which is quite a well written paper, but however does not focus on boundary conditions so will be currently not focused on. From here they then incorporate the boundary conditions as their new ‘non local density’ \(\tilde{\rho}_{+}\) can be represented as  \(\psi^{\dagger}\psi\) from the definition of our (un)bosonised field. This therefore translates into the boundary condition,</p>
+<p>Our matching of the operators at \(x=0\) gives a way to express what the average of \(b\) is in terms of \(a\),</p>
 
-<p>\begin{equation}
-    \frac{1}{L} \sum_k 5|a^{\dagger}_ka_k\rangle -3 |b^{\dagger}b_k\rangle = e(U_1 - U_2)/\pi\hbar v_F
-\end{equation}</p>
+\[\begin{align}
+    2\langle b^{\dagger}_kb_k\rangle = ( &amp; 1 + \cos(\alpha_k))n_k(k^*) \\
+    &amp; + ( 1 - \cos(\alpha_k))n_k(-k^*)
+\end{align}\]
 
-<p>where we can used the boundary conditions of \(\tilde{\rho(x)}\). The averages are non-equilibrium ones and as we have chosen the Luther-Emery point to refermionise, our \(a_k\) operators correspond to non-interacting fermions and therefore their average is the Fermi distribution for some self consistently determined \(k^*\) (ie the \(k\) corresponding to the chemical potential). Our matching of the operators at \(x=0\) gives a way to express what the average of \(b\) is in terms of \(a\),</p>
+<p>To get this result we can show that \(\langle a_{-k}a^{\dagger}_{-k}\rangle = 1 - \langle a^{\dagger}_{-k}a_{-k}\rangle\) by commutation relations. By then substituting in the explicit form for the fermi function with \(-k\) and then combining the fractions we see that \(\langle a_{-k}a^{\dagger}_{-k}\rangle = n_k(-k^*)\).  It is useful to calculate \(\cos(\alpha)\) which is evaluated to give,</p>
 
-<p>\begin{equation}
-    2|b^{\dagger}_kb_k\rangle = ( 1 + \cos(\ln(i\frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B}))n_k(k^<em>) + ( 1 - \cos(\ln(i\frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B}))n_k(-k^</em>)
-\end{equation}</p>
+\[\cos(\alpha_k) = \frac{\hbar^2\nu^2k^2 -\lambda^2_B}{\lambda^2_B + \hbar^2\nu^2k^2}\]
 
 <p>and so substituting it all in gives an expression,</p>
 
-<p>\begin{equation}
-    k^* + \frac{6\pi}{L}\sum_k \frac{n_k(\mu) - n_k(0)}{1 + (\hbar \nu k/\lambda_B)^2} = \frac{e(U_1 - U_2)}{\hbar\pi v_F}
-\end{equation}</p>
+\[\begin{align}
+    \frac{1}{L}\sum_k 2n_k(k^*) + \frac{3}{2}(n_k(k^*) - n_{k}(-k^*)) (1 - \frac{\hbar^2\nu^2k^2 -\lambda^2_B}{\lambda^2_B + \hbar^2\nu^2k^2})  =&amp; \frac{e(U_1 - U_2)}{\hbar\pi v_F} \\\\
+    k^* + \frac{3\pi}{L}\sum_k \frac{n_k(k^*) - n_k(-k^*)}{1 + (\hbar \nu k/\lambda_B)^2} =&amp; \frac{e(U_1 - U_2)}{\hbar v_F}
+\end{align}\]
 
-<p>Finally, we make the assumption of a long quantum wire so that the sums can be converted into integrals to give the expression,</p>
+<p>Where we have taken the first sum (assuming it the fermi function is close enough to a step function) as the sum is over integer multiples of \(2\pi/L\) up to \(k^*\) - ie \(1\times k^*L/2\pi = n^*\). <span style="color:red">In the second sum, I am sticking my neck out to say I think there is a typo in the paper where they have written the Fermi function at zero ‘chemical potential’ instead of the negative one that we have here. I cannot see how one can be changed into the other (it breaks the right/left movers split for one) let alone get out our digamma function that is our answer.</span>  Finally, we make the assumption of a long quantum wire so that the other sum can be converted into an integral and this integral can be evaluated using contour integration.</p>
 
-<p>\begin{equation}
-    k^* + \frac{3\lambda_B}{\hbar \nu} \Im{\psi(\frac{1}{2} + \frac{\lambda_B + i\hbar\nu k^*}{2\pi k_B T}} = \frac{e(U_1 - U_2)}{\hbar v_F}
-\end{equation}</p>
-
-<p>for the digamma function \(\psi(z)\) for which behaviour of the chemical potential \(\mu\) can be found with varying the scattering strength. But first they focus on the density drop across the impurity which in the previous section was related to the four terminal voltage. This density drop can obviously be related to our expectation values of operators \(a_k\) and \(b_k\),</p>
-
-<p>\begin{align<em>}
-\tilde{\rho}_{+}(x&lt;0) - \tilde{\rho}_{+}(x&gt;0) &amp;= \int \frac{dk}{2\pi} |a^{\dagger}_ka_k - b^{\dagger}_kb_k\rangle <br />
-\int \frac{dk}{2\pi} ( 1- \cos(\ln(i\frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B})))(n_{k}(\mu) - n_k(0)) &amp;= \frac{\lambda_B}{\pi\hbar \nu} \Im \psi( \frac{1}{2} + \frac{\lambda_B + i\hbar\nu k^</em>}{2\pi k_B T})
-\end{align*}</p>
-
-<p>So this allows us to relate the four terminal voltage to \(k^*\) and obtain a self consistent equation for the four terminal voltage. Finally the current-voltage behaviour can be found by again evaluating these expectation values. The current will be given by,</p>
+<p>This contour integration is however pretty difficult, and its not helped by converting the answer into a <em>digamma</em> function, \(\psi(z)\), which helps when taking asymptotics. The relation we need to understand where this comes from is</p>
 
 <p>\begin{equation}
-    I = e v_F |\tilde{\rho}_{+}\rangle = \frac{ev_F}{4} \int \frac{dk}{2\pi} |(a^{\dagger}_k b^{\dagger}_k)(a_k + b_k)\rangle
+\frac{1}{\pi}\Big( \frac{1}{1+e^{-2\pi b}} - \frac{1}{1+e^{2\pi b}}\Big) = \frac{1}{\pi}\tanh(\pi b) = \text{Im}\Big( \psi(\frac{1}{2} + ib) \Big)
 \end{equation}</p>
 
-<p>which gives the result \(I = \frac{e^2}{h}(U - V(U,T,\lambda_B)\) for the self consistently determined four terminal voltage. \</p>
+<p>From this we can see the similarity between our Fermi function and the digamma function. So taking the contour integral on each Fermi function separately with semi-circle contours going in opposite directions allows us to cancel out the two sets of countably infinite number of poles that come from each Fermi function. That leaves us with</p>
 
-<p>The notes on this paper are intended to show how to apply these radiative boundary conditions to two different techniques. The first is a more general technique of integrating out quadratic modes subject to the conditions on the field caused by these boundary conditions. The second is when refermionising the fields at a specific interaction parameter value and expressing all quantities of interest as expectation values of operators. So having looked at the 98 paper, it is time to look a bit closer at the nature of screening and why the density is a fraction of its normal value and the lead up to this formulation of the boundary conditions.</p>
+<p>\begin{equation}
+    k^* + \frac{3\lambda_B}{\hbar \nu} \text{Im}\Big(\psi(\frac{1}{2} + \frac{\lambda_B + i\hbar\nu k^*}{2\pi k_B T})\Big) = \frac{e(U_1 - U_2)}{\hbar v_F}
+\end{equation}</p>
+
+<p>So we have managed to obtain an expression for \(k^*\) in terms of the strength of the scatterer. So we can find the limits of what our ‘chemical momentum potential’ is in the strong and weak scattering limits. As \(\lambda_B \rightarrow0\) this gives \(k^* = eU/\hbar v_F\).</p>
+
+<p>In the infinite scattering limit we need to find the asymptotics of our digamma function which is the logarithm of the argument (look it up if you want). The imaginary part of the logarithm is then the phase of the complex argument. This is then arctan of the ratio of the imaginary and real parts.</p>
+
+<p>The ratio of the imaginary and real parts is</p>
+
+\[\frac{\hbar\nu k^* /2\pi k_BT}{\frac{1}{2} + \lambda_B/2\pi k_BT} \sim \frac{\hbar\nu k^*}{\lambda_B}\]
+
+<p>as we are taking the \(\lambda_B\rightarrow\infty\) limit we can perform this simplification. <em>Finally</em>, we use that \(\text{arctan}(x) \sim x\) to get our result of \(k^* = eU/4\hbar v_F\).</p>
+
+<p><strong>Four terminal Voltage</strong></p>
+
+<p>With our new formula relating the operators either side of the impurity, we can find the density drop over the impurity which was shown to be related to the four terminal voltage in the previous section. This density drop can obviously be related to our expectation values of operators \(a_k\) and \(b_k\),</p>
+
+\[\begin{align}
+\tilde{\rho}_{+}(x&lt;0) - \tilde{\rho}_{+}(x&gt;0) &amp;= \int \frac{dk}{2\pi} \langle a^{\dagger}_ka_k - b^{\dagger}_kb_k\rangle \\
+&amp;= \int \frac{dk}{2\pi} ( 1- \cos(\alpha))(n_{k}(\mu) - n_k(0))
+\end{align}\]
+
+<p>which is the same as the the integral calculated earlier (ie just the digamma term). So this allows us to relate the four terminal voltage to our refermionised results,</p>
+
+<p>\begin{equation}
+eV = 2\lambda_B\text{Im}\Big(\psi(\frac{1}{2} + \frac{\lambda_B + i\hbar\nu k^*}{2\pi k_B T})\Big)
+\end{equation}</p>
+
+<p>To do a quick sanity check we can find that in the clean limit (\(\lambda_B \rightarrow0\)) that \(V=0\). This makes sense as if there is no impurity there should be no voltage drop! For the strong scattering limit, we again use the expansion of the digamma function in the exact same way as we did earlier with our strong scattering result for \(k^*\) to get \(V=U\) which also agrees with our previous analysis.</p>
+
+<p>So having checked this answer seems reasonable, we can combine it with our boundary effect to find an expression for \(k^*\)</p>
+
+<p>\begin{equation}
+k^* = \frac{e}{\hbar v_F}(U - \frac{3V}{4})
+\end{equation}</p>
+
+<p>Therefore we can substitute this into our four terminal voltage to find a self constant equation which can be solved (numerically) to give the behaviour!</p>
+
+<p>Finally to get the quantity we actually want to compare, the current, we again consider the expectation values again. The current will be given by (see all of the above as to where this comes from),</p>
+
+<p>\begin{equation}
+    I = e v_F \langle \tilde{\rho}_{+}\rangle = \frac{ev_F}{4} \int \frac{dk}{2\pi} \langle (a^{\dagger}_k b^{\dagger}_k)(a_k + b_k)\rangle
+\end{equation}</p>
+
+<p>which gives the result \(I = \frac{e^2}{h}(U - V(U,T,\lambda_B))\) for the self consistently determined four terminal voltage. Therefore this is the solution to our non-linear current-voltage characteristics and is what they calculate in their paper to show the cross over between different strengths of impurity/temperature for a specific value of the electron-electron interaction. So now we can look at the current voltage dependence</p>
+
+<figure class="align-center">
+<img src="../images/EG/IV.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>The current is normalised to \(I_0 = Ue^2/h\). Important features to note are that as the scattering strength decreases we will have more current flowing for the same two terminal voltage. We recover the Kane-Fisher result of no current for zero temperature with a scatterer present as expected and see the two terminal voltage overcome this. All results that we wanted!</p>
+
+<p>The notes on this paper are intended to show how to apply these radiative boundary conditions to two different situations. The first is a more general technique of integrating out quadratic modes subject to the conditions on the field caused by these boundary conditions. The second is when refermionising the fields at a specific interaction parameter value and expressing all quantities of interest as expectation values of operators.</p>
+
+<p>Made it to the end! Its quite dense so well done for getting through it!</p>
+
+<p>There is a paper by Grabert that explores these ideas in more detail than the paper covered here. Its a useful resource <a href="https://arxiv.org/abs/cond-mat/0107175">https://arxiv.org/abs/cond-mat/0107175</a></p>
 
 <h2 id="references">References</h2>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:2" role="doc-endnote">
-      <p>Maslov and Stone <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Maslov and Stone 95 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:3" role="doc-endnote">
-      <p>Ponomarenko <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Ponomarenko 95 <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:1" role="doc-endnote">
+      <p>The Grabert paper linked just above <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:4" role="doc-endnote">
       <p>Friedel oscillations for interacting fermions in one dimension, Egger &amp; Grabert <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>

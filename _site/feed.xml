@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-07T12:36:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">More is Difficult</title><subtitle>Physics Notes</subtitle><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><entry><title type="html">Solving without translational invariance - Operators</title><link href="http://localhost:4000/Operators/" rel="alternate" type="text/html" title="Solving without translational invariance - Operators" /><published>2021-01-06T00:00:00+00:00</published><updated>2021-01-06T00:00:00+00:00</updated><id>http://localhost:4000/Operators</id><content type="html" xml:base="http://localhost:4000/Operators/">&lt;p&gt;In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-25T11:29:05+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">More is Difficult</title><subtitle>Physics Notes</subtitle><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><entry><title type="html">Solving without translational invariance - Operators</title><link href="http://localhost:4000/maths%20heavy/techniques/Operators/" rel="alternate" type="text/html" title="Solving without translational invariance - Operators" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>http://localhost:4000/maths%20heavy/techniques/Operators</id><content type="html" xml:base="http://localhost:4000/maths%20heavy/techniques/Operators/">&lt;p&gt;In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.&lt;/p&gt;
 
 &lt;p&gt;The way that will be looked into here is due to terms in the Hamiltonian of our system being local. The overall technique remains the same, solving either side and then gluing the pieces together. This time, however, instead of performing this to the Green’s function we will glue operators. There are many parallels between the two techniques though!&lt;/p&gt;
 
@@ -11,7 +11,7 @@
 &lt;p&gt;So we introduce our Hamiltonian with no context&lt;/p&gt;
 
 \[\begin{equation}
-    H = -\int dx \psi^{\dagger}\partial_x \psi + V(c + c^{\dagger})(\psi(0) + \psi^{\dagger}(0))
+    H = \int dx \psi^{\dagger}\partial_x \psi + V(c + c^{\dagger})(\psi(0) + \psi^{\dagger}(0))
 \end{equation}\]
 
 &lt;p&gt;The kinetic term has that particular form as it is a sum over modes with a linear dispersion (thats been Fourier transformed back). There is an infinitely thin barrier at the origin that separates two regions in which the system is non-interacting. Interestingly because this comes from a refermionisation there is a Majorana mode from \(c + c^{\dagger}\) (which can be seen to be equal it Hermitian conjugate and therefore is its own antiparticle) meant to ensure that the combination in the Hamiltonian behaves in a fermionic manner. This is because \(\psi\) is actually the exponential of a bosonic field and can therefore cannot possess fermionic statistics.&lt;/p&gt;
@@ -19,53 +19,99 @@
 &lt;p&gt;So after all these caveats about what the system is, we now just have a scattering problem which can be solved in a variety of ways. Here we will find the equations of motion for the system, where the majorana mode has been renamed \(f\)&lt;/p&gt;
 
 \[\begin{equation}
-    -i\partial_t \phi = [H, \phi] = i\partial_x \phi + Vf\delta(x), \quad \quad -i\partial_t \phi^{\dagger} = [H, \phi] = i\partial_x \phi^{\dagger} + Vf\delta(x),
+    -i\partial_t \phi = [H, \phi] = i\partial_x \phi + Vf\delta(x), \quad \quad -i\partial_t \phi^{\dagger} = [H, \phi] = i\partial_x \phi^{\dagger} - Vf\delta(x),
 \end{equation}\]
 
 &lt;p&gt;and the time dependence of the Majorana mode must also be found and solved for,&lt;/p&gt;
 
 \[\begin{equation}
-    -i\partial_t f = [H,f] = V(\psi(0) + \psi^{\dagger}(0))
+    -i\partial_t f = [H,f] = V(\psi(0) - \psi^{\dagger}(0))
 \end{equation}\]
 
-&lt;h3 id=&quot;solving-and-joining-the-individual-pieces&quot;&gt;Solving and joining the individual pieces&lt;/h3&gt;
+&lt;h3 id=&quot;solving-the-individual-pieces&quot;&gt;Solving the individual pieces&lt;/h3&gt;
 
-&lt;p&gt;Away from \(x=0\) the field can be found and solved for as it must satisfy the equation \((i\partial_t + i\partial_x)\psi = 0\), with the form of \(\psi\) being able to be found by taking the Fourier transform. This must can be different either side of \(x=0\) so in general our solution will be,&lt;/p&gt;
+&lt;p&gt;Away from \(x=0\) the field can be found and solved for as it must satisfy the equation \((i\partial_t + i\partial_x)\psi = 0\), with the form of \(\psi\) being able to be found by taking the Fourier transform into frequency space.&lt;/p&gt;
+
+\[\sum_{\omega} e^{i\omega t} (\omega + i\partial_x)A_{\omega}(x) = 0\]
+
+&lt;p&gt;As this is true for all \(\omega\) we can see that \(-\omega A_{\omega}(x) = i\partial_xA_{\omega}(x)\). This can be solved to get \(A_{\omega}(x) = a_{\omega}e^{i\omega x}\).&lt;/p&gt;
+
+&lt;p&gt;This must can be different either side of \(x=0\) so in general our solution will be,&lt;/p&gt;
 
 \[\begin{equation}
-    \psi(x,t) = \frac{1}{L}\sum_k e^{ik(\nu t -x)} \left\{
+    \psi(x,t) = \frac{1}{L}\sum_{\omega} e^{i\omega(t -x)} \left\{
                 \begin{array}{ll}
-                  a_k, \quad \quad (x&amp;lt;0)\\
-                  b_k, \quad \quad (x&amp;gt;0)\\
-                \end{array} = \frac{1}{L}\sum_k e^{ik(\nu t -x)} \ ( \Theta(-x)a_{k} + \Theta(x)b_k)
+                  a_{\omega}, \quad (x&amp;lt;0)\\
+                  b_{\omega}, \quad (x&amp;gt;0)\\
+                \end{array} = \frac{1}{L}\sum_k e^{i\omega(t -x)} \ ( \Theta(-x)a_{\omega} + \Theta(x)b_{\omega})
               \right.
 \end{equation}\]
 
-&lt;p&gt;To find the boundary condition to join these two solutions together we must solve for \(f\) which involves defining \(\psi(0)\). To ensure commutation relations are satisfied (as \(\psi\) is bosonic and \(f\) makes the combination \(f\psi\) fermionic) we define \(\psi(0) = (\psi(0^+) + \psi(0^-))/2\). Therefore solving for \(f\) with this definition we can find that,&lt;/p&gt;
+&lt;h3 id=&quot;joining-the-parts-together&quot;&gt;Joining the parts together&lt;/h3&gt;
+
+&lt;p&gt;To find the boundary condition to join these two solutions together we must solve for \(f\) which involves defining \(\psi(0)\). This must contain parts from our operators either side of our discontinuity and to ensure that our definition of \(\psi(0)\) commutes with its Hermitian conjugate to give a delta function (not 4 times the delta function or whatever). We define \(\psi(0) = (\psi(0^+) + \psi(0^-))/2\), as \(\{a_{\omega},b^{\dagger}_{\omega}\}=1\) in addition to the more obvious commutation relations - hence the \(1/2\). Therefore solving for \(f\) with this definition we can find that,&lt;/p&gt;
 
 \[\begin{equation}
-    f_{\omega} = \frac{V}{\omega}(\psi_{\omega}(0) + \psi_{\omega}^{\dagger}(0)) =  \frac{V}{2\omega}(a_k + b_k + a^{\dagger}_k + b^{\dagger}_k)
+    f_{\omega} = \frac{V}{2\omega}(\psi_{\omega}(0) - \psi_{\omega}^{\dagger}(0)) =  \frac{V}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{\dagger}_{-\omega})
 \end{equation}\]
 
-&lt;p&gt;Now we plug back into the equations of motion, splitting it up into \(\psi_L(x,t) = \frac{1}{L} \sum_{k} e^{ik(\nu t- x)} a_k\) and \(\psi_R\) respectively, joined together by a theta function. This gives,&lt;/p&gt;
-
-\[\begin{align}
-    (i\partial_t + i\partial_x)(\psi_L\Theta(-x) + \psi_R\Theta(x)) &amp;amp;= 2Vf\delta(x)\\
-    \Theta(-x)(i\partial_t + i\partial_x)\psi_L + \Theta(x)(i\partial_t + i\partial_x)\psi_R + i\psi_L\partial_x\Theta(-x) + i\psi_R\partial_x\Theta(x) &amp;amp;=  2Vf\delta(x) \\
-    i(\psi_R - \psi_L)\delta(x) = 2Vf(x)\delta(x)
-\end{align}\]
-
-&lt;p&gt;therefore we can equate the two coefficients of the delta function and take the Fourier transform to obtain,&lt;/p&gt;
+&lt;p&gt;The \(-\omega\) arises from making sure that the exponentials in our definition of the Fourier series are the same for the operator and its conjugate. Now we plug back into the equations of motion, splitting the full solution up into \(\psi_L(x,t) = \frac{1}{L} \sum_{\omega} e^{i\omega(t- x)} a_{\omega}\) and \(\psi_R\) respectively, joined together by a theta function. This gives,&lt;/p&gt;
 
 \[\begin{equation}
-    i(b_k - a_k) = -\frac{\hbar \nu \lambda_B}{2\omega}(a_k + b_k + a^{\dagger}_k + b^{\dagger}_k)
+    (i\partial_t + i\partial_x)(\psi_L\Theta(-x) + \psi_R\Theta(x)) = -Vf\delta(x)
 \end{equation}\]
 
-&lt;p&gt;and the procedure can be repeated on the equation of motion for the conjugate \(\psi^{\dagger}\). This gives two equations from which we can eliminate \(b^{\dagger}_k\) to obtain a relations between the scattering components,&lt;/p&gt;
+&lt;p&gt;Expanding out and differentiating the step functions gives&lt;/p&gt;
 
 \[\begin{equation}
-    2b_k = ( 1 + \frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B})a_k + ( 1 - \frac{i\hbar \nu k- \lambda_B}{i\hbar \nu k + \lambda_B})a^{\dagger}_k
-\end{equation}\]</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Heavy" /><category term="Techniques" /><summary type="html">Dealing with localised terms in the Hamiltonian with more glue</summary></entry><entry><title type="html">Solving without translational invariance - Green’s functions</title><link href="http://localhost:4000/Stitching/" rel="alternate" type="text/html" title="Solving without translational invariance - Green’s functions" /><published>2021-01-05T00:00:00+00:00</published><updated>2021-01-05T00:00:00+00:00</updated><id>http://localhost:4000/Stitching</id><content type="html" xml:base="http://localhost:4000/Stitching/">&lt;p&gt;While I was attempting to rederive some results from a classic 1D transport paper, I got stuck trying to solve for the Green’s function of the system. The main problem wasn’t a horrendous integral or lack of convergence, but that in the system I was considering there was &lt;em&gt;no translational invariance&lt;/em&gt;. The whole usual method of Fourier transforming our Green’s function into a diagonal basis, inverting it and transforming back could not be used. Our lack of translational invariance means that the Fourier transform no longer neatly decouples our problem into a diagonal basis.&lt;/p&gt;
+    \Theta(-x)(i\partial_t + i\partial_x)\psi_L + \Theta(x)(i\partial_t + i\partial_x)\psi_R + i\psi_L\partial_x\Theta(-x) + i\psi_R\partial_x\Theta(x) =  -Vf\delta(x)
+\end{equation}\]
+
+&lt;p&gt;From the defining differential equation for \(\psi\), we can see that the first two terms will be zero to give.&lt;/p&gt;
+
+\[\begin{equation}
+    i(\psi_R - \psi_L)\delta(x) = -2Vf(x)\delta(x)
+\end{equation}\]
+
+&lt;p&gt;therefore we can equate the two coefficients of the delta function. For the mathematicians, everything is secretly under an integral so this process actually makes sense. Finally we take the Fourier transform of our result to get a relation between \(a_{\omega}, b_{\omega}, a^{\dagger}_{\omega}, b^{\dagger}_{\omega}\),&lt;/p&gt;
+
+\[\begin{equation}
+    i(b_{\omega} - a_{\omega}) = -\frac{V^2}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{\dagger}_{-\omega})
+\end{equation}\]
+
+&lt;p&gt;and the procedure can be repeated on the equation of motion for the conjugate \(\psi^{\dagger}\).&lt;/p&gt;
+
+\[\begin{equation}
+    i(b^{\dagger}_{-\omega} - a^{-\dagger}_{\omega}) = \frac{V^2}{2\omega}(a_{\omega} + b_{\omega} - a^{\dagger}_{-\omega} - b^{-\dagger}_{\omega})
+\end{equation}\]
+
+&lt;p&gt;This gives two equations from which we can add to find an expression for \(b^{\dagger}_{\omega}\). Substituting in and performing the trick of adding and subtracting 1 in the from of \(i\omega +V^2/i\omega +V^2\) to obtain a relations between the scattering components,&lt;/p&gt;
+
+\[\begin{equation}
+    2b_{\omega} = ( 1 + \frac{i\omega- V^2}{i\omega + V^2})a_{\omega} + ( 1 - \frac{i\omega - V^2}{i\omega+ V^2})a^{-\dagger}_k
+\end{equation}\]
+
+&lt;h3 id=&quot;small-sprinkle-of-analysis&quot;&gt;Small sprinkle of analysis&lt;/h3&gt;
+
+&lt;p&gt;So what we have done here is relate the operators either side of a barrier - the typical quantum mechanical problem in the field theoretic way. Solving this problem in QM (see this stack exchange - well up to a minus sign&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;) is a little easier and follows the previous blog post by requiring a discontinuity in the derivative. This problem just requires a little more care to derive.&lt;/p&gt;
+
+&lt;p&gt;Just to close this out, I’ll mention some ways in which this relationship is useful and what it can tell us.&lt;/p&gt;
+
+&lt;p&gt;As \(b_{\omega}\) creates a particle moving to the left from the right hand side, we can see that the difference between the coefficients of the operators on the left hand side of the discontinuity is the phase shift caused by scattering. A particle incident on the barrier will be reflected with a shift of its coefficient. We can summarise the shift as&lt;/p&gt;
+
+\[e^{i\alpha_{\omega}} = e^{-i\alpha_{\omega}} = \frac{i\omega - V^2}{i\omega + V^2}\]
+
+&lt;p&gt;This can be picked out from the form of our relation and this phase shift is the same as in the quantum mechanical problem. As another point of what we can do with this relation is that expectation values of \(\langle b^{\dagger}b \rangle\) can be evaluated in terms of the other operators (and vice versa) which allows us to solve some problems.&lt;/p&gt;
+
+&lt;p&gt;So the one that appears in the Egger-Grabert notes (which this point is lifted from) has boundary conditions of our problem expressed in terms of \(\langle b^{\dagger}b \rangle, \langle a^{\dagger}a \rangle\). This relation is what allows us to relate the two to actually solve the effect of the boundaries on our system.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://physics.stackexchange.com/questions/441616/scattering-by-a-delta-function-well-in-1d&quot;&gt;https://physics.stackexchange.com/questions/441616/scattering-by-a-delta-function-well-in-1d&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Heavy" /><category term="Techniques" /><category term="Boundary Conditions" /><category term="Operators" /><summary type="html">Dealing with localised terms in the Hamiltonian by stitching operators</summary></entry><entry><title type="html">Solving without translational invariance - Green’s functions</title><link href="http://localhost:4000/maths%20heavy/techniques/Stitching/" rel="alternate" type="text/html" title="Solving without translational invariance - Green’s functions" /><published>2021-01-05T00:00:00+00:00</published><updated>2021-01-05T00:00:00+00:00</updated><id>http://localhost:4000/maths%20heavy/techniques/Stitching</id><content type="html" xml:base="http://localhost:4000/maths%20heavy/techniques/Stitching/">&lt;p&gt;While I was attempting to rederive some results from a classic 1D transport paper, I got stuck trying to solve for the Green’s function of the system. The main problem wasn’t a horrendous integral or lack of convergence, but that in the system I was considering there was &lt;em&gt;no translational invariance&lt;/em&gt;. The whole usual method of Fourier transforming our Green’s function into a diagonal basis, inverting it and transforming back could not be used. Our lack of translational invariance means that the Fourier transform no longer neatly decouples our problem into a diagonal basis.&lt;/p&gt;
 
 &lt;p&gt;To be clearer, the usual procedure is to start with our generic Green’s function, \(G(x,x')\), which if we have translational invariance will be a function of the difference of \(x\) and \(x'\) alone, \(G(x-x')\). This reduction of the number of parameters needed means that the Fourier transform only requires one \(k\) to get our answer, \(\tilde{G}(k)\), into a form that we can easily invert. Without translational invariance our Green’s function will depend on \(k\) and \(k'\) in general.&lt;/p&gt;
 
@@ -167,7 +213,7 @@
 
 &lt;p&gt;There’s good info on this same process at the following link:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&quot;&gt;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Heavy" /><category term="Techniques" /><summary type="html">A method for stitching together a patchwork of Green's functions</summary></entry><entry><title type="html">Showing that solitons carry fractional charge</title><link href="http://localhost:4000/Soliton/" rel="alternate" type="text/html" title="Showing that solitons carry fractional charge" /><published>2020-12-02T00:00:00+00:00</published><updated>2020-12-02T00:00:00+00:00</updated><id>http://localhost:4000/Soliton</id><content type="html" xml:base="http://localhost:4000/Soliton/">&lt;p&gt;The concept of a soliton is often only introduced at a graduate level, due to the difficulty of the topics that it appears in. It is probably because of this difficulty that there are many interesting features of a soliton, which is why it’s a shame that it is left til so late to be introduced.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&quot;&gt;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="[&quot;Maths Heavy&quot;, &quot;Techniques&quot;]" /><category term="Green's Functions" /><category term="Boundary Conditions" /><summary type="html">A method for stitching together a patchwork of Green's functions</summary></entry><entry><title type="html">Showing that solitons carry fractional charge</title><link href="http://localhost:4000/maths%20light/arguments/Soliton/" rel="alternate" type="text/html" title="Showing that solitons carry fractional charge" /><published>2020-12-02T00:00:00+00:00</published><updated>2020-12-02T00:00:00+00:00</updated><id>http://localhost:4000/maths%20light/arguments/Soliton</id><content type="html" xml:base="http://localhost:4000/maths%20light/arguments/Soliton/">&lt;p&gt;The concept of a soliton is often only introduced at a graduate level, due to the difficulty of the topics that it appears in. It is probably because of this difficulty that there are many interesting features of a soliton, which is why it’s a shame that it is left til so late to be introduced.&lt;/p&gt;
 
 &lt;p&gt;The feature that will be looked at here is about the fractional charge that a soliton carries. Fractional charge means here that the ‘particle’ carries fractions of the bare electric charge \(e\), and this is in spite of an electron not being made up of more fundamental particles (at least it was the last time I checked what high energy physicists are doing). So what is happening here is a different from how a proton is made up of multiple quarks which have fractions of the electric charge \(e\) - this is why these objects are interesting!&lt;/p&gt;
 
@@ -180,13 +226,13 @@
 &lt;p&gt;In physics it is often our task to find the lowest energy state of the system as this is what our system would like to be doing. The SSH model is defined on a linear chain of atoms with chemical bonds being between each site. The lowest energy state turns out to be an alternating pattern of single and double bonds (corresponding to one or two electrons being shared between the atoms&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;) as drawn below for a section of the chain.&lt;/p&gt;
 
 &lt;figure class=&quot;align-center&quot;&gt;
-&lt;img src=&quot;../images/posts/SSh-A.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;img src=&quot;../../../images/posts/SSh-A.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;There however is a degeneracy and another possible arrangement of chemical bonds has the exact same energy as the previous state. The degeneracy is whether the alternating single and double bonds starts with a double or single bond&lt;/p&gt;
 
 &lt;figure class=&quot;align-center&quot;&gt;
-&lt;img src=&quot;../images/posts/SSh-B.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;img src=&quot;../../../images/posts/SSh-B.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;We will label these two different configurations as \(A\) and \(B\)&lt;/p&gt;
@@ -198,7 +244,7 @@
 &lt;p&gt;These ‘differences’ are called kinks and correspond to our soliton. There are two ways of adding these in as either an extra double bond which here has been placed between sites 3-4&lt;/p&gt;
 
 &lt;figure class=&quot;align-center&quot;&gt;
-&lt;img src=&quot;../images/posts/SSh-kink.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;img src=&quot;../../../images/posts/SSh-kink.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;or we can introduce an extra single bond in a similar manner - these are the first two types of soliton. The are however kinks also anti-kinks and these depend on which configuration is either side of the defect (or difference). In the above example we have \(A\) on the left and \(B\) on the right, which we will call a kink. The opposite case of \(B\) on the left and \(A\) on the right is called an anti kink.&lt;/p&gt;
@@ -214,13 +260,13 @@
 &lt;p&gt;Having gone through adding one of these solitons, let us now add two double bond defects. From the description of a kink and antikink having different configurations either side of them, adding a kink and an anti-kink must be the only way to have two of these defects in our system&lt;/p&gt;
 
 &lt;figure class=&quot;align-center&quot;&gt;
-&lt;img src=&quot;../images/posts/SSh-2kink.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;img src=&quot;../../../images/posts/SSh-2kink.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Now for no apparently reason, let us consider what adding one normal electron to configuration \(B\) would look like, and we will specifically add it at sites 2-3,&lt;/p&gt;
 
 &lt;figure class=&quot;align-center&quot;&gt;
-&lt;img src=&quot;../images/posts/SSh-1elec.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;img src=&quot;../../../images/posts/SSh-1elec.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Comparing the two, in a coincidence noone could have seen coming, they turn out to be identical if we swapped bonds 3-4 and 4-5 (which is an allowed action). Therefore in some way the two kink state is equivalent to adding one electron to the ground state. This means that each kink must carry half the charge of an electron!&lt;/p&gt;
@@ -249,4 +295,4 @@
       &lt;p&gt;There is a subtlty about this as single and double bonds involve two and four electrons respectively, but it is that one of the electrons involved in the bond is bound tightly to the atom/sites and cannot move or hop. The other electron involve can move freely and swap with electrons involved in other bonds and as what we are describing in SSH is conduction electrons these are the only ones we actually care about. This requires a bit more knowledge on how physical chemistry works so I haven’t talked about it in detail - just to point out that there is no contradiction here! &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Light" /><category term="Arguments" /><summary type="html">A short, intuitive reason can be given to understand why the charge of solitons fractionalise.</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Light" /><category term="Arguments" /><category term="Fractional Charge" /><category term="Solitons" /><summary type="html">A short, intuitive reason can be given to understand why the charge of solitons fractionalise.</summary></entry></feed>

@@ -209,9 +209,10 @@ $$\begin{equation}
 
 as this is a solution of the EOM, then this solution corresponds to a an extremum of the potential functional. So in our expansion the linear term will be absent,
 
-$$\begin{equation}
-    V[\phi] = V[\phi_S] + \int dx \ \ \frac{\eta(x)}{2} \Big( - \frac{\partial^2}{dx^2} - m^2 + 3\lambda \phi_S^2 \Big) \eta(x) + \lambda \int dx ( \phi_S \eta^3 + \frac{1}{4} \eta^4 )
-\end{equation}$$
+$$\begin{align}
+    V[\phi] = V[\phi_S] &+ \int dx \ \ \frac{\eta(x)}{2} \Big( - \frac{\partial^2}{dx^2} - m^2 + 3\lambda \phi_S^2 \Big) \eta(x)\\
+    & + \lambda \int dx ( \phi_S \eta^3 + \frac{1}{4} \eta^4 )
+\end{align}$$
 
 where $$\eta = \phi - \phi_S$$. The eigenvalues of the second derivative are given by the equation,
 
@@ -265,7 +266,7 @@ which slightly altrs the constants out the front. It however still ends up diver
 Going through to solve this I will briefly outline the technique as presented in Rajaramen chapter 5.4 and then present a slightly different one that uses a bit of functional integral knowledge. The effect of this normal ordering on the Hamiltonian is rather simple and just gives,
 
 $$\begin{equation}
-    :H: = H - \int dx \ \frac{1}{2} \delta m \phi^2 + D
+    :H: \ = H - \int dx \ \frac{1}{2} \delta m \phi^2 + D
 \end{equation}$$
 
 and we just need to work out what these constants are through performing perturbation theory to order $$\lambda$$ (which is equivalent to only counting one loop diagrams). This will then give a shift of all energy levels $$\bar{E}_0$$ and $$\bar{E}_{vac}$$, and the energy of the kink will be the difference of these new renormalised energies. In a weird way this procedure slightly makes sense where any divergence can be dealt with by introducing another term that diverges in a similar way (ie is the same function with a different constant) and resulting in an overall shift of variables. Interestingly these constants can be infinite, resulting in a changing of the infinite bare mass by an infinite shifting which results in the actual parameter $$M$$ that is possible to measure in experiment.
@@ -279,7 +280,7 @@ $$\begin{equation}
 However all this talk of shifting and perturbation is not my strong point - I much prefer some functional integration. So by performing saddle point analysis on our expanded action around the classical configuration, we can express this as an effective action.
 
 $$\begin{align}
-S_{eff} &= S_0 + \int dxdt \eta (\Delta^2 + \frac{d^2V}{d\phi^2}) \eta = s_0 + Tr(\ln(\omega^2 + p^2 + \frac{d^2V}{d\phi^2})) \\
+S_{eff} &= S_0 + \int dxdt \ \eta (\Delta^2 + \frac{d^2V}{d\phi^2}) \eta = s_0 + Tr(\ln(\omega^2 + p^2 + \frac{d^2V}{d\phi^2})) \\
 & = S_0 + Tr(\ln(G_0) + \ln(1+ G^{-1}_0(\frac{d^2V}{d\phi^2} - 2m^2)))  
 \end{align}$$
 
@@ -292,9 +293,10 @@ where $$G_0 = \omega^2 - p^2 + m^2$$. From which we can identify the mass shift 
 
 it is the trace that enforces the loop, as we take the sum over the Green's function that start and end at the same point due to us taking the diagonal elements. So having obtained what the renormalised constant energy difference is we can finally find our rest mass when none of the quantum modes are occupied.
 
-$$\begin{equation}
-    M = \frac{2\sqrt{2}m^3}{3\lambda} + \frac{1}{2}\hbar \sqrt{\frac{3}{2}} - \frac{3\hbar m}{\pi \sqrt{2}} - \frac{3\sqrt{2}m\hbar}{4\pi} \int dp \frac{p^2 + 2}{\sqrt{p^2 +1}(p^2 +4) } - \frac{1}{\sqrt{p^2 + 2}}
-\end{equation}$$
+$$\begin{align}
+    M = & \frac{2\sqrt{2}m^3}{3\lambda} + \frac{1}{2}\hbar \sqrt{\frac{3}{2}} - \frac{3\hbar m}{\pi \sqrt{2}} \\
+    & - \frac{3\sqrt{2}m\hbar}{4\pi} \int dp \Big( \frac{p^2 + 2}{\sqrt{p^2 +1}(p^2 +4) } - \frac{1}{\sqrt{p^2 + 2}} \Big)
+\end{align}$$
 
 Believe it or not, this integral is now do-able and the final result is
 

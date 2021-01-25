@@ -1,7 +1,10 @@
 ---
 title: "Solving without translational invariance - Green's functions"
 date: 2021-01-05
-tags: [Maths Heavy, Techniques]
+tags: [Green's Functions, Boundary Conditions]
+category:
+   - Maths Heavy
+   - Techniques
 excerpt: "A method for stitching together a patchwork of Green's functions"
 mathjax: "true"
 ---

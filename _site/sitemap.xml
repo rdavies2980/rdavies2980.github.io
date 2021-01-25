@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/Soliton/</loc>
+<loc>http://localhost:4000/maths%20light/arguments/Soliton/</loc>
 <lastmod>2020-12-02T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/Stitching/</loc>
+<loc>http://localhost:4000/maths%20heavy/techniques/Stitching/</loc>
 <lastmod>2021-01-05T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/Operators/</loc>
-<lastmod>2021-01-06T00:00:00+00:00</lastmod>
+<loc>http://localhost:4000/maths%20heavy/techniques/Operators/</loc>
+<lastmod>2021-01-07T00:00:00+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/_posts/2020-12-02-Soliton/</loc>
@@ -46,7 +46,7 @@
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blogtags/</loc>
+<loc>http://localhost:4000/categories/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/books/</loc>
@@ -56,6 +56,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/physnote/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tags/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/notes/Glazman.pdf</loc>

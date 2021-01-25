@@ -62,7 +62,7 @@ where the intensity at any point is the square of the amplitude. This is in cont
 <img src="../images/PathInt/moreslits.png" style="width: 70%" class="align-center">
 </figure>
 
-The total amplitude would then become a more complicated sum, having to take into account more slits, $$A(O) = \sum_iB(i\rightarrow0) \sum_jA(j\rightarrow i)$$. Taking this idea to its conclusion, if there were an infinite number of slits then there would be an infinite number of amplitudes to sum over. An infinite number of gratings would mean that the the 'paths' that the particle takes is now a continuous function (imagine spacing between gratings and spacing are two independent coordinates that both shrink to an infinitessimal). This resultsin the total amplitude is summed over all possible paths from the source to the point $$O$$[^1].
+The total amplitude would then become a more complicated sum, having to take into account more slits, $$A(O) = \sum_iB(i\rightarrow0) \sum_jA(j\rightarrow i)$$. Taking this idea to its conclusion, if there were an infinite number of slits then there would be an infinite number of amplitudes to sum over. An infinite number of gratings would mean that the the 'paths' that the particle takes is now a continuous function (imagine spacing between gratings and spacing are two independent coordinates that both shrink to an infinitessimal). This results in the total amplitude is summed over all possible paths from the source to the point $$O$$[^1].
 
 <figure class="align-center">
 <img src="../images/PathInt/SLITS%3F.png" style="width: 70%" class="align-center">
@@ -188,7 +188,7 @@ Having obtained the path integral and introduced new mathematics to deal with it
 
 where the final equality is from letting $$\hbar = 1/\beta$$ and $$t = -iL$$ and allows us to express the partition function of a classical system with a quantum mechanical amplitude. This will turn out to be useful when considering actual systems, allowing the existance of imaginary time allows us to consider statistical effects. The link between $$d$$ dimensional quantum mechanics and $$d+1$$ dimensional statistical mechanics, is true in general. The strength of fluctuations is given by $$\hbar$$ and $$\beta$$ and the 'extra' dimension is absorbed into the time.
 
-This however is even useful for quantum mechanics of a single particle, where the partition function is the trace over the exponential of the Hamiltonian as an operator. From the connection, this can be reformulated as a trace over the transition amplitude evaluated at an imaginary time. So the real time dynamics and statistical aspects can both be formulated from the same thing, providing that imaginary time is allowed.
+This however is even useful for quantum mechanics of a single particle, where the partition function is the trace over the exponential of the Hamiltonian operator. From this connection, this can be reformulated as a trace over the transition amplitude evaluated at an imaginary time. So both the real time dynamics and statistical aspects can both be formulated from the same thing, providing that imaginary time is allowed.
 
 ## Field Integrals
 
@@ -249,7 +249,41 @@ Now equipped with this resolution of identity, we can repeat the time slicing pr
 \mathcal{Z} = \sum_n \langle n | \exp(-\beta(:H: - \mu N)) | n \rangle
 \end{equation}
 
-which is a sum over the $$n$$ Fock states. From this, the coherent states are put in and as mentioned earlier we start from the microscopic Hamiltonian and so the exact form of the partition function will depend on the Hamiltonian chosen.  
+which is a sum over the $$n$$ Fock states. From this, the coherent states are put in and as mentioned earlier we start from the microscopic Hamiltonian. So taking a generic looking Hamiltonian,
+
+$$
+:H(a,a^{\dagger}): = \sum_{ij} h_{ij}a^{\dagger}_ia_j + \sum_{ijkl}V_{ijkl}a^{\dagger}_ia^{\dagger}_ja_la_k
+$$
+
+which has been normal ordered. Inserting the resolution of identity into the partition function definition,
+
+$$
+\mathcal{Z} = \int \prod_i \frac{d\bar{\phi}_id\phi_i}{\pi} e^{-\sum_i \bar{\phi}_i\phi_i} \sum_n \langle \phi | \exp(-\beta(:H: - \mu N)) | n \rangle \langle n | \phi \rangle
+$$
+
+where we have used the property that $$ \langle n \vert \phi \rangle\langle \phi \vert n \rangle = \langle \phi \vert n \rangle\langle n \vert \phi \rangle$$. This allows us to use the regular identity for Fock space (ie $$\sum_n \vert n \rangle \langle n\vert $$) and only express the problem as a integral over the fields - hence the name field integral!
+
+Therefore to use the coherent states for the Hamiltonian, we simply put in $$\phi, \bar{\phi}$$ in the place of $$a, a^{\dagger}$$. This has prepped us to 'time slice' our temperature (as we showed earlier that its like an imaginary time) into $$N$$ slices of width $$\delta$$ so that $$\beta = \delta/N$$. Therefore doing the same procedure as before and take the limit that $$N\rightarrow\infty$$, we end up with
+
+$$
+\mathcal{Z} = \int \mathcal{D}\phi\mathcal{D}\bar{\phi} e^{-S[\phi,\bar{\phi}]}
+$$
+
+with our action being,
+
+$$
+S[\phi,\bar{\phi}] = \int_0^{\beta} d\tau \big( \bar{\phi}\partial_{\tau}\phi + H(\bar{\phi},\phi) - \mu N(\bar{\phi},\phi)\big).
+$$
+
+Final thing to say is about the boundary conditions on the fields. In the path integral version we had the start and end point defined $$q(0), q(t)$$. Here we will have the field evaluated at $$\phi(0)$$ and $$\phi(\beta)$$, but we can do a little better due to the starting point of this field integral.
+
+We originally inserted the resolution of identity for the state $$\phi$$ evaluated at $\tau=0$$ into the sum over Fock states. Then we time sliced the ket state to evolve the state in time. After performing all the time slicing we will have $$\vert \phi(\beta)$$ but we still have the bra that we inserted from the resolution of identity! So in order to have a non-zero result we must cancel the $$e^{-\sum_i \bar{\phi}\phi}$$ which can be done with the final bra-ket if
+
+$$
+\phi(0) = \phi(\beta), \quad \quad \bar{\phi}(0) = \bar{\phi}(\beta)
+$$
+
+which provides our boundary conditions. We need to cancel out that exponential as the sum over $$i$$ is actually a sum over all states (see how we constructed the coherent states and this also makes sense with how this process works). Therefore this is an infinite sum which would make all our non-trivial field configurations (ie fields being non-zero) be zero and therefore need to be cancelled out!
 
 Therefore thats all the problem solved right? Finding correlators is as easy as using this path integral as a generating function and then that is all physics solved - it is just a question of how to evaluate the correlators through expansions.
 
@@ -279,7 +313,20 @@ The biggest difference between the two cases is that the Gaussian integral no lo
     \int d(\bar{\phi},\phi) \exp(-\bar{\phi} \boldsymbol{A}\phi ) = \det{ \boldsymbol{A}}
 \end{equation}
 
-Therefore the fermionic/bosonic formulation is the same, but the result of the integration differs by an inverse and what the fields are actually over. This should be all the required information needed to be able to dive into the more specific literature. Instantons can now be analysed with the QM version of the path integral and basic semiclassical analysis can be done by performing the functional integral on the quadratic terms. The field theoretic problems require a little more subtle analysis, especially the inclusion of temperature requiring matsubara frequencies. This however should suffice as quick introduction to the ideas.
+Therefore the fermionic/bosonic formulation is the same, but the result of the integration differs by an inverse and what the fields are actually over. Another difference comes from the translation into grassman variables of an equation that was important in our derivation of time slicing.
+
+$$ \langle n \vert \phi \rangle\langle \phi \vert n \rangle = \langle -\phi \vert n \rangle\langle n \vert \phi \rangle$$
+
+This ends up meaning that the boundary conditions on our fields are now
+
+$$
+\phi(0) = -\phi(\beta), \quad \quad \bar{\phi}(0) = -\bar{\phi}(\beta)
+$$
+
+
+This should be all the required information needed to be able to dive into the more specific literature. Instantons can now be analysed with the QM version of the path integral and basic semiclassical analysis can be done by performing the functional integral on the quadratic terms. The field theoretic problems require a little more subtle analysis, especially the inclusion of temperature requiring matsubara frequencies. This however should suffice as quick introduction to the ideas.
+
+However, I know that when things are just stated to me, I find it hard to follow without seeing an exploration of the thing. So hopefully some more notes will appear on using path integrals as this only really presents a derivation of the formalism which can be quite detatched from understanding the formalism. 
 
 ## Further Reading
 
