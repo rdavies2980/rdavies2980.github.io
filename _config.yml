@@ -28,7 +28,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
-words_per_minute         : 100
+words_per_minute         : 90
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Rose Davies"
   avatar           : "images/selfie.jpg"
-  bio              : "Trying to understand physics and help others do the same!"
+  bio              : "Trying to understand physics and help others do the same!<br>(She/her)"
   location         : "Birmingham, UK"
   email            : "rxd440@student.bham.ac.uk"
   links:

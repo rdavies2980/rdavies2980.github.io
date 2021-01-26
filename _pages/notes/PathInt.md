@@ -6,7 +6,7 @@ classes: single
 excerpt: "An intuitive, appealing alternative construction of Quantum Mechanics and Field Theory"
 author_profile: false
 header:
-  overlay_image: "../images/PathInt/SLITS%3F.png"
+  overlay_image: "../images/PathInt/SLITSall.png"
   overlay_filter: "rgba(150,220,140,0.9)"
   actions:
   - label: "Download PDF Version"
@@ -65,7 +65,7 @@ where the intensity at any point is the square of the amplitude. This is in cont
 The total amplitude would then become a more complicated sum, having to take into account more slits, $$A(O) = \sum_iB(i\rightarrow0) \sum_jA(j\rightarrow i)$$. Taking this idea to its conclusion, if there were an infinite number of slits then there would be an infinite number of amplitudes to sum over. An infinite number of gratings would mean that the the 'paths' that the particle takes is now a continuous function (imagine spacing between gratings and spacing are two independent coordinates that both shrink to an infinitessimal). This results in the total amplitude is summed over all possible paths from the source to the point $$O$$[^1].
 
 <figure class="align-center">
-<img src="../images/PathInt/SLITS%3F.png" style="width: 70%" class="align-center">
+<img src="../images/PathInt/SLITSall.png" style="width: 70%" class="align-center">
 </figure>
 
 The final part is that infinitely many slits means that there is no grating! So somehow calculating the amplitude at a single point takes into account all the possible histories of that particle at once and this is the heart of the path integral.
@@ -326,7 +326,7 @@ $$
 
 This should be all the required information needed to be able to dive into the more specific literature. Instantons can now be analysed with the QM version of the path integral and basic semiclassical analysis can be done by performing the functional integral on the quadratic terms. The field theoretic problems require a little more subtle analysis, especially the inclusion of temperature requiring matsubara frequencies. This however should suffice as quick introduction to the ideas.
 
-However, I know that when things are just stated to me, I find it hard to follow without seeing an exploration of the thing. So hopefully some more notes will appear on using path integrals as this only really presents a derivation of the formalism which can be quite detatched from understanding the formalism. 
+However, I know that when things are just stated to me, I find it hard to follow without seeing an exploration of the thing. So hopefully some more notes will appear on using path integrals as this only really presents a derivation of the formalism which can be quite detatched from understanding the formalism.
 
 ## Further Reading
 

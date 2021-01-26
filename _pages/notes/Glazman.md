@@ -235,7 +235,7 @@ In these notes we used the Landauer formula without deriving it - so see any qua
 
 The derivation of the exact transmission coefficient relies on properties of parabolic cyclindrical function with 'Quantum Mechanics of the Inverted Oscillator Potential' by Barton being my resource for this. There is also a cool WKB approximation to the reflection coefficient in the following notes
 
-   http://web.mit.edu/8.322/Spring%202007/notes/reflectionabove030507.pdf
+<http://web.mit.edu/8.322/Spring%202007/notes/reflectionabove030507.pdf>
 
 
 Finally there is also reference to this in Quantum Effects near a Barrier Maximum - Ford, Hill et al in section 5.

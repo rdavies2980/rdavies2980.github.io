@@ -165,7 +165,7 @@ $$
 where $$\lambda$$ is the dimensionless phonon-electron coupling constant. To see how this approaches zero, we can do a Taylor expansion around $$T_0$$, but the graph of the dispersion of the phonons is a lot clearer on how the frequency is renormalised[^3].
 
 <figure class="align-center">
-<img src="../images/Peierls/renorm.png" style="width: 50%" class="align-center">
+<img src="../images/Peierls/Renorm.png" style="width: 50%" class="align-center">
 <figcaption>Showing the lowering of energy of the lattice modulation mode at twice the fermi wavevector as we approach the transition temperature. </figcaption>
 </figure>
 
