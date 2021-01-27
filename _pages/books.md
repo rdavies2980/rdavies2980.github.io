@@ -82,7 +82,6 @@ feature_row1:
 
 
             <div class="archive__item-excerpt">
-            <p></p>
               <h3>Egger and Grabert</h3>
             <p> These are three papers released in quick succession by Egger and Grabert that look at the problem of Luttinger Liquids and applying bias across them. These set of papers introduce the <em>radiative boundary conditions</em> which have become a standard way to deal with non-equilibrium wires. </p>
             </div>

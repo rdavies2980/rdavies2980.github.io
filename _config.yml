@@ -99,9 +99,8 @@ author:
   location         : "Birmingham, UK"
   email            : "rxd440@student.bham.ac.uk"
   links:
-    #- label: "Email"
+    #- label: "rxd440@student.bham.ac.uk"
     #  icon: "fas fa-fw fa-envelope-square"
-    #  url: "rxd440@student.bham.ac.uk"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"

@@ -13,6 +13,7 @@ header:
     url: "../assets/notes/Path_Integral_Introduction.pdf"
 
 read_time: true
+description: just having fun with it
 ---
 <!-- <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
@@ -43,6 +44,8 @@ Contents</h4></header>
 {:toc .toc__menu}
 </nav>
 </aside>
+
+{{page.description}}
 
 The path integral formulation of quantum mechanics compliments and contrasts with the second quantised operator construction. These two formalisms offer different ways, each with their own advantages and disadvantages, to approach the intimidating topic of QFT. Reformulating the ideas of Quantum in this formalism offers another way to interpret quantum mechanics with the 'sum over histories' idea. The main reasons why the path integrals still being used is that the classical limit is much easier to obtain, it has a clear connection to classical statistical mechanics and that it naturally lends itself to infinite order perturbation summations (non-perturbative problems). These three reasons make it clear why its use in condensed matter is such a natural fit.
 
@@ -277,7 +280,7 @@ $$
 
 Final thing to say is about the boundary conditions on the fields. In the path integral version we had the start and end point defined $$q(0), q(t)$$. Here we will have the field evaluated at $$\phi(0)$$ and $$\phi(\beta)$$, but we can do a little better due to the starting point of this field integral.
 
-We originally inserted the resolution of identity for the state $$\phi$$ evaluated at $\tau=0$$ into the sum over Fock states. Then we time sliced the ket state to evolve the state in time. After performing all the time slicing we will have $$\vert \phi(\beta)$$ but we still have the bra that we inserted from the resolution of identity! So in order to have a non-zero result we must cancel the $$e^{-\sum_i \bar{\phi}\phi}$$ which can be done with the final bra-ket if
+We originally inserted the resolution of identity for the state $$\phi$$ evaluated at $$\tau=0$$ into the sum over Fock states. Then we time sliced the ket state to evolve the state in time. After performing all the time slicing we will have $$\vert \phi(\beta)$$ but we still have the bra that we inserted from the resolution of identity! So in order to have a non-zero result we must cancel the $$e^{-\sum_i \bar{\phi}\phi}$$ which can be done with the final bra-ket if
 
 $$
 \phi(0) = \phi(\beta), \quad \quad \bar{\phi}(0) = \bar{\phi}(\beta)
