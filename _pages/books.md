@@ -11,7 +11,7 @@ feature_row:
     btn_label: "More Info"
     btn_class: "btn--inverse"
 feature_row2:
-  - image_path: ../images/chillvibes.jpg
+  - image_path: ../images/chillvibes.JPG
     title: "Applying voltage sources to Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev B 1998"
     url: /EG98/
