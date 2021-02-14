@@ -77,6 +77,11 @@ body {
   }
 }
 
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 .page__lead {
   font-family: $global-font-family;
   font-size: $type-size-4;

@@ -1,4 +1,9 @@
-I"v]<aside class="sidebar__right sticky">
+I"@c<p>.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}</p>
+
+<aside class="sidebar__right sticky">
 <nav class="toc">
     <header><h4 class="nav__title" style="background:rgb(123,174,73)"><i class="fas fa-list"></i>
 Contents</h4></header>
@@ -118,27 +123,27 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
 
 <p>So now transforming back our effective potential to get our rough estimate for our resultant field that tries to counteract the applied field, we will get</p>
 
-<p>\(begin{align}
-    U_{eff}(x) &amp;= \int dq \ e^{iqx} 2e^2 \ln(\vert q \vert d) \approx \int_0^{1/x} dq \ \underbrace{e^{iqx}}_{1} \ln(\vert q\vert d)\\
-    &amp;\approx  \eval{q\ln(dq) - q}^{1/x}_{0} \sim \frac{1}{x\ln(x/d)} - \frac{1}{x}
-\end{align}\)</p>
+\[\begin{align}
+    U_{eff}(x) &amp; = \int dq \ e^{iqx} 2e^2 \ln(\vert q \vert d) \approx \int_0^{1/x} dq \ \underbrace{e^{iqx}}_{1} \ln(\vert q\vert d)\\
+    &amp; \approx  q\ln(dq) - q \Big\vert^{1/x}_{0} \sim \frac{1}{x\ln(x/d)} - \frac{1}{x}
+\end{align}\]
 
-<p>so we only have logarithmic correction of the usual inverse potential. The fact that this isn’t suppressed further, shows that screening is weak in 1D.</p>
+<p>so we only have logarithmic correction of the usual inverse potential. The fact that this isn’t suppressed further to decay faster, shows that screening is weak in 1D.</p>
 
 <h3 id="using-phase-shifts---friedels-sum-rule">Using Phase Shifts - Friedel’s Sum Rule</h3>
 
-<p>Instead of relying on the dielectric function, we can formulate the argument in another way due to Friedel. This relates the charge that comes to screen a system as a sum over the phase shifts experienced by the system. Considering how the external charge comes into the system when our external charge is localised \(Q\partial(x)\), we see that performing the unitary transformation</p>
+<p>Instead of relying on the dielectric function, we can formulate the argument in another way using Friedel’s Sum Rule. This relates the charge that comes to screen a system as a sum over the phase shifts experienced by the system. Considering how the external charge comes into the system when our external charge is localised \(Q\partial(x)\), we see that performing the unitary transformation</p>
 
 <p>\begin{equation}
     U = \exp( -i\sqrt{\pi} \int dx \alpha(x) \phi(x)), \quad \quad \alpha(q) = - \frac{U(q)/\pi v_F}{1 + U(q)/\pi v_F}Q
 \end{equation}</p>
 
-<p>for the dual field \(\phi\) to our original field will produce the interaction term in the Hamiltonian. Calculating this can be done by first calculating \(U(\partial_x\theta)U^{-1}\). We can see why the dual field is used as it has canonical commutation relations with \(\partial_x\theta\) which when \(U^{-1}\) is commuted through results in two terms, one which is our usual term and another that contains a factor of \(\alpha(x)\). Therefore we can choose a specific form of \(\alpha\) to cancel out the external charge term and result in other constants that we can ignore. Therefore comparing this to the density result we got from the quadratic Hamiltonian in the static limit \(\omega=0\), we see that the average density is the phase of the transformation \(\langle\rho(x)\rangle = \alpha(x)\).</p>
+<p>for the dual field \(\phi\) to our original field will produce the interaction term in the Hamiltonian. Calculating this can be done by first calculating \(U(\partial_x\theta)U^{-1}\). We can see why the dual field is used as it has canonical commutation relations with \(\partial_x\theta\) such that \([\partial_x\theta, \phi] = \delta(x-x')\). When \(U^{-1}\) is commuted through the density operator, this results in two terms - one which is the same term with the operators swapped around and another that contains a factor of \(\alpha(x)\). Therefore we can choose a specific form of \(\alpha\) to cancel out the external charge term in the Hamitlonian and only result in other constants that we can ignore. Therefore comparing this to the density result we got from the quadratic Hamiltonian in the static limit \(\omega=0\), we see that the average density is the phase of the transformation \(\langle\rho(x)\rangle = \alpha(x)\).</p>
 
-<p>Performing the transformation leads to an overall phase shift in the \(2k_F\) part of the density. This can be seen by similar reasoning as to above except this time we are commuting the \(e^{i\theta}\) with \(U\) as we have the faster oscillations of that form in the density. The commutator is now between \([\theta, \phi] = \text{sgn}(x-x')\) and so it should be expected that the phase shift from this transformation is,</p>
+<p>Performing the transformation leads to an overall phase shift in the \(2k_F\) part of the density. This can be seen by similar reasoning as to above except this time we are commuting the \(e^{i\theta}\) with \(U\) because the faster oscillations have that form in the density operator. The commutator is now between \([\theta, \phi] = \text{sgn}(x-x')\) and so it should be expected that the phase shift from this transformation is,</p>
 
 <p>\begin{equation}
-    \eta(x) = \pi \int dx’ \textnormal{sgn}(x-x’)\alpha(x’).
+    \eta(x) = \pi \int dx’ \text{sgn}(x-x’)\alpha(x’).
 \end{equation}</p>
 
 <p>We can then define the asympototic limit of this phase shift as,</p>
@@ -147,15 +152,15 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
     \eta(x\rightarrow\infty)/\pi = \int dx \alpha(x) = Q_s
 \end{equation}</p>
 
-<p>where the last line is because the average density is equal to \(\alpha\) which defines our screening charge. This shows that Friedel’s phase shift sum rule still holds, that the phase shift is equal to the charge that comes in to screen the added charge. However as shown in the previous section this is not the full charge that was originally added and therefore this modification of the the charge by \(K^2\) must be something that is happening and not a breakdown on the methods. By substituting in for \(\alpha(q)\), we can determine the screening of the charge result again.</p>
+<p>where the last line is because the average density is equal to \(\alpha\) which defines our screening charge. This shows that Friedel’s phase shift sum rule still holds, that the phase shift is equal to the charge that comes in to screen the added charge. However as shown in the previous section this is not the full charge that was originally added and therefore this modification of the the charge by \(K^2\) must be something that is happening and not a breakdown of the methods. By substituting in for \(\alpha(q)\), we can determine the screening of the charge result again.</p>
 
 <h2 id="external-confinement-gates">External Confinement Gates</h2>
 
 <p>To see more clearly why electroneutrality is ‘violated’ it is worth giving a more concrete example. So consider the system shown in the diagram below - of a 1D wire with 2D screening gates located a distance \(D\) away. The bare impurity charge is \(Q\), the screened response is \(Q_s\) and the induced charge on the gate is \(Q_g\)</p>
 
-<p>\begin{center}
-\includegraphics[height=5cm]{wirescreen.png}
-\end{center}</p>
+<figure class="align-center">
+<img src="../images/EG/wire.png" style="width: 70%" class="align-center" />
+</figure>
 
 <p>The Luttinger liquid interaction parameter can be expressed in terms of the distance that the screening gate is away (as it the confinement of this gate that actually causes the 1D behaviour and ensures the interactions in the wire are finite so can assume contact interactions). This is normally done by introducing a cut off to the \(1/\vert x\vert\) interaction at a particular distance. This normally means the interaction has the real space form of \(1/\sqrt{x^2 - c^2}\), in a process identical to one shown in a previous section.  When Fourier transformed, this has the form of a modified Bessel function \(K_0(qc)\) which to leading order is given by a log \(U(q) = 2e^2\vert\ln(qc)\vert\). Therefore our interaction parameter becomes,</p>
 
@@ -179,7 +184,7 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
 
 <h2 id="hypergeometric-awfulness">Hypergeometric Awfulness</h2>
 
-<p>The final part of the paper looks into the \(2k_F\) response to argue that we do not need to look at this part. So the polarisability \(\chi(q,\omega)\) is related to the Fourier transform of the density-density correlator in the unperturbed Luttinger Liquid. This correlation is actually known precisely through Luttinger Liquid techniques and therefore all that is left is to take the Fourier transform and then analytically continue to real frequencies. The actual process is quite heavy but check out “Fourier transform of the 2kF Luttinger liquid density correlation function with different spin and charge velocities” for a more in depth derivation of the particular form. However, the point I will focus on is that in the static case,</p>
+<p>The final part of the paper looks into the \(2k_F\) response to argue that we do not need to look at this part. So the polarisability \(\chi(q,\omega)\) is related to the Fourier transform of the density-density correlator in the unperturbed Luttinger Liquid. This correlation is actually known precisely through Luttinger Liquid techniques and therefore all that is left is to take the Fourier transform and then analytically continue to real frequencies. The actual process is quite heavy but check out this paper if you are interested in the full derivation<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>. However, the point I will focus on is that in the static case,</p>
 
 <p>\begin{equation}
     \chi(q \approx 2k_F) = - \frac{C_g}{\pi v_F} \sum_{eta=\pm1} \Big( \frac{q}{k_F} - 2\eta \Big)^{2K-2}
@@ -187,19 +192,27 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
 
 <p>for a bunch of ugly constants \(C_g\), we can infer an induced density of \(\langle\rho(x)\rangle \sim \cos(2k_Fx) x^{1-2K}\). The cosine term arising as we are considering momenta of \(2k_F\) and the algebraic decay coming from the Fourier transform of \(q^{2K-2}\) which can be done through referring to the gamma function and multiplying by extra terms until we have the form of the gamma function.</p>
 
-<p>However the breakdown of linear screening due to the Peierls instability (that \(\chi(q\rightarrow2k_F)\) diverges) means that the approach of using the dielectric function breaks down and we can no longer use our simple relation between induced density and applied field. Our calculation just above is only to first order \textcolor{red}{though I’m not too sure what is even being expanded in here!}.</p>
+<p>However the breakdown of linear screening due to the Peierls instability (that \(\chi(q\rightarrow2k_F)\) diverges) means that the approach of using the dielectric function breaks down and we can no longer use our simple relation between induced density and applied field. See my notes on the Peierls Instability for more info<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>. Our calculation just above is only to first order \textcolor{red}{though I’m not too sure what is even being expanded in here!}.</p>
 
-<p>The natural splitting of the fast and slow components of the density (the partial derivative and cosine terms) that bosonisation results in should however also hold for our electronic screening (which uses the induced density). The total screening charge comes from the \(q=0\) component so it is the slow response that we should be looking at. \textcolor{red}{Not sure why its the small momenta that determines it, guess its as the included charge isnt dynamical and so the screening should be close to the charge to minimise its effects and therefore wouldnt be oscillating}. This is just to give some reason why the results for the screening do not need to take into account the \(2k_F\) part of the response.</p>
+<p>The natural splitting of the fast and slow components of the density (the partial derivative and cosine terms) that bosonisation results in should however also hold for our electronic screening (which uses the induced density). The total screening charge comes from the \(q=0\) component so it is the slow response that we should be looking at. <span style="color:red">Not sure why its the small momenta that determines it, guess its as the included charge isnt dynamical and so the screening should be close to the charge to minimise its effects and therefore wouldnt be oscillating</span>. This is just to give some reason why the results for the screening do not need to take into account the \(2k_F\) part of the response.</p>
 
 <h2 id="references">References</h2>
+
+<p>So obviously the main reference for these notes are the paper itself! The main places where I got extra information from were referenced in the text, but any resource that explains linear response theory will give the general idea of why the various steps are done. The smaller details of the particular Luttinger Liquid results can be found in the classic references such as Giamarchi’s book or many of the lecture courses that can be found online.</p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1" role="doc-endnote">
-      <p>The Grabert paper linked just above <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Altland And Simons - Quantum Field Theory in Condensed Matter: Chapter 7 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:2" role="doc-endnote">
-      <p>Maslov and Stone 95 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p>Mahan - Many Particle Physics <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Iucci, Fiete, Giamarchi - Fourier transform of the 2kF Luttinger liquid density correlation function with different spin and charge velocities <a href="https://core.ac.uk/download/pdf/4876114.pdf">https://core.ac.uk/download/pdf/4876114.pdf</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p><a href="\Peierls\">My Notes!!</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
