@@ -1,0 +1,206 @@
+I"y]<aside class="sidebar__right sticky">
+<nav class="toc">
+    <header><h4 class="nav__title" style="background:rgb(123,174,73)"><i class="fas fa-list"></i>
+Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#finding-the-average-density-and-polarisability" id="markdown-toc-finding-the-average-density-and-polarisability">Finding The Average Density and Polarisability</a></li>
+  <li><a href="#screening-of-an-additional-charge" id="markdown-toc-screening-of-an-additional-charge">Screening Of An Additional charge</a>    <ul>
+      <li><a href="#using-the-dielectric-function" id="markdown-toc-using-the-dielectric-function">Using The Dielectric Function</a></li>
+      <li><a href="#using-phase-shifts---friedels-sum-rule" id="markdown-toc-using-phase-shifts---friedels-sum-rule">Using Phase Shifts - Friedel’s Sum Rule</a></li>
+    </ul>
+  </li>
+  <li><a href="#external-confinement-gates" id="markdown-toc-external-confinement-gates">External Confinement Gates</a></li>
+  <li><a href="#hypergeometric-awfulness" id="markdown-toc-hypergeometric-awfulness">Hypergeometric Awfulness</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p><em>In this paper, they look at how a Luttinger Liquid reacts to the presence of external charges and find that the response of the conducting electrons to the charge does not result in electroneutrality at large distances, but instead only a fraction of the original charge</em> \((1-K^2)\) <em>is compensated. Their reasoning for this is that the external gates that cause the finite nature of the interactions in the Luttinger Liquid also react to the external charge and it is the sum total of these parts that gives the overall electroneutrality that we would expect.</em></p>
+
+<p>Screening is a property that underlies a lot of the assumptions that we make in physics. The fact that charge will rearrange itself to eliminate the field at long distances is what allows us to assume that interactions are short distanced which is often assumed for many condensed matter systems - it is crucial for obtaining the Luttinger Liquid model for example. Thomas-Fermi (an exponential decay on the Coulomb potential) screening is a common model for the how the interaction from an introduced charge behaves in an exponentially suppressed way. There are multiple neat ways to retrieve this result, from more simple assumptions about how electronic systems are dominated by the chemical potential to as a limit of a full treatment of the polarisation operator.</p>
+
+<p>The fact that the field from the introduced charge is cancelled at large distances in a conducting material should be expected, as we are considering a state at equilibrium and if the field still existed at large distances then more electrons will be pushed away (or holes pulled in) until it has been cancelled in the equilibrium state. This is a manifestation of the overall <em>electroneutrality</em> of materials macroscopically.</p>
+
+<p>Assuming that linear screening is accurate (ie the effects of external charges on the system is given by linear response theory) this means that the dielectric function \(\epsilon(k,\omega)\) describes all the behaviour as this function relates the new field to the old one. It is this function that we will attempt to find for a general 1D system.</p>
+
+<h2 id="finding-the-average-density-and-polarisability">Finding The Average Density and Polarisability</h2>
+
+<p>Here we will treat the interaction of the electrons with each other in a more careful way than the normal Luttinger approach where the interaction is set to be a contact interaction. So consider the Hamiltonian which has already been bosonised,</p>
+
+<p>\begin{equation}
+    H_0 = \frac{v_F}{2}\int dx \big( \Pi^2(x) + (\partial_x\theta)^2 \big) + \frac{1}{2\pi} \int dx dx’ \partial_x\theta(x) U(x-x’) \partial_{x’}\theta(x’)
+\end{equation}</p>
+
+<p>where \(\Pi(x)\) is the conjugate momentum to \(\theta\). Here in the unscreened limit \(U(x-x')\) can either be an unscreened Coulomb interaction (behaving as \(1/\vert x\vert\)) or a weaker finite range potential that has been screened by external charges. As we are in 1D and have introduced our bosonic fields, the second term describes a non-local density-density interaction - where slow variations in density looks like \(\rho = \rho_0 - \partial_x\theta/\sqrt{\pi}\). We will assume that the \(q = 2k_F\) component of the Fourier transform of the interaction is small - this is will simplify the calculation but the full case will still yield the same behaviour.</p>
+
+<p>As everything in this Hamiltonian is quadratic, we can perform a Fourier transform to incorporate the interactions into our expression which will have now have a plasmonic dispersion of \(\omega_q\),</p>
+
+<p>\begin{equation}
+    H_0 = \sum_k \frac{v_F}{2}\vert\Pi(k)\vert^2 + \frac{\omega^2_k}{2v_F} \vert \theta(k) \vert^2, \quad \omega^2 = (v_Fk)^2(1 + \frac{U(q)}{\pi v_F})
+\end{equation}</p>
+
+<p>In the case of Luttinger Liquids, where the interaction \(U(x)\) is a contact interaction, then the Fourier transform of the interaction is a constant \(U_0\). The Luttinger liquid parameter is therefore its usual form \(K = (1 + U_0/\pi v_F)^{-1/2}\) and the slightly more general model we have above will give the Luttinger Liquid as a limit.</p>
+
+<p>We now will consider some external time-dependent charge distribution \(Q(x,t)\) brought into the 1D system, with the interaction with the metal being given by</p>
+
+\[\begin{align}
+H_Q(t) &amp;= \int dx dx' Q(x,t)U(x-x')\rho(x'), \\
+H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\omega)
+\end{align}\]
+
+<p>which we will add to our total Hamiltonian and calculate the average density \(\langle \rho(q,\omega)\rangle\). The way that this is entering the Hamiltonian makes sense with a charge (essentially charge multiplied by density) interacting via the interaction potential with density.  Ignoring the \(2k_F\) component that should arise in the interaction with the external charge (as we care about the long range response of the electrons - this is why we assumed it was small earlier) we can rewrite the derivative of the field as \(\sqrt{\pi}\) multiplied by the density. The first thing to notice is that if we want the average of the density, then taking the functional derivative of the partition function with respect to \(U(q)Q(q)\) will give the average of the density (and dividing it by just the partition function). Now we want to complete the square on our action (also calculating this in terms of actions as it is what I understand better but this same process can be followed in an operator formalism) so we start with our full action</p>
+
+<p>\begin{equation}
+    S = \frac{1}{2\pi\beta} \sum_{\omega,q} \big(\frac{v_F}{2}\omega^2 + \frac{1}{2v_F}\omega^2(q)\big)\vert\theta(q,\omega)\vert^2 + Q(q,\omega)U(q)q\theta(q,\omega)
+\end{equation}</p>
+
+<p>which is done by just taking the Fourier transform and collecting up relevant terms. As a reminder, the plasmon frequency is</p>
+
+<p>\begin{equation}
+   \omega(q) = v_F\vert q\vert\sqrt{1 + U(q)/\pi v_F}
+\end{equation}</p>
+
+<p>Then we complete the square,</p>
+
+\[\begin{align}
+    S = \frac{1}{2\pi\beta} \sum_{\omega,q} \Big[(\frac{v_F}{2}\omega^2 + \frac{1}{2v_F}\omega^2(q))&amp;\Big( \theta(q,\omega) + \frac{Q(q,\omega)U(q)q}{v_F\omega^2 + \frac{1}{v_F}\omega^2(q)} \Big)^2\\
+    &amp; - \frac{1}{2}\frac{Q^2(q,\omega)U^2(q)q^2}{v_F\omega^2 +\frac{1}{v_F}\omega^2(q)}\Big]
+\end{align}\]
+
+<p>from here we can perform the functional integral over the theta field to get a determinant that goes as \(\det( \frac{v_F}{2}\omega^2 + \frac{1}{2v_F}\omega^2(q))\) which will be cancelled out in the averaging. So the average of the density is the functional derivative as stated earlier and taking the functional derivative with respect to \(U(q)Q(q)\) and diving by the partition function we get,</p>
+
+<p>\begin{equation}
+    \langle \rho(q,\omega)\rangle = \frac{v_F}{\pi} \frac{q^2U(q)}{\omega^2 - \omega^2(q)}Q(q,\omega)
+\end{equation}</p>
+
+<p>where we have analytically continued to real frequencies from Matsubara (there are no weird singularities so this is okay to do). This calculation can also be done by evaluating the field that minimises the functional and then taking the spatial derivative to get the density. This can be done because the action is quadratic. Therefore, we have linear screening where the average induced density is proportional to the external field in the diagonal frequency/momentum basis. This was started at the start but has now been shown, so therefore the dielectric function capture all the relevant information.</p>
+
+<p>The proportionality between induced density and field is given by the polarisation \(\chi(q,\omega)\), where \(\langle\rho(q,\omega)\rangle = U(q) \chi(q,\omega)Q(q,\omega)\). The reason why we have a factor of \(U\) appearing there, is because of how the electric field is related to the density. To relate the two, we use the same idea as in the EG98 paper where the interaction looks like density interacting with an electric field specified at every point by \(QU\) (well the spatial version of these!) - due to the system essentially being a capacitor and the energy being added is charging energy of a capacitor. So to get the induced density from the applied field instead of from the external density (controlled by the density-density correlator) we will have an extra factor of \(U\) that appears in the definition. So our polarisability is,</p>
+
+<p>\begin{equation}
+   \chi(q,\omega) =  \frac{v_F}{\pi} \frac{q^2}{\omega^2 - \omega^2(q)}.
+\end{equation}</p>
+
+<h2 id="screening-of-an-additional-charge">Screening Of An Additional charge</h2>
+<h3 id="using-the-dielectric-function">Using The Dielectric Function</h3>
+
+<p>As we are interested in the screening properties, we relate this to the dielectric function which we define to be related to the polarisation,</p>
+
+<p>\begin{equation}
+    \varepsilon(q,\omega)^{-1} = 1 + U(q) \chi(q,\omega), \quad  \implies \quad \varepsilon^{-1}(q,\omega) = 1 + \frac{v_F}{m}\frac{q^2U(q)}{\omega^2 - \omega^2(q)}
+\end{equation}</p>
+
+<p>where the static \(\omega=0\) case gives \(\epsilon(q) = 1 + U(q)/\pi v_F\). This relation is derived in Altland and Simons<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and Mahan<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>, which relates it to the density-density correlation. We will only state it here though in intrest of space. We want the dielectric function as it describes the resultant opposing potential caused by the additional charge which is the relationship we are investigating. The relation between this and the average induced density can be substituted in to give</p>
+
+<p>\begin{equation}
+    \langle \rho(q,\omega)\rangle = \varepsilon^{-1}Q - Q
+\end{equation}</p>
+
+<p>The important thing to note is that throughout this derivation we require the external charge to not be too large as the approach of bosonising the description of a system fails when there is a large charge - linear screening as an approximation also fails when the charge is strong. We can define the screened interaction potential by dividing the Fourier transform of the interaction by the dielectric function \(U_{eff}(q) = U(q)/\varepsilon(q)\). Most importantly the static limit of the dielectric function gives the result that \(U_{eff} = K^2 U(q)\) as \(q\rightarrow0\). To see this, we take the static expression for \(\varepsilon\) which we then put into the relation between effective interaction and the underlying one to give,</p>
+
+<p>\begin{equation}
+    U_{eff} = U(q)(1 + U(q)/\pi v_F)^{-1}, \quad \quad K = (1 + U(0)/\pi v_F)^{-1/2}
+\end{equation}</p>
+
+<p>where \(U(q) \rightarrow U(0)\) as \(q\rightarrow0\). So this means that our \(\varepsilon(q\rightarrow0) = 1/K^2\) as it is the proportionality between the effective reactive potential and the external one.</p>
+
+<p>Now we can put all this together to examine how the system responds to external charge. The requirement of perfect screening is that \(\varepsilon^{-1}(q\rightarrow0,\omega=0) \rightarrow0\) - so the induced density is exactly equal to the external charge. However taking this limit for our system shows it going to a finite value instead, \(\varepsilon^{-1}(q\rightarrow0) \rightarrow K^2\), so our system cannot fully screen out an external field. This leads to the conclusion that the induced density is \(K^2\) different to the  unscreened interaction, which was used in the 98 paper as a basis of their derivation. To be a bit more direct, consider a point charge sitting at \(x=0\) so \(Q(x,t) = Q\delta(x)\). The total induced screening charge in the wire is therefore (through using the definition of average induced density in terms of our dielectric function)</p>
+
+<p>\begin{equation}
+   e Q_S \equiv e\int dx \langle\rho(x)\rangle, \quad \implies \quad Q_S = -(1-K^2)Q
+\end{equation}</p>
+
+<p>which is obviously reduced in comparison to the bare charge (which linearly related to the density). This therefore looks like electroneutrality can be violated (ie the system should not have an overall charge so \(Q+Q_s = 0\) should always be true). The problem is in finite range interaction models as long distance interactions can be expressed through a Luttinger liquid with \(K\rightarrow0\) as we move further away - this will provide the electroneutrality that we would expect. The reason for this apparent problem is that we have not considered the screening gates, but before we show that considering the entirety of system solves the issue we first look at a phase derivation of the electroneutrality which is known as Friedel’s sum rule.</p>
+
+<p>As a little side note before we get to phases, we will be a little less severe in our approximations and extract the asymptotic behaviour of \(U(q)\) to see a little more precisely what is going on. So as we want small momenta, we are looking at large distances and if the 1D wire has a width of \(d\) then at distances further away than \(d\) then particles would see a a single charge rather than a smeared charge. This can be approximated by a electric potential of \(e^2/\sqrt{x^2 + d^2}\), which when Fourier transformed gives Bessel functions (look at the definitions of the modified Bessel function of second kind) \(2e^2 K_0(\vert q\vert d)\). Now again stealing results from Bessel functions, the asymptote of this at small momenta is \(2e^2 \ln(\vert q \vert d)\) - though this should be expected from integrating something like \(1/x\) (Fourier transform with \(e^{iqx}\) at small q which is approx 1) which would give a logarithmic looking term.</p>
+
+<p>So now transforming back our effective potential to get our rough estimate for our resultant field that tries to counteract the applied field, we will get</p>
+
+<p>\begin{align}
+    U_{eff}(x) &amp;= \int dq \ e^{iqx} 2e^2 \ln(\vert q \vert d) \approx \int_0^{1/x} dq \ \underbrace{e^{iqx}}<em>{1} \ln(\vert q\vert d)<br />
+    &amp;\approx  \eval{q\ln(dq) - q}^{1/x}</em>{0} \sim \frac{1}{x\ln(x/d)} - \frac{1}{x}
+\end{align}</p>
+
+<p>so we only have logarithmic correction of the usual inverse potential. The fact that this isn’t suppressed further, shows that screening is weak in 1D.</p>
+
+<h3 id="using-phase-shifts---friedels-sum-rule">Using Phase Shifts - Friedel’s Sum Rule</h3>
+
+<p>Instead of relying on the dielectric function, we can formulate the argument in another way due to Friedel. This relates the charge that comes to screen a system as a sum over the phase shifts experienced by the system. Considering how the external charge comes into the system when our external charge is localised \(Q\partial(x)\), we see that performing the unitary transformation</p>
+
+<p>\begin{equation}
+    U = \exp( -i\sqrt{\pi} \int dx \alpha(x) \phi(x)), \quad \quad \alpha(q) = - \frac{U(q)/\pi v_F}{1 + U(q)/\pi v_F}Q
+\end{equation}</p>
+
+<p>for the dual field \(\phi\) to our original field will produce the interaction term in the Hamiltonian. Calculating this can be done by first calculating \(U(\partial_x\theta)U^{-1}\). We can see why the dual field is used as it has canonical commutation relations with \(\partial_x\theta\) which when \(U^{-1}\) is commuted through results in two terms, one which is our usual term and another that contains a factor of \(\alpha(x)\). Therefore we can choose a specific form of \(\alpha\) to cancel out the external charge term and result in other constants that we can ignore. Therefore comparing this to the density result we got from the quadratic Hamiltonian in the static limit \(\omega=0\), we see that the average density is the phase of the transformation \(\langle\rho(x)\rangle = \alpha(x)\).</p>
+
+<p>Performing the transformation leads to an overall phase shift in the \(2k_F\) part of the density. This can be seen by similar reasoning as to above except this time we are commuting the \(e^{i\theta}\) with \(U\) as we have the faster oscillations of that form in the density. The commutator is now between \([\theta, \phi] = \text{sgn}(x-x')\) and so it should be expected that the phase shift from this transformation is,</p>
+
+<p>\begin{equation}
+    \eta(x) = \pi \int dx’ \textnormal{sgn}(x-x’)\alpha(x’).
+\end{equation}</p>
+
+<p>We can then define the asympototic limit of this phase shift as,</p>
+
+<p>\begin{equation}
+    \eta(x\rightarrow\infty)/\pi = \int dx \alpha(x) = Q_s
+\end{equation}</p>
+
+<p>where the last line is because the average density is equal to \(\alpha\) which defines our screening charge. This shows that Friedel’s phase shift sum rule still holds, that the phase shift is equal to the charge that comes in to screen the added charge. However as shown in the previous section this is not the full charge that was originally added and therefore this modification of the the charge by \(K^2\) must be something that is happening and not a breakdown on the methods. By substituting in for \(\alpha(q)\), we can determine the screening of the charge result again.</p>
+
+<h2 id="external-confinement-gates">External Confinement Gates</h2>
+
+<p>To see more clearly why electroneutrality is ‘violated’ it is worth giving a more concrete example. So consider the system shown in the diagram below - of a 1D wire with 2D screening gates located a distance \(D\) away. The bare impurity charge is \(Q\), the screened response is \(Q_s\) and the induced charge on the gate is \(Q_g\)</p>
+
+<p>\begin{center}
+\includegraphics[height=5cm]{wirescreen.png}
+\end{center}</p>
+
+<p>The Luttinger liquid interaction parameter can be expressed in terms of the distance that the screening gate is away (as it the confinement of this gate that actually causes the 1D behaviour and ensures the interactions in the wire are finite so can assume contact interactions). This is normally done by introducing a cut off to the \(1/\vert x\vert\) interaction at a particular distance. This normally means the interaction has the real space form of \(1/\sqrt{x^2 - c^2}\), in a process identical to one shown in a previous section.  When Fourier transformed, this has the form of a modified Bessel function \(K_0(qc)\) which to leading order is given by a log \(U(q) = 2e^2\vert\ln(qc)\vert\). Therefore our interaction parameter becomes,</p>
+
+<p>\begin{equation}
+    K = \Big( 1 + \frac{2e^2}{\pi v_F} \ln(2D/d) \Big)^{-1/2}
+\end{equation}</p>
+
+<p>for distance separation of the screening gate and the wire \(D\) and width of the wire \(d\). Next we want to find the induced charge on the 2D screening gate from a total density of charge \(q(x')\) along the wire. This requires the susceptibility of a 2D metal which can be evaluated - its not easily though! Looking up correlations in a Luttinger liquid, the part we want is the quadratically decaying part that is typical of Fermi liquids. We are considering the static case (systems has come to equilibrium) so we get something that looks like \((x^2 + (it)^2)/(x^2+(it)^2)^2\). Wanting the static case and taking into account the fact that charge is \(D\) away from the wire (so the actually distance is \(h^2 = x^2 + D^2\))</p>
+
+<p>\begin{equation}
+    \rho_G(x) = \int dx’ \chi(x-x’) q(x’) = \frac{-D}{\pi} \int dx’ \frac{q(x’)}{D^2 + (x-x’)^2}
+\end{equation}</p>
+
+<p>where the integration over the \(y\) width of the gate Upon having found the expression for the charge induced in our gate, we then integrate over \(x\) to find the total charge response. This results in an arctan integral which when taken to include our whole region will give a contribution of \(\pi/D\). This leaves the integration over the total density in the wire which was what defines our charges! Therefore our new condition of electroneutrality is</p>
+
+<p>\begin{equation}
+    Q_s + Q + Q_g = 0
+\end{equation}</p>
+
+<p>which sorts out the issue of electroneutrality!</p>
+
+<h2 id="hypergeometric-awfulness">Hypergeometric Awfulness</h2>
+
+<p>The final part of the paper looks into the \(2k_F\) response to argue that we do not need to look at this part. So the polarisability \(\chi(q,\omega)\) is related to the Fourier transform of the density-density correlator in the unperturbed Luttinger Liquid. This correlation is actually known precisely through Luttinger Liquid techniques and therefore all that is left is to take the Fourier transform and then analytically continue to real frequencies. The actual process is quite heavy but check out “Fourier transform of the 2kF Luttinger liquid density correlation function with different spin and charge velocities” for a more in depth derivation of the particular form. However, the point I will focus on is that in the static case,</p>
+
+<p>\begin{equation}
+    \chi(q \approx 2k_F) = - \frac{C_g}{\pi v_F} \sum_{eta=\pm1} \Big( \frac{q}{k_F} - 2\eta \Big)^{2K-2}
+\end{equation}</p>
+
+<p>for a bunch of ugly constants \(C_g\), we can infer an induced density of \(\langle\rho(x)\rangle \sim \cos(2k_Fx) x^{1-2K}\). The cosine term arising as we are considering momenta of \(2k_F\) and the algebraic decay coming from the Fourier transform of \(q^{2K-2}\) which can be done through referring to the gamma function and multiplying by extra terms until we have the form of the gamma function.</p>
+
+<p>However the breakdown of linear screening due to the Peierls instability (that \(\chi(q\rightarrow2k_F)\) diverges) means that the approach of using the dielectric function breaks down and we can no longer use our simple relation between induced density and applied field. Our calculation just above is only to first order \textcolor{red}{though I’m not too sure what is even being expanded in here!}.</p>
+
+<p>The natural splitting of the fast and slow components of the density (the partial derivative and cosine terms) that bosonisation results in should however also hold for our electronic screening (which uses the induced density). The total screening charge comes from the \(q=0\) component so it is the slow response that we should be looking at. \textcolor{red}{Not sure why its the small momenta that determines it, guess its as the included charge isnt dynamical and so the screening should be close to the charge to minimise its effects and therefore wouldnt be oscillating}. This is just to give some reason why the results for the screening do not need to take into account the \(2k_F\) part of the response.</p>
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>The Grabert paper linked just above <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Maslov and Stone 95 <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET
