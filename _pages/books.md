@@ -11,13 +11,13 @@ feature_row:
     btn_label: "More Info"
     btn_class: "btn--inverse"
 feature_row2:
-  - image_path: ../images/chillvibes.JPG
+  - image_path: ../images/chillvibes.jpg
     title: "Applying voltage sources to Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev B 1998"
     url: /EG98/
     btn_label: "More Info"
     btn_class: "btn--inverse"  
-  - image_path: ../images/night.jpg
+  - image_path: ../images/night.JPG
     title: "Electroneutrality in a Luttinger Liquid"
     excerpt: "Egger and Grabert - Phys Rev Lett 1997"
     url: /EG97/
