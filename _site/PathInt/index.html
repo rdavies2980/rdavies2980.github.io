@@ -21,14 +21,14 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="More is Difficult">
 <meta property="og:title" content="Introduction to Path Integrals">
-<meta property="og:url" content="http://localhost:4000/PathInt/">
+<meta property="og:url" content="/PathInt/">
 
 
   <meta property="og:description" content="just having fun with it">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/images/PathInt/SLITSall.png">
+  <meta property="og:image" content="/images/PathInt/SLITSall.png">
 
 
 
@@ -43,7 +43,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/PathInt/">
+<link rel="canonical" href="/PathInt/">
 
 
 
@@ -54,7 +54,7 @@
     
       "@type": "Person",
       "name": "Rose Davies",
-      "url": "http://localhost:4000/"
+      "url": "/"
     
   }
 </script>
@@ -190,7 +190,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          48 minute read
+          43 minute read
         
       </span>
     
@@ -281,19 +281,19 @@ Contents</h4></header>
 
 <h2 id="quantum-mechanical-paths---sum-over-histories">Quantum Mechanical Paths - Sum Over Histories</h2>
 
-<p>To start to understand what is happening in a path integral, it is best to start at the beginning of many a quantum mechanics course - Young’s double slit experiment. The diffraction that is unique to wavelike behaviour is described by summing the amplitudes at a point \(O\) that come from each slit, \(A(0) = \sum_i A(i \rightarrow0)\) , as shown in the figure below<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>To start to understand what is happening in a path integral, it is best to start at the beginning of many a quantum mechanics course - Young’s double slit experiment. The diffraction that is unique to wavelike behaviour is described by summing the amplitudes at a point \(O\) that come from each slit, \(A(0) = \sum_i A(i \rightarrow0)\) , as shown in the figure below<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <figure class="align-center">
 <img src="../images/PathInt/2slits.png" style="width: 70%" class="align-center" />
 </figure>
 
-<p>where the intensity at any point is the square of the amplitude. This is in contrast to particle-like behaviour where the total intensity is the sum of the individual intensities. However, in one lesson, many years ago (as the apocryphal story goes), a young Feynman asked what would happen if there were more holes and gratings<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>where the intensity at any point is the square of the amplitude. This is in contrast to particle-like behaviour where the total intensity is the sum of the individual intensities. However, in one lesson, many years ago (as the apocryphal story goes), a young Feynman asked what would happen if there were more holes and gratings<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <figure class="align-center">
 <img src="../images/PathInt/moreslits.png" style="width: 70%" class="align-center" />
 </figure>
 
-<p>The total amplitude would then become a more complicated sum, having to take into account more slits, \(A(O) = \sum_iB(i\rightarrow0) \sum_jA(j\rightarrow i)\). Taking this idea to its conclusion, if there were an infinite number of slits then there would be an infinite number of amplitudes to sum over. An infinite number of gratings would mean that the the ‘paths’ that the particle takes is now a continuous function (imagine spacing between gratings and spacing are two independent coordinates that both shrink to an infinitessimal). This results in the total amplitude is summed over all possible paths from the source to the point \(O\)<sup id="fnref:1:2" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>The total amplitude would then become a more complicated sum, having to take into account more slits, \(A(O) = \sum_iB(i\rightarrow0) \sum_jA(j\rightarrow i)\). Taking this idea to its conclusion, if there were an infinite number of slits then there would be an infinite number of amplitudes to sum over. An infinite number of gratings would mean that the the ‘paths’ that the particle takes is now a continuous function (imagine spacing between gratings and spacing are two independent coordinates that both shrink to an infinitessimal). This results in the total amplitude is summed over all possible paths from the source to the point \(O\)<sup id="fnref:1:2" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <figure class="align-center">
 <img src="../images/PathInt/SLITSall.png" style="width: 70%" class="align-center" />
@@ -420,7 +420,7 @@ Contents</h4></header>
 
 <h2 id="field-integrals">Field Integrals</h2>
 
-<p>Our task is to now extend the idea of a path integral of quantum mechanics to quantum field theory. In a quantum mechanical sense, we elevated a single point particle to an integral over all time-dependent configurations. In field theory, the demotion of position from a dynamical variable to a label means the degrees of freedom are already continuous. A path integral over this will be integration over a single copy of these variables at each instant of time. We are integrating over surfaces that are mappings from space-time to the field manifold <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+<p>Our task is to now extend the idea of a path integral of quantum mechanics to quantum field theory. In a quantum mechanical sense, we elevated a single point particle to an integral over all time-dependent configurations. In field theory, the demotion of position from a dynamical variable to a label means the degrees of freedom are already continuous. A path integral over this will be integration over a single copy of these variables at each instant of time. We are integrating over surfaces that are mappings from space-time to the field manifold <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
 
 <figure class="align-center">
 <img src="../images/PathInt/FieldIntegral.png" style="width: 70%" class="align-center" />
@@ -460,7 +460,7 @@ Contents</h4></header>
     I = \sum_{-S}^{S} |S_z\rangle\langle S_z|
 \end{equation}</p>
 
-<p>we now want to consider the spin coherent state \(\vert \Omega\rangle\) which is a state obtained by rotating the fully polarised state by an angle \(\theta\) around the \(x\) axis and an angle \(\phi\) around the \(z\) axis. This state is no longer an eigenfunction of the spin operator, instead it more obviously has a classical interpretation as a spin pointing in a certain direction! This state can then be used as our basis. This, however, is only okay to do if we are in the large spin limit due to a lack of kinetic energy term damping the change in our states (so derivatives are v dodgy when we calculate a path integral for spin). Many spin problems can be tackled with the path integral representation of the problem - see Shankar<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+<p>we now want to consider the spin coherent state \(\vert \Omega\rangle\) which is a state obtained by rotating the fully polarised state by an angle \(\theta\) around the \(x\) axis and an angle \(\phi\) around the \(z\) axis. This state is no longer an eigenfunction of the spin operator, instead it more obviously has a classical interpretation as a spin pointing in a certain direction! This state can then be used as our basis. This, however, is only okay to do if we are in the large spin limit due to a lack of kinetic energy term damping the change in our states (so derivatives are v dodgy when we calculate a path integral for spin). Many spin problems can be tackled with the path integral representation of the problem - see Shankar<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</p>
 
 <p>So returning to our coherent states as the eigenfunctions of the annihilation operator, we end up with a new resolution of identity:</p>
 
@@ -468,7 +468,7 @@ Contents</h4></header>
     I_F = \int \prod_i \frac{d\bar{\phi}_id\phi_i}{\pi} e^{-\sum_i \bar{\phi}_i\phi_i} |\phi\rangle\langle\phi|
 \end{equation}</p>
 
-<p>with this now showing how these states are not pairwise orthogonal and the weighting that appears in this resolution compensating for this over-counting. In the coherent basis, the overlap between two states is given by \(\langle\phi \vert \theta\rangle = \exp(\sum \phi^*_i\theta_i)\). See Altland and Simons<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>, or Shankar<sup id="fnref:3:1" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup> for derivations of these relations.</p>
+<p>with this now showing how these states are not pairwise orthogonal and the weighting that appears in this resolution compensating for this over-counting. In the coherent basis, the overlap between two states is given by \(\langle\phi \vert \theta\rangle = \exp(\sum \phi^*_i\theta_i)\). See Altland and Simons<sup id="fnref:2:1" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, or Shankar<sup id="fnref:3:1" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> for derivations of these relations.</p>
 
 <p>Now equipped with this resolution of identity, we can repeat the time slicing procedure from earlier, using the coherent states and inserting the resolution of identity between each various time slice. Starting from a more multi-particle perspective of the quantum Gibbs distribution</p>
 

@@ -1,0 +1,654 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Why the Renormalisation Group is Needed | More is Difficult</title>
+<meta name="description" content="Understanding the difference between correlated and uncorrelated systems">
+
+
+  <meta name="author" content="Rose Davies">
+  
+  <meta property="article:author" content="Rose Davies">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="More is Difficult">
+<meta property="og:title" content="Why the Renormalisation Group is Needed">
+<meta property="og:url" content="/maths%20light/overview/RG/">
+
+
+  <meta property="og:description" content="Understanding the difference between correlated and uncorrelated systems">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-05-21T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/maths%20light/overview/RG/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Rose Davies",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="More is Difficult Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          More is Difficult
+          <span class="site-subtitle">Condensed Matter Physics</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/physnote/">Topic Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/books/">Paper Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+  <div class="sidebars_underline">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/selfie.jpg" alt="Rose Davies" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Rose Davies</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Trying to understand physics and help others do the same!<br />(She/her)</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Contact</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Birmingham, UK</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:rxd440@student.bham.ac.uk">
+            <meta itemprop="email" content="rxd440@student.bham.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label"> Email </span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Why the Renormalisation Group is Needed">
+    <meta itemprop="description" content="Understanding the difference between correlated and uncorrelated systems">
+    <meta itemprop="datePublished" content="2021-05-21T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Why the Renormalisation Group is Needed
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          14 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>The Renormalisation Group (RG) technique is held up as one of the crowning achievements of physics and has obtained a mystical, threatening aura to anyone beginning to learn it. The usual way of explaining it relies on the abstract concept of flows through parameter space and is often explained using high energy physics - which I find to be unintuitive! So I will try to explain via an analogy the idea of correlated systems that I think gets at the heart of why RG is necessary, as if we see why something is needed we have learnt quite a lot about it without having to deal with it directly.</p>
+
+<p>To explain this, we will have to discuss issues about how physics actually describes the world and what we mean by a model. This is actually a good place to start, with the idea of separation of scales that most physics models use without explicitly stating.</p>
+
+<h3 id="separation-of-scales---mean-field-theory-in-disguise">Separation of Scales - Mean Field Theory in Disguise</h3>
+
+<p>The university is, luckily, an infuriatingly complicated place - for it would be very boring otherwise! This is a problem for physics when we try to describe the world around us. Where do we stop including information? There is a common sense answer for this and it is to stop including things when they have a small effect on the behaviour we want to model. For example, we ignore the effects of objects being made from atoms when calculating where a projectile will land and any map of a country will not include rockpools on the beach.</p>
+
+<p>The notion is put in mathematical terms by considering a ‘separation of scales’ which assigns a scale (normally a length or unit of time but could be more exotic units) to each part of the model and requires that they are suitably different. So in our previous example, rockpools are \(\sim 10cm\), whereas countries are hundreds of kilometers across. So we see that it will be small enough (written as \(10cm &lt;&lt; 100 km\)) where we can safely ignore it.</p>
+
+<p>This all seems pretty handwavey - “isn’t physics about rigorous statements and universal laws?”. Well it is to an extent but due to the complexity of everything, our losses must be cut at some point. A valid question would be what ‘small enough’ meant in the previous paragraph and the answer is that it depends on the situation. Again no absolute answers can be given because it all depends on what we choose to model, the <em>objective science</em> has been brought low by <em>postmodern subjectivity</em>!</p>
+
+<p>But to give an example, if we want to model plate tectonics then we can safely ignore the rock pools. This is because as well as being small on the length scale of tectonic plates, the timescale at which plates move is so much larger than how long a rock pool will exist - the sea might have risen or eroded away the coastline. GPS tracking gives an example of where we could still care about rockpools as here we are trying to model people who are usually \(\sim 1m\), when rockpools are not so insignificant.</p>
+
+<p>Choosing what level of detail to include in our problem depends on the accuracy we want in our answer. This idea is how we normally approach physics and modelling but there has been an assumption snuck into the reasoning. The assumption is that <em>small scale behaviour will not affect the larger scale behaviour</em>, so in our example we assumed that rockpools on the beach aren’t related to the size of the country. This premise is flawed in correlated systems.</p>
+
+<h3 id="correlated-systems-via-an-analogy">Correlated Systems via an analogy</h3>
+
+<p>Let’s consider someone making a sarcastic comment to you on a regular day. It will probably just be ignored, might even cause a chuckle or an eye roll. Now imagine that same comment but on a day after a bad night of sleep, when you haven’t had time to eat lunch and during a hectic week. Suddenly the remark could now cause you to snap back, get into an argument and escalate further. This snowballing from a small original nudge to a large scale result is at the heart of correlated systems.</p>
+
+<p>In physics, correlation is often talked about in terms of a length rather than relationships. So to translate the analogy into a ‘material’, we will consider a 1D chain of spins (that can point in any direction) that is paramagnetic with all the spins are oriented randomly. So this diagram shows a snapshot in time of the orientation of these fluctuations.</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/spinchain.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>Now due to thermal or quantum fluctuations, there is a chance that any spin will randomly align (think about Boltzmann or Fermi/Bose distributions in statistical physics or just a probability argument). This random spin alignment corresponds to our sarcastic comment - the initial perturbation.</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/spinwavFluc.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>If our 1D spin chain is having a regular day then the spin on the site will just take on another random orientation after this intial alignment. On a slightly worse day this alignment could cause other spins around it to also align but may only affect a couple of sites either side. If the 1D spin chain was having the worst day in its life then one pair of spins aligning could cause the entire chain to become ferromagentic and point in the same direction.</p>
+
+<p>The length over which the original spin alignment can affect others is called the correlation length and is one of the most important ways of characterising a system. So for our spin chain it would correspond to the number of sites that align in the same direction before relaxing back to each having a random orientation.</p>
+
+<figure class="align-center">
+<img src="../../../images/posts/spinwavcorrel.png" style="width: 70%" class="align-center" />
+</figure>
+
+<p>Mathematically it is related to the average of \(\langle s(i)s(j)\rangle\) where \(s(i)\) is the spin on site \(i\). To be accurate it is the exponent of this expression \(\langle s(i)s(j)\rangle \sim exp(\vert i - j \vert/\xi)\). If you know about statistics, you can see that the name correlation is appropriate!</p>
+
+<h3 id="why-we-need-rg">Why we need RG</h3>
+
+<p>Having understood the correlation length, we can see that it is the crucial length scale to consider whether we can ignore smaller information. If we are trying to model something at a scale \(L\) and the correlation length, \(\xi\), is a lot smaller than this then we do not need to care about microscopic details and fluctuations. Returning again to the rockpool example, as rockpools with a size \(l\) only tend to exist on the beach we have a correlation length of the size of the beach. So if the country is much larger than the beach we have achieved both the separation of lengths \(l &lt;&lt; L\) and the correlation length will be small compared to the country \(\xi &lt;&lt; L\). These are the requirements that we can ignore information at a smaller scale.</p>
+
+<p>The natural question is then what can we do if the correlation length is the same size as what we are interested in. We need RG in order to extract what the effect is of all of the fluctuations at the smaller scale. To give a sneak peek into how it works, it assumes that fluctuations most strongly affect fluctuations of a similar size and the effect cascades up in size - each fluctuation effecting a larger one. In the sarcastic comment analogy, although it might be hard to draw a directly line from a sarcastic comment to getting fired from your work, linking up each step from the comment to the reply, to the insult to throwing your drink over them make it possible to track. Therefore the end result of the fluctuations can be expressed by summing up all the contributions as we increase the length up to the scale we want to consider. This is the set up for differential equations to describe the system which can be integrated to give a total effect.</p>
+
+<p>In physics we must always ignore some information in order to produce any meaningful results - when there is Avogadro’s number of atoms in a couple of grams of a material we cannot hope to simulate it exactly. Normally we rely on a good separation of scales in order to quantify what we can ignore. However we have seen that there is another scale, the correlation length, that is also needed to determine whether we can ignore smaller scale behaviour. Correlated systems are systems in which the correlation length is the same size as the lengths scale we want to model and it is here that RG is needed to tell us what we can ignore.</p>
+
+<p>Hopefully you now understand the idea of correlated systems and why RG would be useful. RG notes that go into the mathematical detail will be uploaded soon so be sure to check those out if you want to know more. Finally I would like to reassure everyone that I have never been fired from a job because of throwing my drink over anyone - this was strictly a Gedankenexperiment!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#models" class="page__taxonomy-item" rel="tag">Models</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#renormalisation-group" class="page__taxonomy-item" rel="tag">Renormalisation Group</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#maths-light" class="page__taxonomy-item" rel="tag">Maths Light</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#overview" class="page__taxonomy-item" rel="tag">Overview</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-05-21T00:00:00+01:00">May 21, 2021</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Why+the+Renormalisation+Group+is+Needed%20%2Fmaths%2520light%2Foverview%2FRG%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fmaths%2520light%2Foverview%2FRG%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fmaths%2520light%2Foverview%2FRG%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/maths%20heavy/techniques/Operators/" class="pagination--pager" title="Solving without translational invariance - Operators
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20heavy/techniques/Operators/" rel="permalink">Solving without translational invariance - Operators
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dealing with localised terms in the Hamiltonian by stitching operators
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20heavy/techniques/Stitching/" rel="permalink">Solving without translational invariance - Green’s functions
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          14 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A method for stitching together a patchwork of Green’s functions
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20light/arguments/Soliton/" rel="permalink">Showing that solitons carry fractional charge
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short, intuitive reason can be given to understand why the charge of solitons fractionalise.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Contact:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2021 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

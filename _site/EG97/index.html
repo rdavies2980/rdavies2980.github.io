@@ -21,14 +21,14 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="More is Difficult">
 <meta property="og:title" content="Electroneutrality and the Friedel Sum Rule in a Luttinger Liquid">
-<meta property="og:url" content="http://localhost:4000/EG97/">
+<meta property="og:url" content="/EG97/">
 
 
   <meta property="og:description" content="Electroneutrality, Luttinger Liquid, Egger Grabert, Screening">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/images/EG/wire.png">
+  <meta property="og:image" content="/images/EG/wire.png">
 
 
 
@@ -43,7 +43,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/EG97/">
+<link rel="canonical" href="/EG97/">
 
 
 
@@ -54,7 +54,7 @@
     
       "@type": "Person",
       "name": "Rose Davies",
-      "url": "http://localhost:4000/"
+      "url": "/"
     
   }
 </script>
@@ -190,7 +190,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          37 minute read
+          34 minute read
         
       </span>
     
@@ -322,7 +322,7 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
     \varepsilon(q,\omega)^{-1} = 1 + U(q) \chi(q,\omega), \quad  \implies \quad \varepsilon^{-1}(q,\omega) = 1 + \frac{v_F}{m}\frac{q^2U(q)}{\omega^2 - \omega^2(q)}
 \end{equation}</p>
 
-<p>where the static \(\omega=0\) case gives \(\epsilon(q) = 1 + U(q)/\pi v_F\). This relation is derived in Altland and Simons<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and Mahan<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>, which relates it to the density-density correlation. We will only state it here though in the interest of space. We want the dielectric function as it describes the resultant opposing potential caused by the additional charge which is the relationship we are investigating. The relation between this and the average induced density can be substituted in to give</p>
+<p>where the static \(\omega=0\) case gives \(\epsilon(q) = 1 + U(q)/\pi v_F\). This relation is derived in Altland and Simons<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> and Mahan<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>, which relates it to the density-density correlation. We will only state it here though in the interest of space. We want the dielectric function as it describes the resultant opposing potential caused by the additional charge which is the relationship we are investigating. The relation between this and the average induced density can be substituted in to give</p>
 
 <p>\begin{equation}
     \langle \rho(q,\omega)\rangle = \varepsilon^{-1}Q - Q
@@ -409,7 +409,7 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
 
 <h2 id="hypergeometric-awfulness">Hypergeometric Awfulness</h2>
 
-<p>The final part of the paper looks into the \(2k_F\) response to argue that we do not need to look at this part. So the polarisability \(\chi(q,\omega)\) is related to the Fourier transform of the density-density correlator in the unperturbed Luttinger Liquid. This correlation is actually known precisely through Luttinger Liquid techniques and therefore all that is left is to take the Fourier transform and then analytically continue to real frequencies. The actual process is quite heavy but check out this paper if you are interested in the full derivation<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>. However, the point I will focus on is that in the static case,</p>
+<p>The final part of the paper looks into the \(2k_F\) response to argue that we do not need to look at this part. So the polarisability \(\chi(q,\omega)\) is related to the Fourier transform of the density-density correlator in the unperturbed Luttinger Liquid. This correlation is actually known precisely through Luttinger Liquid techniques and therefore all that is left is to take the Fourier transform and then analytically continue to real frequencies. The actual process is quite heavy but check out this paper if you are interested in the full derivation<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>. However, the point I will focus on is that in the static case,</p>
 
 <p>\begin{equation}
     \chi(q \approx 2k_F) = - \frac{C_g}{\pi v_F} \sum_{eta=\pm1} \Big( \frac{q}{k_F} - 2\eta \Big)^{2K-2}
@@ -417,7 +417,7 @@ H_Q(\omega) &amp;= \frac{1}{2\pi\beta} \sum_{q,\omega} Q(q,\omega)U(q)\rho(-q,-\
 
 <p>for a bunch of ugly constants \(C_g\), we can infer an induced density of \(\langle\rho(x)\rangle \sim \cos(2k_Fx) x^{1-2K}\). The cosine term arising as we are considering momenta of \(2k_F\) and the algebraic decay coming from the Fourier transform of \(q^{2K-2}\) which can be done through referring to the gamma function and multiplying by extra terms until we have the form of the gamma function.</p>
 
-<p>However the breakdown of linear screening due to the Peierls instability (that \(\chi(q\rightarrow2k_F)\) diverges) means that the approach of using the dielectric function breaks down and we can no longer use our simple relation between induced density and applied field. See my notes on the Peierls Instability for more info<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>. Our calculation just above is only to first order \textcolor{red}{though I’m not too sure what is even being expanded in here!}.</p>
+<p>However the breakdown of linear screening due to the Peierls instability (that \(\chi(q\rightarrow2k_F)\) diverges) means that the approach of using the dielectric function breaks down and we can no longer use our simple relation between induced density and applied field. See my notes on the Peierls Instability for more info<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>. Our calculation just above is only to first order <span style="color:red">though I’m not too sure what is even being expanded in here!</span></p>
 
 <p>The natural splitting of the fast and slow components of the density (the partial derivative and cosine terms) that bosonisation results in should however also hold for our electronic screening (which uses the induced density). The total screening charge comes from the \(q=0\) component so it is the slow response that we should be looking at. <span style="color:red">Not sure why its the small momenta that determines it, guess its as the included charge isnt dynamical and so the screening should be close to the charge to minimise its effects and therefore wouldnt be oscillating</span>. This is just to give some reason why the results for the screening do not need to take into account the \(2k_F\) part of the response.</p>
 

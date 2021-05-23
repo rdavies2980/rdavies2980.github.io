@@ -1,4 +1,4 @@
-I"H$<p>In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.</p>
+I"W$<p>In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.</p>
 
 <p>The way that will be looked into here is due to terms in the Hamiltonian of our system being local. The overall technique remains the same, solving either side and then gluing the pieces together. This time, however, instead of performing this to the Green’s function we will glue operators. There are many parallels between the two techniques though!</p>
 
@@ -93,7 +93,7 @@
 
 <h3 id="small-sprinkle-of-analysis">Small sprinkle of analysis</h3>
 
-<p>So what we have done here is relate the operators either side of a barrier - the typical quantum mechanical problem in the field theoretic way. Solving this problem in QM (see this stack exchange - well up to a minus sign<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>) is a little easier and follows the previous blog post by requiring a discontinuity in the derivative. This problem just requires a little more care to derive.</p>
+<p>So what we have done here is relate the operators either side of a barrier - the typical quantum mechanical problem in the field theoretic way. Solving this problem in QM (see this stack exchange - well up to a minus sign<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>) is a little easier and follows the previous blog post by requiring a discontinuity in the derivative. This problem just requires a little more care to derive.</p>
 
 <p>Just to close this out, I’ll mention some ways in which this relationship is useful and what it can tell us.</p>
 

@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-14T17:52:38+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">More is Difficult</title><subtitle>Physics Notes</subtitle><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><entry><title type="html">Solving without translational invariance - Operators</title><link href="http://localhost:4000/maths%20heavy/techniques/Operators/" rel="alternate" type="text/html" title="Solving without translational invariance - Operators" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>http://localhost:4000/maths%20heavy/techniques/Operators</id><content type="html" xml:base="http://localhost:4000/maths%20heavy/techniques/Operators/">&lt;p&gt;In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-23T12:05:16+01:00</updated><id>/feed.xml</id><title type="html">More is Difficult</title><subtitle>Physics Notes</subtitle><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><entry><title type="html">Why the Renormalisation Group is Needed</title><link href="/maths%20light/overview/RG/" rel="alternate" type="text/html" title="Why the Renormalisation Group is Needed" /><published>2021-05-21T00:00:00+01:00</published><updated>2021-05-21T00:00:00+01:00</updated><id>/maths%20light/overview/RG</id><content type="html" xml:base="/maths%20light/overview/RG/">&lt;p&gt;The Renormalisation Group (RG) technique is held up as one of the crowning achievements of physics and has obtained a mystical, threatening aura to anyone beginning to learn it. The usual way of explaining it relies on the abstract concept of flows through parameter space and is often explained using high energy physics - which I find to be unintuitive! So I will try to explain via an analogy the idea of correlated systems that I think gets at the heart of why RG is necessary, as if we see why something is needed we have learnt quite a lot about it without having to deal with it directly.&lt;/p&gt;
+
+&lt;p&gt;To explain this, we will have to discuss issues about how physics actually describes the world and what we mean by a model. This is actually a good place to start, with the idea of separation of scales that most physics models use without explicitly stating.&lt;/p&gt;
+
+&lt;h3 id=&quot;separation-of-scales---mean-field-theory-in-disguise&quot;&gt;Separation of Scales - Mean Field Theory in Disguise&lt;/h3&gt;
+
+&lt;p&gt;The university is, luckily, an infuriatingly complicated place - for it would be very boring otherwise! This is a problem for physics when we try to describe the world around us. Where do we stop including information? There is a common sense answer for this and it is to stop including things when they have a small effect on the behaviour we want to model. For example, we ignore the effects of objects being made from atoms when calculating where a projectile will land and any map of a country will not include rockpools on the beach.&lt;/p&gt;
+
+&lt;p&gt;The notion is put in mathematical terms by considering a ‘separation of scales’ which assigns a scale (normally a length or unit of time but could be more exotic units) to each part of the model and requires that they are suitably different. So in our previous example, rockpools are \(\sim 10cm\), whereas countries are hundreds of kilometers across. So we see that it will be small enough (written as \(10cm &amp;lt;&amp;lt; 100 km\)) where we can safely ignore it.&lt;/p&gt;
+
+&lt;p&gt;This all seems pretty handwavey - “isn’t physics about rigorous statements and universal laws?”. Well it is to an extent but due to the complexity of everything, our losses must be cut at some point. A valid question would be what ‘small enough’ meant in the previous paragraph and the answer is that it depends on the situation. Again no absolute answers can be given because it all depends on what we choose to model, the &lt;em&gt;objective science&lt;/em&gt; has been brought low by &lt;em&gt;postmodern subjectivity&lt;/em&gt;!&lt;/p&gt;
+
+&lt;p&gt;But to give an example, if we want to model plate tectonics then we can safely ignore the rock pools. This is because as well as being small on the length scale of tectonic plates, the timescale at which plates move is so much larger than how long a rock pool will exist - the sea might have risen or eroded away the coastline. GPS tracking gives an example of where we could still care about rockpools as here we are trying to model people who are usually \(\sim 1m\), when rockpools are not so insignificant.&lt;/p&gt;
+
+&lt;p&gt;Choosing what level of detail to include in our problem depends on the accuracy we want in our answer. This idea is how we normally approach physics and modelling but there has been an assumption snuck into the reasoning. The assumption is that &lt;em&gt;small scale behaviour will not affect the larger scale behaviour&lt;/em&gt;, so in our example we assumed that rockpools on the beach aren’t related to the size of the country. This premise is flawed in correlated systems.&lt;/p&gt;
+
+&lt;h3 id=&quot;correlated-systems-via-an-analogy&quot;&gt;Correlated Systems via an analogy&lt;/h3&gt;
+
+&lt;p&gt;Let’s consider someone making a sarcastic comment to you on a regular day. It will probably just be ignored, might even cause a chuckle or an eye roll. Now imagine that same comment but on a day after a bad night of sleep, when you haven’t had time to eat lunch and during a hectic week. Suddenly the remark could now cause you to snap back, get into an argument and escalate further. This snowballing from a small original nudge to a large scale result is at the heart of correlated systems.&lt;/p&gt;
+
+&lt;p&gt;In physics, correlation is often talked about in terms of a length rather than relationships. So to translate the analogy into a ‘material’, we will consider a 1D chain of spins (that can point in any direction) that is paramagnetic with all the spins are oriented randomly. So this diagram shows a snapshot in time of the orientation of these fluctuations.&lt;/p&gt;
+
+&lt;figure class=&quot;align-center&quot;&gt;
+&lt;img src=&quot;../../../images/posts/spinchain.png&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Now due to thermal or quantum fluctuations, there is a chance that any spin will randomly align (think about Boltzmann or Fermi/Bose distributions in statistical physics or just a probability argument). This random spin alignment corresponds to our sarcastic comment - the initial perturbation.&lt;/p&gt;
+
+&lt;figure class=&quot;align-center&quot;&gt;
+&lt;img src=&quot;../../../images/posts/spinwavFluc.png&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If our 1D spin chain is having a regular day then the spin on the site will just take on another random orientation after this intial alignment. On a slightly worse day this alignment could cause other spins around it to also align but may only affect a couple of sites either side. If the 1D spin chain was having the worst day in its life then one pair of spins aligning could cause the entire chain to become ferromagentic and point in the same direction.&lt;/p&gt;
+
+&lt;p&gt;The length over which the original spin alignment can affect others is called the correlation length and is one of the most important ways of characterising a system. So for our spin chain it would correspond to the number of sites that align in the same direction before relaxing back to each having a random orientation.&lt;/p&gt;
+
+&lt;figure class=&quot;align-center&quot;&gt;
+&lt;img src=&quot;../../../images/posts/spinwavcorrel.png&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Mathematically it is related to the average of \(\langle s(i)s(j)\rangle\) where \(s(i)\) is the spin on site \(i\). To be accurate it is the exponent of this expression \(\langle s(i)s(j)\rangle \sim exp(\vert i - j \vert/\xi)\). If you know about statistics, you can see that the name correlation is appropriate!&lt;/p&gt;
+
+&lt;h3 id=&quot;why-we-need-rg&quot;&gt;Why we need RG&lt;/h3&gt;
+
+&lt;p&gt;Having understood the correlation length, we can see that it is the crucial length scale to consider whether we can ignore smaller information. If we are trying to model something at a scale \(L\) and the correlation length, \(\xi\), is a lot smaller than this then we do not need to care about microscopic details and fluctuations. Returning again to the rockpool example, as rockpools with a size \(l\) only tend to exist on the beach we have a correlation length of the size of the beach. So if the country is much larger than the beach we have achieved both the separation of lengths \(l &amp;lt;&amp;lt; L\) and the correlation length will be small compared to the country \(\xi &amp;lt;&amp;lt; L\). These are the requirements that we can ignore information at a smaller scale.&lt;/p&gt;
+
+&lt;p&gt;The natural question is then what can we do if the correlation length is the same size as what we are interested in. We need RG in order to extract what the effect is of all of the fluctuations at the smaller scale. To give a sneak peek into how it works, it assumes that fluctuations most strongly affect fluctuations of a similar size and the effect cascades up in size - each fluctuation effecting a larger one. In the sarcastic comment analogy, although it might be hard to draw a directly line from a sarcastic comment to getting fired from your work, linking up each step from the comment to the reply, to the insult to throwing your drink over them make it possible to track. Therefore the end result of the fluctuations can be expressed by summing up all the contributions as we increase the length up to the scale we want to consider. This is the set up for differential equations to describe the system which can be integrated to give a total effect.&lt;/p&gt;
+
+&lt;p&gt;In physics we must always ignore some information in order to produce any meaningful results - when there is Avogadro’s number of atoms in a couple of grams of a material we cannot hope to simulate it exactly. Normally we rely on a good separation of scales in order to quantify what we can ignore. However we have seen that there is another scale, the correlation length, that is also needed to determine whether we can ignore smaller scale behaviour. Correlated systems are systems in which the correlation length is the same size as the lengths scale we want to model and it is here that RG is needed to tell us what we can ignore.&lt;/p&gt;
+
+&lt;p&gt;Hopefully you now understand the idea of correlated systems and why RG would be useful. RG notes that go into the mathematical detail will be uploaded soon so be sure to check those out if you want to know more. Finally I would like to reassure everyone that I have never been fired from a job because of throwing my drink over anyone - this was strictly a Gedankenexperiment!&lt;/p&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Light" /><category term="Overview" /><category term="Renormalisation Group" /><category term="Models" /><summary type="html">Understanding the difference between correlated and uncorrelated systems</summary></entry><entry><title type="html">Solving without translational invariance - Operators</title><link href="/maths%20heavy/techniques/Operators/" rel="alternate" type="text/html" title="Solving without translational invariance - Operators" /><published>2021-01-07T00:00:00+00:00</published><updated>2021-01-07T00:00:00+00:00</updated><id>/maths%20heavy/techniques/Operators</id><content type="html" xml:base="/maths%20heavy/techniques/Operators/">&lt;p&gt;In the previous blog post, a way to stitch together Green’s functions to get an overall non-homogeneous result was explored. The thing that broke translational invariance in that case was a change in the parameters of the system between two different constant values. This is obviously not the only way in which we can break this symmetry.&lt;/p&gt;
 
 &lt;p&gt;The way that will be looked into here is due to terms in the Hamiltonian of our system being local. The overall technique remains the same, solving either side and then gluing the pieces together. This time, however, instead of performing this to the Green’s function we will glue operators. There are many parallels between the two techniques though!&lt;/p&gt;
 
@@ -93,7 +143,7 @@
 
 &lt;h3 id=&quot;small-sprinkle-of-analysis&quot;&gt;Small sprinkle of analysis&lt;/h3&gt;
 
-&lt;p&gt;So what we have done here is relate the operators either side of a barrier - the typical quantum mechanical problem in the field theoretic way. Solving this problem in QM (see this stack exchange - well up to a minus sign&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;) is a little easier and follows the previous blog post by requiring a discontinuity in the derivative. This problem just requires a little more care to derive.&lt;/p&gt;
+&lt;p&gt;So what we have done here is relate the operators either side of a barrier - the typical quantum mechanical problem in the field theoretic way. Solving this problem in QM (see this stack exchange - well up to a minus sign&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;) is a little easier and follows the previous blog post by requiring a discontinuity in the derivative. This problem just requires a little more care to derive.&lt;/p&gt;
 
 &lt;p&gt;Just to close this out, I’ll mention some ways in which this relationship is useful and what it can tell us.&lt;/p&gt;
 
@@ -111,9 +161,9 @@
       &lt;p&gt;&lt;a href=&quot;https://physics.stackexchange.com/questions/441616/scattering-by-a-delta-function-well-in-1d&quot;&gt;https://physics.stackexchange.com/questions/441616/scattering-by-a-delta-function-well-in-1d&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Heavy" /><category term="Techniques" /><category term="Boundary Conditions" /><category term="Operators" /><summary type="html">Dealing with localised terms in the Hamiltonian by stitching operators</summary></entry><entry><title type="html">Solving without translational invariance - Green’s functions</title><link href="http://localhost:4000/maths%20heavy/techniques/Stitching/" rel="alternate" type="text/html" title="Solving without translational invariance - Green’s functions" /><published>2021-01-05T00:00:00+00:00</published><updated>2021-01-05T00:00:00+00:00</updated><id>http://localhost:4000/maths%20heavy/techniques/Stitching</id><content type="html" xml:base="http://localhost:4000/maths%20heavy/techniques/Stitching/">&lt;p&gt;While I was attempting to rederive some results from a classic 1D transport paper, I got stuck trying to solve for the Green’s function of the system. The main problem wasn’t a horrendous integral or lack of convergence, but that in the system I was considering there was &lt;em&gt;no translational invariance&lt;/em&gt;. The whole usual method of Fourier transforming our Green’s function into a diagonal basis, inverting it and transforming back could not be used. Our lack of translational invariance means that the Fourier transform no longer neatly decouples our problem into a diagonal basis.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="Maths Heavy" /><category term="Techniques" /><category term="Boundary Conditions" /><category term="Operators" /><summary type="html">Dealing with localised terms in the Hamiltonian by stitching operators</summary></entry><entry><title type="html">Solving without translational invariance - Green’s functions</title><link href="/maths%20heavy/techniques/Stitching/" rel="alternate" type="text/html" title="Solving without translational invariance - Green’s functions" /><published>2021-01-05T00:00:00+00:00</published><updated>2021-01-05T00:00:00+00:00</updated><id>/maths%20heavy/techniques/Stitching</id><content type="html" xml:base="/maths%20heavy/techniques/Stitching/">&lt;p&gt;While I was attempting to rederive some results from a classic 1D transport paper, I got stuck trying to solve for the Green’s function of the system. The main problem wasn’t a horrendous integral or lack of convergence, but that in the system I was considering there was &lt;em&gt;no translational invariance&lt;/em&gt;. The whole usual method of Fourier transforming our Green’s function into a diagonal basis, inverting it and transforming back could not be used. Our lack of translational invariance means that the Fourier transform no longer neatly decouples our problem into a diagonal basis.&lt;/p&gt;
 
-&lt;p&gt;To be clearer, the usual procedure is to start with our generic Green’s function, \(G(x,x')\), which if we have translational invariance will be a function of the difference of \(x\) and \(x'\) alone, \(G(x-x')\). This reduction of the number of parameters needed means that the Fourier transform only requires one \(k\) to get our answer, \(\tilde{G}(k)\), into a form that we can easily invert. Without translational invariance our Green’s function will depend on \(k\) and \(k'\) in general.&lt;/p&gt;
+&lt;p&gt;To be clearer, the usual procedure is to start with our generic Green’s function, \(G(x,x&apos;)\), which if we have translational invariance will be a function of the difference of \(x\) and \(x&apos;\) alone, \(G(x-x&apos;)\). This reduction of the number of parameters needed means that the Fourier transform only requires one \(k\) to get our answer, \(\tilde{G}(k)\), into a form that we can easily invert. Without translational invariance our Green’s function will depend on \(k\) and \(k&apos;\) in general.&lt;/p&gt;
 
 &lt;p&gt;It isn’t often that we lack translational invariance in physics due to the fact that it is what makes many calculations possible, however there is a neat way to solve the issue in certain cases (otherwise I wouldn’t be writing this at all!). Content here has been lifted from my research into Maslov and Stone’s 95 paper, full notes of which may appear at some point.&lt;/p&gt;
 
@@ -124,26 +174,26 @@
 &lt;p&gt;So simply quoting what the mathematical problem is without much context&lt;/p&gt;
 
 \[\begin{equation}
-    \Bigg[-\partial_x \frac{v(x)}{K(x)} \partial_x + \frac{\omega^2}{v(x)K(x)} \Bigg] G_{\omega}(x,x') = \delta(x-x')
+    \Bigg[-\partial_x \frac{v(x)}{K(x)} \partial_x + \frac{\omega^2}{v(x)K(x)} \Bigg] G_{\omega}(x,x&apos;) = \delta(x-x&apos;)
 \end{equation}\]
 
 &lt;p&gt;where the parameters \(v(x), K(x)\) are constant when \(x&amp;lt;0, x&amp;gt;L\) and have a different constant value when \(0 \le x \le L\). We will call this inside region a wire throughout. Here we see that if we had translational invariance (parameters constant everywhere) we could Fourier transform to get a familiar looking Green’s function of \(G(k,\omega) = 1/(ak^2 +b\omega^2)\) for constants \(a,b\). Through complex analysis this can be transformed back, but we cannot rely on that method now.&lt;/p&gt;
 
 &lt;h3 id=&quot;conditions-on-the-greens-function&quot;&gt;Conditions on the Green’s Function&lt;/h3&gt;
 
-&lt;p&gt;Now we will look at what the properties the Green’s function has, by investigating the defining equation. Because it contains no derivatives of delta functions, we see that the Green’s function must be &lt;em&gt;continuous&lt;/em&gt; everywhere as if it contains any discontinuities then taking the second spatial derivative of this will produce derivatives of the delta function. Therefore at all possible problem points (\(x=0,x=x',x=L\)) the Green’s function will be continuous. To see the effect of derivatives we integrate in a thin strip of size \(2\delta\) around a certain point \(y= \{ 0,x',L\}\),&lt;/p&gt;
+&lt;p&gt;Now we will look at what the properties the Green’s function has, by investigating the defining equation. Because it contains no derivatives of delta functions, we see that the Green’s function must be &lt;em&gt;continuous&lt;/em&gt; everywhere as if it contains any discontinuities then taking the second spatial derivative of this will produce derivatives of the delta function. Therefore at all possible problem points (\(x=0,x=x&apos;,x=L\)) the Green’s function will be continuous. To see the effect of derivatives we integrate in a thin strip of size \(2\delta\) around a certain point \(y= \{ 0,x&apos;,L\}\),&lt;/p&gt;
 
 \[\begin{equation}
-     \int_{y-\delta}^{y+\delta} dx \Bigg[ -\partial_x \frac{v}{K} \partial_x + \frac{\omega^2}{vK} \Bigg] G_{\omega'}(x,x') = \int_{y-\delta}^{y+\delta}  \delta(x-x')
+     \int_{y-\delta}^{y+\delta} dx \Bigg[ -\partial_x \frac{v}{K} \partial_x + \frac{\omega^2}{vK} \Bigg] G_{\omega&apos;}(x,x&apos;) = \int_{y-\delta}^{y+\delta}  \delta(x-x&apos;)
 \end{equation}\]
 
-&lt;p&gt;We can see that the RHS of the equation will be zero unless \(y=x'\) and then it will equal 1 even as we let \(\delta \rightarrow0\). Turning our attention to the LHS, we see that the factor \((\omega^2/vK) G\) will give zero as we let \(\delta \rightarrow0\) due to the continuity of everything in the integrand. The terms with the spatial derivatives however will give a result of&lt;/p&gt;
+&lt;p&gt;We can see that the RHS of the equation will be zero unless \(y=x&apos;\) and then it will equal 1 even as we let \(\delta \rightarrow0\). Turning our attention to the LHS, we see that the factor \((\omega^2/vK) G\) will give zero as we let \(\delta \rightarrow0\) due to the continuity of everything in the integrand. The terms with the spatial derivatives however will give a result of&lt;/p&gt;
 
 \[\begin{equation}
-    \Big[ \frac{v(x)}{K(x)}\partial_x G(x,x') \Big]^{y+0}_{y-0} = \left\{
+    \Big[ \frac{v(x)}{K(x)}\partial_x G(x,x&apos;) \Big]^{y+0}_{y-0} = \left\{
                 \begin{array}{ll}
                   0 \quad \text{if } y=0,L\\
-                  1 \quad \text{if } y=x'\\
+                  1 \quad \text{if } y=x&apos;\\
                 \end{array}
               \right.
 \end{equation}\]
@@ -152,53 +202,53 @@
 
 &lt;h3 id=&quot;finding-our-pieces&quot;&gt;Finding our pieces&lt;/h3&gt;
 
-&lt;p&gt;We can solve the problem away from the \(x=x'\) point, this can be seen to give an exponential dependence (with terms that diverge being set to zero).&lt;/p&gt;
+&lt;p&gt;We can solve the problem away from the \(x=x&apos;\) point, this can be seen to give an exponential dependence (with terms that diverge being set to zero).&lt;/p&gt;
 
 \[\begin{equation}
     G_0^L = Ae^{\omega x/v}, \quad G_W^L = Be^{\omega x/v} + Ce^{-\omega x/v}, \quad G_1^L = De^{-\omega x/v}
 \end{equation}\]
 
-&lt;p&gt;where \(G_0\) is the region to the left of the wire, \(G_W\) is in the wire and \(G_1\) is to the right of the wire. The \(L\) notation is to denote that these are left of the point \(x'\). To the right of this point we will have similar solutions with different coefficients which will be notated with primes. To simplify the more complicated problem, we will only consider that \(0&amp;lt;x'&amp;lt;L\) which will reduce the complication of stitching the solutions together. So we need to glue together \(G_0^L, G_W^L, G_W^R, G_1^R\) in accordance with the boundary conditions.&lt;/p&gt;
+&lt;p&gt;where \(G_0\) is the region to the left of the wire, \(G_W\) is in the wire and \(G_1\) is to the right of the wire. The \(L\) notation is to denote that these are left of the point \(x&apos;\). To the right of this point we will have similar solutions with different coefficients which will be notated with primes. To simplify the more complicated problem, we will only consider that \(0&amp;lt;x&apos;&amp;lt;L\) which will reduce the complication of stitching the solutions together. So we need to glue together \(G_0^L, G_W^L, G_W^R, G_1^R\) in accordance with the boundary conditions.&lt;/p&gt;
 
-&lt;p&gt;To summarise a bit, these boundary conditions mean that (as we have fixed \(x'\) to be within the wire) that we need to make the \(G_0^L, G_W^L\) boundary such that the function is continuous and to the same for \(G_W^R, G_1^R\). Then the gluing together of \(G^L\) and \(G^R\) parts is done by matching the Green’s function with a unit step in the derivative.&lt;/p&gt;
+&lt;p&gt;To summarise a bit, these boundary conditions mean that (as we have fixed \(x&apos;\) to be within the wire) that we need to make the \(G_0^L, G_W^L\) boundary such that the function is continuous and to the same for \(G_W^R, G_1^R\). Then the gluing together of \(G^L\) and \(G^R\) parts is done by matching the Green’s function with a unit step in the derivative.&lt;/p&gt;
 
 &lt;h3 id=&quot;gluing-together&quot;&gt;Gluing together&lt;/h3&gt;
 
 &lt;p&gt;Up to now, I have repeatedly talked about gluing solutions together - but what is mathematically meant by this? Essentially we will use two step functions, \(\Theta(x)\), to ensure that the solutions are non-zero and zero respectively in the correct sections. So for the continuous boundary we will have,&lt;/p&gt;
 
-\[G^L(x&amp;lt;x') = A G^L_0(x)\Theta(-x) + B G^L_W(x)\Theta(x)\]
+\[G^L(x&amp;lt;x&apos;) = A G^L_0(x)\Theta(-x) + B G^L_W(x)\Theta(x)\]
 
 &lt;p&gt;where we can see that action of the step functions kicking in at \(x=0\). Derivatives of this can now be taken, but any worrisome delta function terms that arise from differentiating the step function are killed off by one of the step functions having a negative sign and the continuity requirement meaning that \(A G^L_0(0) = BG^L_W(0)\). For the gluing over the continuous boundaries (\(x=0,L\)), we set the two parts of the functions and their derivatives to be equal at the boundary - much like in the standard QM problem except with the prefactor of the derivatives being different on either side. This allows us to relate the coefficients \(A\) and \(B\) to obtain an expression for \(G^L\) (with the final constant being set by larger considerations of the system, normalisation and whatnot).&lt;/p&gt;
 
-&lt;p&gt;The boundary with the derivative step can be solved for in the same way - writing out using theta functions and then relating the coefficients. This time however, the delta function in the derivative will not  So generically we solve for a solution where the coefficients can depend on where \(x'\) is set. This means \(G^L(x,x') = a(x')y_1(x)\) and \(G^R(x,x') = b(x')y_2(x)\) where \(y(x)\) contains the exponential \(x\) dependence of the Green’s function. Relating the two for \(x=x'\), using the conditions on our Green’s function.&lt;/p&gt;
+&lt;p&gt;The boundary with the derivative step can be solved for in the same way - writing out using theta functions and then relating the coefficients. This time however, the delta function in the derivative will not  So generically we solve for a solution where the coefficients can depend on where \(x&apos;\) is set. This means \(G^L(x,x&apos;) = a(x&apos;)y_1(x)\) and \(G^R(x,x&apos;) = b(x&apos;)y_2(x)\) where \(y(x)\) contains the exponential \(x\) dependence of the Green’s function. Relating the two for \(x=x&apos;\), using the conditions on our Green’s function.&lt;/p&gt;
 
 \[\begin{align}
-    &amp;amp;G^L(x=x',x') = G^R(x=x',x') = a(x') y_1(x=x') = b(x') y_2(x=x'), \\
-    &amp;amp; b y'_2 - a y'_1 = K(x=x')/v(x=x')
+    &amp;amp;G^L(x=x&apos;,x&apos;) = G^R(x=x&apos;,x&apos;) = a(x&apos;) y_1(x=x&apos;) = b(x&apos;) y_2(x=x&apos;), \\
+    &amp;amp; b y&apos;_2 - a y&apos;_1 = K(x=x&apos;)/v(x=x&apos;)
 \end{align}\]
 
 &lt;p&gt;This notation is very ugly but it’s important to be clear on the dependence of various things. This can be solved for \(a,b\) (by just rearranging the above two equations) to give,&lt;/p&gt;
 
 \[\begin{equation}
-  b = \frac{K}{v}\frac{y_1}{y_1y'_2 - y_2y'_1} \Big\vert_{x=x'}, \ \quad a = \frac{K}{v}\frac{y_2}{y_1y'_2 - y_2y'_1} \Big\vert_{x=x'}
+  b = \frac{K}{v}\frac{y_1}{y_1y&apos;_2 - y_2y&apos;_1} \Big\vert_{x=x&apos;}, \ \quad a = \frac{K}{v}\frac{y_2}{y_1y&apos;_2 - y_2y&apos;_1} \Big\vert_{x=x&apos;}
 \end{equation}\]
 
 &lt;p&gt;which we can then use to get our full expression for the Green’s function which can be checked to satisfy our original differential equation.&lt;/p&gt;
 
 \[\begin{equation}
-    G(x,x') = \frac{K}{v} \frac{1}{y_1 y'_2 - y_2y'_1}\Big\vert_{x=x'} \Big(\Theta(x'-x) y_1(x)y_2(x') + \Theta(x-x')y_2(x)y_1(x')\Big)
+    G(x,x&apos;) = \frac{K}{v} \frac{1}{y_1 y&apos;_2 - y_2y&apos;_1}\Big\vert_{x=x&apos;} \Big(\Theta(x&apos;-x) y_1(x)y_2(x&apos;) + \Theta(x-x&apos;)y_2(x)y_1(x&apos;)\Big)
 \end{equation}\]
 
-&lt;p&gt;where the prefactor that is evaluated at \(x=x'\) is actually the inverse of the Wronskian of the two solutions evaluated at this point. I prefer to write it more explicitly. The generalisation to the \(y\) representation of the exponential dependence does make this particular question a little harder to follow (because of the multiple different exponential parts hidden within) but was used to show the more general technique.&lt;/p&gt;
+&lt;p&gt;where the prefactor that is evaluated at \(x=x&apos;\) is actually the inverse of the Wronskian of the two solutions evaluated at this point. I prefer to write it more explicitly. The generalisation to the \(y\) representation of the exponential dependence does make this particular question a little harder to follow (because of the multiple different exponential parts hidden within) but was used to show the more general technique.&lt;/p&gt;
 
 &lt;p&gt;The prefactor of the above equation actually turns out to be constant so we can evaluate its value anywhere! To show this we consider the derivative of the prefactor,&lt;/p&gt;
 
-\[\frac{d}{dx}\Big(\frac{v}{K}(y_1 y'_2 - y_2y'_1)\Big) = \frac{d}{dx}\Big(\frac{v}{K} \Big)(y_1 y'_2 - y_2y'_1) + \frac{v}{K}(\underbrace{y'_1y'_2 - y'_2y'_1}_{0} + y_1y''_2 - y_2y''_1)\]
+\[\frac{d}{dx}\Big(\frac{v}{K}(y_1 y&apos;_2 - y_2y&apos;_1)\Big) = \frac{d}{dx}\Big(\frac{v}{K} \Big)(y_1 y&apos;_2 - y_2y&apos;_1) + \frac{v}{K}(\underbrace{y&apos;_1y&apos;_2 - y&apos;_2y&apos;_1}_{0} + y_1y&apos;&apos;_2 - y_2y&apos;&apos;_1)\]
 
 &lt;p&gt;and then consider our defining equation for what \(y_1\) and \(y_2\) must satisfy (ie the Green’s function differential equation away from the delta function spike)&lt;/p&gt;
 
 \[\begin{equation}
-    \frac{\omega^2}{v(x)K(x)}y = \partial_x \frac{v(x)}{K(x)} \partial_xy  = \frac{d}{dx}\Big(\frac{v}{K} \Big)y' + \frac{v(x)}{K(x)}y''
+    \frac{\omega^2}{v(x)K(x)}y = \partial_x \frac{v(x)}{K(x)} \partial_xy  = \frac{d}{dx}\Big(\frac{v}{K} \Big)y&apos; + \frac{v(x)}{K(x)}y&apos;&apos;
 \end{equation}\]
 
 &lt;p&gt;Therefore the spatial derivative of the prefactor can be seen to be&lt;/p&gt;
@@ -213,17 +263,17 @@
 
 &lt;p&gt;There’s good info on this same process at the following link:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&quot;&gt;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="[&quot;Maths Heavy&quot;, &quot;Techniques&quot;]" /><category term="Green's Functions" /><category term="Boundary Conditions" /><summary type="html">A method for stitching together a patchwork of Green's functions</summary></entry><entry><title type="html">Showing that solitons carry fractional charge</title><link href="http://localhost:4000/maths%20light/arguments/Soliton/" rel="alternate" type="text/html" title="Showing that solitons carry fractional charge" /><published>2020-12-02T00:00:00+00:00</published><updated>2020-12-02T00:00:00+00:00</updated><id>http://localhost:4000/maths%20light/arguments/Soliton</id><content type="html" xml:base="http://localhost:4000/maths%20light/arguments/Soliton/">&lt;p&gt;The concept of a soliton is often only introduced at a graduate level, due to the difficulty of the topics that it appears in. It is probably because of this difficulty that there are many interesting features of a soliton, which is why it’s a shame that it is left til so late to be introduced.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&quot;&gt;http://www.damtp.cam.ac.uk/user/dbs26/1BMethods/GreensODE.pdf&lt;/a&gt;&lt;/p&gt;</content><author><name>Rose Davies</name><email>rxd440@student.bham.ac.uk</email></author><category term="[&quot;Maths Heavy&quot;, &quot;Techniques&quot;]" /><category term="Green&apos;s Functions" /><category term="Boundary Conditions" /><summary type="html">A method for stitching together a patchwork of Green&apos;s functions</summary></entry><entry><title type="html">Showing that solitons carry fractional charge</title><link href="/maths%20light/arguments/Soliton/" rel="alternate" type="text/html" title="Showing that solitons carry fractional charge" /><published>2020-12-02T00:00:00+00:00</published><updated>2020-12-02T00:00:00+00:00</updated><id>/maths%20light/arguments/Soliton</id><content type="html" xml:base="/maths%20light/arguments/Soliton/">&lt;p&gt;The concept of a soliton is often only introduced at a graduate level, due to the difficulty of the topics that it appears in. It is probably because of this difficulty that there are many interesting features of a soliton, which is why it’s a shame that it is left til so late to be introduced.&lt;/p&gt;
 
 &lt;p&gt;The feature that will be looked at here is about the fractional charge that a soliton carries. Fractional charge means here that the ‘particle’ carries fractions of the bare electric charge \(e\), and this is in spite of an electron not being made up of more fundamental particles (at least it was the last time I checked what high energy physicists are doing). So what is happening here is a different from how a proton is made up of multiple quarks which have fractions of the electric charge \(e\) - this is why these objects are interesting!&lt;/p&gt;
 
-&lt;p&gt;The proof of this normally involves quantum field theoretic techniques and was pioneered by Jackiw and Rebbi &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and Su, Schrieffer, and Heeger&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. The latter group were attempting to describe a material, polyacetylene, and their model became known as the SSH model. It is SSH model that we are going to look at.&lt;/p&gt;
+&lt;p&gt;The proof of this normally involves quantum field theoretic techniques and was pioneered by Jackiw and Rebbi &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; and Su, Schrieffer, and Heeger&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. The latter group were attempting to describe a material, polyacetylene, and their model became known as the SSH model. It is SSH model that we are going to look at.&lt;/p&gt;
 
 &lt;p&gt;The only knowledge needed here is some basic understanding of how chemical bonds work and belief that lowest energy ground state has the form that I will state, which is why this short proof is so unique!&lt;/p&gt;
 
 &lt;h2 id=&quot;ssh-model&quot;&gt;SSH Model&lt;/h2&gt;
 
-&lt;p&gt;In physics it is often our task to find the lowest energy state of the system as this is what our system would like to be doing. The SSH model is defined on a linear chain of atoms with chemical bonds being between each site. The lowest energy state turns out to be an alternating pattern of single and double bonds (corresponding to one or two electrons being shared between the atoms&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;) as drawn below for a section of the chain.&lt;/p&gt;
+&lt;p&gt;In physics it is often our task to find the lowest energy state of the system as this is what our system would like to be doing. The SSH model is defined on a linear chain of atoms with chemical bonds being between each site. The lowest energy state turns out to be an alternating pattern of single and double bonds (corresponding to one or two electrons being shared between the atoms&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;) as drawn below for a section of the chain.&lt;/p&gt;
 
 &lt;figure class=&quot;align-center&quot;&gt;
 &lt;img src=&quot;../../../images/posts/SSh-A.jpg&quot; style=&quot;width: 70%&quot; class=&quot;align-center&quot; /&gt;

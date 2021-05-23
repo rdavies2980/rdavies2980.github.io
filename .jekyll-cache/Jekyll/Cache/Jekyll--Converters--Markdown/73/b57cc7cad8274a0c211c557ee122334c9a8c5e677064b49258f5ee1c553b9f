@@ -1,4 +1,4 @@
-I"��<aside class="sidebar__right sticky">
+I"۩<aside class="sidebar__right sticky">
 <nav class="toc">
     <header><h4 class="nav__title" style="background:rgb(250,174,73)"><i class="fas fa-list"></i>
 Contents</h4></header>
@@ -25,7 +25,7 @@ Contents</h4></header>
   </nav>
 </aside>
 
-<p><em>This paper aims to generalise the Landauer transmission approach to 1D wires where there is strong interactions between the electrons. A single channel wire with a single impurity that is adiabatically connected to external voltage sources is investigated. They look into whether the voltage drop across the impurity is always localised to the impurity. They claim that this approach is more general than Kubo based investigations<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">1</a></sup><sup>,</sup><sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">2</a></sup> and doesnt require the assumption that \(K=1\) models ideal reservoirs. </em></p>
+<p><em>This paper aims to generalise the Landauer transmission approach to 1D wires where there is strong interactions between the electrons. A single channel wire with a single impurity that is adiabatically connected to external voltage sources is investigated. They look into whether the voltage drop across the impurity is always localised to the impurity. They claim that this approach is more general than Kubo based investigations<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">1</a></sup><sup>,</sup><sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">2</a></sup> and doesnt require the assumption that \(K=1\) models ideal reservoirs. </em></p>
 
 <p>The main interesting part of this paper is in the ‘<strong>looking into reservoirs</strong>’ section which is where the conditions are derived and the ‘<strong>examples of applying</strong>’ section gives some simple results (that were expected) that can be obtained. The two later sections ‘<strong>integrating out</strong>’ and ‘<strong>refermionisation</strong>’ are much more subtle and involved examples of applying the boundary conditions, showing that there is a wide range of application. The intro section just goes into a bit more depth as to how the Luttinger Liquid Hamiltonian is set up but the main point is to state our starting Hamiltonian. Good luck with this!</p>
 
@@ -53,7 +53,7 @@ Contents</h4></header>
 
 <p>This wire is connected to reservoirs held at chemical potentials \(\mu_{L,R}\), where good screening of higher dimensional (\(d&gt;1\)) Fermi liquids means that the difference between the two chemical potentials divided by charge is the two terminal voltage (<span style="color:red"> Not quite sure why the screening is needed? Seems pretty valid to say quite generally, I guess its sort of assuming the two reservoirs are far enough apart</span>).</p>
 
-<p>Our aim here is to re-express the interaction of the Luttinger Liquid as an interaction with a spatially varying electrochemical field, which we will call \(\varphi(x)\). This reformulation allows us to visualise the system and the gate that provides the constriction as a capacitor shown in the figure below <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">3</a></sup></p>
+<p>Our aim here is to re-express the interaction of the Luttinger Liquid as an interaction with a spatially varying electrochemical field, which we will call \(\varphi(x)\). This reformulation allows us to visualise the system and the gate that provides the constriction as a capacitor shown in the figure below <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">3</a></sup></p>
 
 <figure class="align-center">
 <img src="../images/EG/capactior.png" style="width: 70%" class="align-center" />
@@ -189,7 +189,7 @@ Contents</h4></header>
 
 <h2 id="integrating-out-around-the-impurity">Integrating out around the impurity</h2>
 
-<p>Now the paper moves to a much more mathematical section, where the quadratic modes around the impurity is integrated out in order to investigate precisely how the voltage drop occurs and how it should be added into the Hamiltonian. The procedure for doing this is outlined in a couple of different places - the 96 paper by the duo and a 95 paper<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>. Only the results will be mentioned, go check out the notes on the 96 paper to see the gory details. This paper does however use the Keldysh contour, although this does not really affect things as we are simply finding an effective action. Another difference that instead over being left in Matsubara form as in the paper in 96, they explicitly change back to real frequencies - which is why there is a \(\tanh\) looking term in this later paper.</p>
+<p>Now the paper moves to a much more mathematical section, where the quadratic modes around the impurity is integrated out in order to investigate precisely how the voltage drop occurs and how it should be added into the Hamiltonian. The procedure for doing this is outlined in a couple of different places - the 96 paper by the duo and a 95 paper<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>. Only the results will be mentioned, go check out the notes on the 96 paper to see the gory details. This paper does however use the Keldysh contour, although this does not really affect things as we are simply finding an effective action. Another difference that instead over being left in Matsubara form as in the paper in 96, they explicitly change back to real frequencies - which is why there is a \(\tanh\) looking term in this later paper.</p>
 
 <p>Integrating out the theta field at all points apart from the impurity, is a standard technique (despite being a quite difficult). A delta function is included so that our new variable is always equal to the field at the impurity. Solving this with respect to the boundary conditions means we have a part of the field (the particular solution and the homogeneous part) and it turns out that the average density is given by the derivative of the particular solution (again see the notes on 96 for details). This has the form,</p>
 

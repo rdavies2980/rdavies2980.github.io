@@ -21,14 +21,14 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="More is Difficult">
 <meta property="og:title" content="Peierls Instability">
-<meta property="og:url" content="http://localhost:4000/Peierls/">
+<meta property="og:url" content="/Peierls/">
 
 
   <meta property="og:description" content="Investigating an instability that is unavoidable in 1D physics">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/images/Peierls/PeierlsHeader.png">
+  <meta property="og:image" content="/images/Peierls/PeierlsHeader.png">
 
 
 
@@ -43,7 +43,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/Peierls/">
+<link rel="canonical" href="/Peierls/">
 
 
 
@@ -54,7 +54,7 @@
     
       "@type": "Person",
       "name": "Rose Davies",
-      "url": "http://localhost:4000/"
+      "url": "/"
     
   }
 </script>
@@ -190,7 +190,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          26 minute read
+          23 minute read
         
       </span>
     
@@ -267,13 +267,13 @@
 
 \[\rho_{ind}(k) = \chi(k)\phi(k), \quad \quad \chi(k) = \int \frac{d^dq}{(2\pi)^d} \frac{f_q - f_{q+k}}{\epsilon_q - \epsilon_{q+k}}\]
 
-<p>where \(f_q = f(\epsilon_q)\) is the Fermi function. To dive a little into the derivation of this, there are multiple ways in which this can be found. It was originally derived when trying to calculate behaviour of an interacting Fermi gas, introducing a self consistent field to avoid divergence issues (as we are essentially dealing with electron-electron interactions). For those who know QFT well, it is the polarisation operator for an isotropic system and uses the random phase approximation. It is essentially given by \(\sim \sum_q G_qG_{p+k}\). See the resources for a detailed description of how to find this particular form of the function <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>where \(f_q = f(\epsilon_q)\) is the Fermi function. To dive a little into the derivation of this, there are multiple ways in which this can be found. It was originally derived when trying to calculate behaviour of an interacting Fermi gas, introducing a self consistent field to avoid divergence issues (as we are essentially dealing with electron-electron interactions). For those who know QFT well, it is the polarisation operator for an isotropic system and uses the random phase approximation. It is essentially given by \(\sim \sum_q G_qG_{p+k}\). See the resources for a detailed description of how to find this particular form of the function <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <p>The derivation for the people who know how Kubo works in general is quite easy as it is simply the usual commutator</p>
 
 \[\chi(r,t; r',t') = \frac{-i}{\hbar} \Theta(t-t') \langle [ \rho(r,t), \rho(r',t') ] \rangle_0\]
 
-<p>This can also be derived through considering the action associated with a generic electron-phonon action and then integrating out the fermionic degrees of freedom and expanding to second order, giving the Green’s function version of the expression. This is a problem in Chapter 6 of Altland and Simons<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+<p>This can also be derived through considering the action associated with a generic electron-phonon action and then integrating out the fermionic degrees of freedom and expanding to second order, giving the Green’s function version of the expression. This is a problem in Chapter 6 of Altland and Simons<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
 
 <p>Ignoring the derivation and believing that the susceptibility is given by this function, we will look into the behaviour of this function. We can see that any vector \(k\) that links two points of the same energy will cause singularities - this is known as nesting. However, for it to have the full effect, one of the momenta must be occupied and the other unoccupied (This is to avoid integrating over a 0/0 and to integrate over a 1/0 instead which will give the largest contribution). This condition is sometimes stated as \(\epsilon(k) = -\epsilon(K+Q)\) The integral over \(q\) introduces as factor of \(q^{d-1}\) which makes this less of problem in high dimensions and smooths out any discontinuities and regulates it to derivatives of the susceptibility.</p>
 
@@ -365,7 +365,7 @@
 
 \[\omega^2_{2k_F} = \frac{2g^2\omega_{2k_F}n(\epsilon_F)}{\hbar}\ln(\frac{1.14\epsilon_0}{k_BT_0}) \quad \quad  k_BT_0 = 1.14\epsilon_0 e^{-\hbar\omega_{2k_F}/g^2n(\epsilon_F)} = 1.14\epsilon_0 e^{-1/\lambda}\]
 
-<p>where \(\lambda\) is the dimensionless phonon-electron coupling constant. To see how this approaches zero, we can do a Taylor expansion around \(T_0\), but the graph of the dispersion of the phonons is a lot clearer on how the frequency is renormalised<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>.</p>
+<p>where \(\lambda\) is the dimensionless phonon-electron coupling constant. To see how this approaches zero, we can do a Taylor expansion around \(T_0\), but the graph of the dispersion of the phonons is a lot clearer on how the frequency is renormalised<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</p>
 
 <figure class="align-center">
 <img src="../images/Peierls/Renorm.png" style="width: 50%" class="align-center" />
@@ -465,7 +465,7 @@
 
 \[\rho(x) = \rho_0 \Big( 1 + \frac{\Delta}{\nu_Fk_F\lambda}\cos(2k_Fx + \phi)  \Big)\]
 
-<p>Therefore we have managed to show the two most distinctive features of the charge density wave phase - periodic modulation of charge and the lattice. This should be compared to the normal metallic state where the electron density is a constant and the lattice is all equally spaced. To sum it up in a picture<sup id="fnref:3:1" role="doc-noteref"><a href="#fn:3" class="footnote">3</a></sup>,</p>
+<p>Therefore we have managed to show the two most distinctive features of the charge density wave phase - periodic modulation of charge and the lattice. This should be compared to the normal metallic state where the electron density is a constant and the lattice is all equally spaced. To sum it up in a picture<sup id="fnref:3:1" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>,</p>
 
 <figure class="align-center">
 <img src="../images/Peierls/Comparison.png" style="width: 70%" class="align-center" />
@@ -492,11 +492,11 @@
 
 <h2 id="resources">Resources</h2>
 
-<p>A lot of this work comes from Gruner’s density waves in solids<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote">4</a></sup>. There are however a lot of useful resources. A great easy one that is a good introduction is the following link,</p>
+<p>A lot of this work comes from Gruner’s density waves in solids<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup>. There are however a lot of useful resources. A great easy one that is a good introduction is the following link,</p>
 
 <p><a href="http://galileo.phys.virginia.edu/classes/752.mf1i.spring03/PeierlsTrans.htm">http://galileo.phys.virginia.edu/classes/752.mf1i.spring03/PeierlsTrans.htm</a></p>
 
-<p>which treats the problem in a more 3rd year undergraduate level. A serious intro to Lindhart stuff that looks at the diagrams produced but is quite pedagodical <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote">5</a></sup></p>
+<p>which treats the problem in a more 3rd year undergraduate level. A serious intro to Lindhart stuff that looks at the diagrams produced but is quite pedagodical <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup></p>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
