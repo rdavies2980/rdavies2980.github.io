@@ -307,7 +307,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          14 minute read
+          15 minute read
         
       </span>
     
@@ -319,15 +319,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>The Renormalisation Group (RG) technique is held up as one of the crowning achievements of physics and has obtained a mystical, threatening aura to anyone beginning to learn it. The usual way of explaining it relies on the abstract concept of flows through parameter space and is often explained using high energy physics - which I find to be unintuitive! So I will try to explain via an analogy the idea of correlated systems that I think gets at the heart of why RG is necessary, as if we see why something is needed we have learnt quite a lot about it without having to deal with it directly.</p>
+        <p>The Renormalisation Group (RG) technique is held up as one of the crowning achievements of physics and has obtained a mystical, threatening aura for anyone beginning to learn it. The usual way of explaining it relies on the abstract concept of flows through parameter space and is often explained using high energy physics - which I find to be unintuitive! Instead, I’m going to explore why RG is necessary by explaining the concept of correlated systems using analogy. Looking into why a procedure is needed will help us understand aspects of the procedure without having to deal with it directly, which is often the difficult part!</p>
 
-<p>To explain this, we will have to discuss issues about how physics actually describes the world and what we mean by a model. This is actually a good place to start, with the idea of separation of scales that most physics models use without explicitly stating.</p>
+<p>To explain the context of RG, we will first have to discuss issues about how physics actually describes the world and what we mean by a model.  We’ll start with the idea of ‘separation of scales’, which is used by most physics models, even if it’s rarely stated explicitly.</p>
 
 <h3 id="separation-of-scales---mean-field-theory-in-disguise">Separation of Scales - Mean Field Theory in Disguise</h3>
 
-<p>The universe is, luckily, an infuriatingly complicated place - for it would be very boring otherwise! This is a problem for physics when we try to describe the world around us. Where do we stop including information? There is a common sense answer for this and it is to stop including things when they have a small effect on the behaviour we want to model. For example, we ignore the effects of objects being made from atoms when calculating where a projectile will land and any map of a country will not include rockpools on the beach.</p>
+<p>The universe is, luckily, an infuriatingly complicated place - for it would be very boring otherwise! This is a problem in physics when we are trying to describe the world around us. Where do we stop including information? There is a common sense answer for this and it is to stop including things when they have a small effect on the behaviour we want to model. For example, we ignore the effects of objects being made from atoms when calculating where a projectile will land and a map of a country will not include rockpools on the beach.</p>
 
-<p>The notion is put in mathematical terms by considering a ‘separation of scales’ which assigns a scale (normally a length or unit of time but could be more exotic units) to each part of the model and requires that they are suitably different. So in our previous example, rockpools are \(\sim 10cm\), whereas countries are hundreds of kilometers across. So we see that it will be small enough (written as \(10cm &lt;&lt; 100 km\)) where we can safely ignore it.</p>
+<p>The notion is put in mathematical terms by considering a ‘separation of scales’ which assigns a scale (normally a length or unit of time but could be more unusual units) to each part of the model and requires that they are suitably different. So in our previous example, rockpools are \(\sim 10cm\), whereas countries are hundreds of kilometers across. So we see that it will be small enough (written as \(10cm &lt;&lt; 100 km\)) where we can safely ignore it.</p>
 
 <p>This all seems pretty handwavey - “isn’t physics about rigorous statements and universal laws?”. Well it is to an extent but due to the complexity of everything, our losses must be cut at some point. A valid question would be what ‘small enough’ meant in the previous paragraph and the answer is that it depends on the situation. Again no absolute answers can be given because it all depends on what we choose to model, the <em>objective science</em> has been brought low by <em>postmodern subjectivity</em>!</p>
 
@@ -337,9 +337,9 @@
 
 <h3 id="correlated-systems-via-an-analogy">Correlated Systems via an analogy</h3>
 
-<p>Let’s consider someone making a sarcastic comment to you on a regular day. It will probably just be ignored, might even cause a chuckle or an eye roll. Now imagine that same comment but on a day after a bad night of sleep, when you haven’t had time to eat lunch and during a hectic week. Suddenly the remark could now cause you to snap back, get into an argument and escalate further. This snowballing from a small original nudge to a large scale result is at the heart of correlated systems.</p>
+<p>Let’s consider someone making a sarcastic comment to you on a regular day. It will probably just be ignored, might even cause a chuckle or an eye roll. Now imagine that same comment but on a day after a bad night of sleep, when you haven’t had time to eat lunch during a hectic week. Suddenly the remark could now cause you to snap back, get into an argument and escalate further. This snowballing from a small original nudge to a large scale result is at the heart of correlated systems.</p>
 
-<p>In physics, correlation is often talked about in terms of a length rather than relationships. So to translate the analogy into a ‘material’, we will consider a 1D chain of spins (that can point in any direction) that is paramagnetic with all the spins are oriented randomly. So this diagram shows a snapshot in time of the orientation of these fluctuations.</p>
+<p>In physics, correlation is often talked about in terms of a length rather than relationships. So to translate the analogy into a ‘material’, we will consider a 1D chain of spins (that can point in any direction) that is paramagnetic with all the spins are oriented randomly. This diagram shows a snapshot in time of the orientation of these fluctuations.</p>
 
 <figure class="align-center">
 <img src="../../../images/posts/spinchain.png" style="width: 70%" class="align-center" />
@@ -363,11 +363,11 @@
 
 <h3 id="why-we-need-rg">Why we need RG</h3>
 
-<p>Having understood the correlation length, we can see that it is the crucial length scale to consider whether we can ignore smaller information. If we are trying to model something at a scale \(L\) and the correlation length, \(\xi\), is a lot smaller than this then we do not need to care about microscopic details and fluctuations. Returning again to the rockpool example, as rockpools with a size \(l\) only tend to exist on the beach we have a correlation length of the size of the beach. So if the country is much larger than the beach we have achieved both the separation of lengths \(l &lt;&lt; L\) and the correlation length will be small compared to the country \(\xi &lt;&lt; L\). These are the requirements that we can ignore information at a smaller scale.</p>
+<p>Having understood the correlation length, we can see that it is the crucial length scale to consider when we decide whether we can ignore smaller scale information. If we are trying to model something at a scale \(L\) and the correlation length, \(\xi\), is a lot smaller than this then we do not need to care about microscopic details and fluctuations. Returning again to the rockpool example, as rockpools with a size \(l\) only tend to exist on the beach we have a correlation length of the size of the beach. So if the country is much larger than the beach we have achieved both the separation of lengths \(l &lt;&lt; L\) and the correlation length will be small compared to the country \(\xi &lt;&lt; L\). These are the requirements that we can ignore information at a smaller scale.</p>
 
-<p>The natural question is then what can we do if the correlation length is the same size as what we are interested in. We need RG in order to extract what the effect is of all of the fluctuations at the smaller scale. To give a sneak peek into how it works, it assumes that fluctuations most strongly affect fluctuations of a similar size and the effect cascades up in size - each fluctuation effecting a larger one. In the sarcastic comment analogy, although it might be hard to draw a directly line from a sarcastic comment to getting fired from your work, linking up each step from the comment to the reply, to the insult to throwing your drink over them make it possible to track. Therefore the end result of the fluctuations can be expressed by summing up all the contributions as we increase the length up to the scale we want to consider. This is the set up for differential equations to describe the system which can be integrated to give a total effect.</p>
+<p>The natural question is then: what can we do if the correlation length is the same size as what we are interested in? We need RG in order to work out what the effect of all of the fluctuations is at the smaller scale. To give a sneak peek into how it works, it assumes that fluctuations most strongly affect fluctuations of a similar size and the effect cascades up in size - each fluctuation affecting a larger one. In the sarcastic comment analogy, although it might be hard to draw a directly line from a sarcastic comment to getting fired from your work, linking up each step from the comment to the reply, to the insult to throwing your drink at someone make it possible to track. Therefore the end result of the fluctuations can be expressed by summing up all the contributions as we increase the length up to the scale we want to consider. This is the set up for differential equations to describe the system which can be integrated to give a total effect.</p>
 
-<p>In physics we must always ignore some information in order to produce any meaningful results - when there is Avogadro’s number of atoms in a couple of grams of a material we cannot hope to simulate it exactly. Normally we rely on a good separation of scales in order to quantify what we can ignore. However we have seen that there is another scale, the correlation length, that is also needed to determine whether we can ignore smaller scale behaviour. Correlated systems are systems in which the correlation length is the same size as the lengths scale we want to model and it is here that RG is needed to tell us what we can ignore.</p>
+<p>In physics we must always ignore some information in order to produce any meaningful results - when there is Avogadro’s number of atoms in a couple of grams of a material we cannot hope to simulate it exactly. Normally we rely on a good separation of scales in order to quantify what we can ignore. However we have seen that there is another scale, the correlation length, that is also needed to determine whether we can ignore smaller scale behaviour. Correlated systems are systems in which the correlation length is the same size as the lengths scale we want to model and it is here that RG is needed to tell us what we can and can’t ignore.</p>
 
 <p>Hopefully you now understand the idea of correlated systems and why RG would be useful. RG notes that go into the mathematical detail will be uploaded soon so be sure to check those out if you want to know more. Finally I would like to reassure everyone that I have never been fired from a job because of throwing my drink over anyone - this was strictly a Gedankenexperiment!</p>
 
@@ -627,7 +627,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2021 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2022 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

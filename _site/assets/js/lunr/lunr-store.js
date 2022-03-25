@@ -18,7 +18,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Why the Renormalisation Group is Needed",
-        "excerpt":"The Renormalisation Group (RG) technique is held up as one of the crowning achievements of physics and has obtained a mystical, threatening aura to anyone beginning to learn it. The usual way of explaining it relies on the abstract concept of flows through parameter space and is often explained using...","categories": ["Maths Light","Overview"],
+        "excerpt":"The Renormalisation Group (RG) technique is held up as one of the crowning achievements of physics and has obtained a mystical, threatening aura for anyone beginning to learn it. The usual way of explaining it relies on the abstract concept of flows through parameter space and is often explained using...","categories": ["Maths Light","Overview"],
         "tags": ["Renormalisation Group","Models"],
         "url": "/maths%20light/overview/RG/",
         "teaser": null
