@@ -13,7 +13,6 @@ header:
     url: "../assets/notes/Path_Integral_Introduction.pdf"
 
 read_time: true
-description: just having fun with it
 ---
 <!-- <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

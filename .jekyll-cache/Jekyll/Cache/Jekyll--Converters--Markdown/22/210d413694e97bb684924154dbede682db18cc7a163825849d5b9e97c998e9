@@ -1,0 +1,443 @@
+I"�<aside class="sidebar__right sticky">
+<nav class="toc">
+    <header><h4 class="nav__title" style="background:rgb(118,72,115)"><i class="fas fa-list"></i>
+Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#one-dimensional-idiosyncrasies" id="markdown-toc-one-dimensional-idiosyncrasies">One-Dimensional Idiosyncrasies</a></li>
+  <li><a href="#tomonaga-luttinger-model" id="markdown-toc-tomonaga-luttinger-model">Tomonaga-Luttinger Model</a></li>
+  <li><a href="#bosonisation" id="markdown-toc-bosonisation">Bosonisation</a>    <ul>
+      <li><a href="#functional-integrals" id="markdown-toc-functional-integrals">Functional Integrals</a></li>
+      <li><a href="#operator-interpretation" id="markdown-toc-operator-interpretation">Operator Interpretation</a>        <ul>
+          <li><a href="#operator-identity" id="markdown-toc-operator-identity">Operator Identity</a></li>
+        </ul>
+      </li>
+      <li><a href="#phenomenological-bosonisation" id="markdown-toc-phenomenological-bosonisation">Phenomenological Bosonisation</a></li>
+    </ul>
+  </li>
+  <li><a href="#including-interactions" id="markdown-toc-including-interactions">Including Interactions</a></li>
+  <li><a href="#spinful-luttinger-liquids" id="markdown-toc-spinful-luttinger-liquids">Spinful Luttinger Liquids</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p><i>This is adapted from a chapter in my thesis, which introduces Luttinger liquids along with extra notes that got cut. This will mostly go through how to set up the model rather than calculating correlations, focussing on the bosonisation proceedure needed to get to that point. The first half of this page is mostly descriptive and doesnt require too much QFT maths, but from the bosonisation section onward both operator and path integral methods are used extensively. </i></p>
+
+<p>This chapter will go through the paradigm of 1D physics - the Luttinger liquid which describes the gapless low-energy excitations as a bosonic density wave. First we will explore how physics is altered in this reduced dimensionality and why conventional descriptions of continuum fermionic systems fail. The process of linearisation is examined to understand why this technique is so widely applicable, which results in a new effective model of the low-lying excitations. This effective model is then converted to the Luttinger liquid description by bosonisation. Additional electron species, in this case spin, will then be included into the description. Most of this chapter draws from Giarmachi’s authoritative book on 1D physics<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<h2 id="one-dimensional-idiosyncrasies">One-Dimensional Idiosyncrasies</h2>
+
+<p>The defining feature of one-dimensional physics is that all motion must be collective. Consider a chain of particles where one particle collides with a neighbouring particle, causing some displacement. The neighbouring particle will then interact with its neighbour and create a cascade of interactions between pairs of particles that travels along the chain - a propagating longitudinal density wave. In higher dimensions, a particle can avoid or lessen a collision by going around other particles. This leads the influence of a disturbance fizzling out over shorter distances in higher dimensions for similar interaction strengths. The requirement to interact in 1D results in all excitations being density fluctuations, which are bosonic and therefore there must be a bosonic description of a fermionic 1D system. Obtaining this description is what bosonisation achieves. Tomonaga<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> was the first to attempt to describe a one-dimensional system in this way, paving the way for the linear model introduced by Luttinger <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> that was grouped into the `Luttinger liquid’ collection of models by Haldane <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup> <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>.</p>
+
+<p>The necessity to consider collective motion elevates the importance of interactions to a system; changing the statistics of particles and amplifying the effect of fluctuations. Quantum fluctuations will have their effect felt over larger distances, resulting long-range order being unable to form even at zero temperature. Statistics upon particle exchange are not only determined from the particle’s inherent statistics, but also from the phase shift from collisions. This means there is a parameter related to the interactions that can be smoothly changed to describe systems with different statistics, shown in the figure below, where the parameter \(K\) will get an explicit formulation later.</p>
+
+<figure class="align-center">
+<img src="../images/Luttinger/LuttingerParam.png" style="width: 70%" class="align-center" />
+<figcaption>Varying the Luttinger parameter changes what underlying model our Luttinger liquid description corresponds to. Certain common models coincide with specific values of K that are shown here.</figcaption>
+</figure>
+
+<p>My interest is normally in fermionic systems. The underlying solution from which interactions are adiabatically introduced differs for low-dimensional systems. In dimensions larger than two, Fermi liquid theory permits the absorption of electron-electron interactions into a renormalisation of the electron mass in the quadratic Fermi gas dispersion. The Tomonaga-Luttinger model serves as the point from which to introduce interactions in 1D.</p>
+
+<p>One of the reasons that Fermi liquid theory fails in 1D is due to an inherent instability in the description. Considering the susceptibility of an equilibrium system of volume \(\Omega\) to a static perturbation of momentum \(q\),</p>
+
+\[\chi(q) = \frac{1}{\Omega} \sum_k \frac{f(\xi(k)) - f(\xi(k+q))}{\xi(k) - \xi(k+q)},\]
+
+<p>where \(f(k)\) is the Fermi function and \(\xi(k)\) is the energy measured relative to the Fermi surface. This form follows from an application of Kubo formalism to a perturbation in density. For a specific \(k\) and \(q\) that links two points on the Fermi surface, \(\xi(k) = \xi(k+q)=0\) resulting in a divergence in the summand. There are pairs of points in all dimensions where this `nesting’ condition is met, but the divergence is smoothed out by the additional factors that appear upon exchanging the sum for an integration, such as \(k^{D-1}dk\) when integrating an isotropic distribution in \(D\) dimensions.</p>
+
+<p>In one dimension, this divergence is not cancelled and the entire Fermi surface is nested as there are only two points. This means that the system is infinitely susceptible to a perturbation where \(q=2k_F\). A diverging susceptibility is an indication of the original non-interacting ground state being completely different to the interacting one, as any interaction with an infinitesimal \(2k_F\) momentum component will result in an infinite response of the system. This will change the underlying description to one that is non-trivially related to the original description. For fermions at half filling on a lattice this instability causes the Peierls transition where pairs of electrons bunch up and double the periodicity of the chain. This was looked at in more detail in the <a href="/Peierls/">Peierls notes on this website</a>.The system is not just unstable towards this process, as there is also a superconducting instability that competes with the dimerisation. The 1D system is also cursed to never be able to achieve long range order, as mentioned earlier, so these two processes compete and leave the system on the verge of instability.</p>
+
+<p>It will be shown that the elementary excitations of a class of 1D models are density waves of spin and charge. Any fermionic excitation, like creating an additional electron, must necessarily split up into constituent spin and charge components. This spin-charge separation is the simplest example of charge fractionalisation, the extension of which are fractionally charged excitations.</p>
+
+<h2 id="tomonaga-luttinger-model">Tomonaga-Luttinger Model</h2>
+
+<p>To see how bosonic density excitations could form the low-energy excitations of a fermionic 1D model, first consider a gas of non-interacting electrons. Density fluctuations are particle-hole pairs that destroy a particle at momentum $k$ and create a particle at a new momentum \(k+q\), denoted as \(c^{\dagger}_{k+q}c_k\). The dispersion of a Fermi gas measured about the Fermi surface is \(\xi(k) = (k^2 - k^2_F)/2m\), so the excitations have an energy of,</p>
+
+\[E_k(q) = \xi(k+q) - \xi(k) = \frac{2qk + q^2}{2m}.
+    \label{eq:4:LuttingerModelDispersion}\]
+
+<p>The average value of the energy \(E(q)\) over the region \([k_F - q,k_F]\), and the variation in the energy \(\delta E(q) = \text{max}(E_k(q)) - \text{min}(E_k(q))\) in the same segment, can be calculated. This particular region is chosen so that \(c_{k+q}^{\dagger}\) does not act on an already filled state. This gives,</p>
+
+\[E(q) = k_Fq/m = v_Fq, \quad \quad \delta E(q) = q^2/m = E(q)^2/mv_F^2.
+    \label{eq:4:Dispersion}\]
+
+<p>Provided that there is a finite slope at the Fermi level (so \(v_F\ne 0\)), the average energy of an excitation only depends on the momentum of the particle-hole pair. The variation in energy goes to zero faster than the average energy. Therefore these particles will have a well defined momentum and energy that become long lived as the energy tends to zero. The independence of the above equation from the original \(k\) means that the mapping to particle-like excitations will hold for all fillings away from the bottom of the band.</p>
+
+<p>Having seen how the density fluctuations are well-defined particles, the Tomonaga-Luttinger model can now be introduced. The energy spectrum is that of a relativistic fermion, travelling at a speed \(v_F\) instead of \(c\)</p>
+
+\[\varepsilon_q = \eta v_F q \quad \text{where }\   
+    \eta = \{R=1,L=-1\}.\]
+
+<p>There are two branches of the dispersion that correspond to right movers for positive \(\eta\) and left movers for negative \(\eta\). An excitation with negative \(q\) (so moving to the left) will then have a positive energy, hence the extra minus sign in the dispersion. This directionality causes the branches to act as two different non-interacting fermion species if \(k_F\) is large. Then only a large momentum scattering of \(2k_F\) would allow a change of direction. In this model, for all possible \(q\) to be considered, an infinite number of negative energy states must be introduced that are filled up to a certain energy - much like the Dirac sea.</p>
+
+<p>This model can be seen to represent the low-energy excitations of a Fermi liquid in 1D with electron and hole symmetry. Expanding the dispersion around the two Fermi points of the Fermi surface \(k = \pm k_F\), where \(q= k-k_F\), gives a dispersion of,</p>
+
+\[\xi_k = \frac{1}{2m}(k-k_F)(k+k_F) = \begin{cases} v_Fq, \quad &amp;\text{for} \ \ k \approx k_F, \\
+    -v_Fq, \quad &amp;\text{for} \ \ k \approx - k_F.
+    \end{cases}\]
+
+<p>This expansion is only valid if \(k_F \gg q\). For fluctuations caused by temperature, this condition becomes \(T \ll \epsilon_F\). Although the increase to the infinite number of electrons in the Tomonaga-Luttinger model is unphysical, it will not affect the low-energy behaviour. The exclusion principle means that in order for electrons at a large negative energy to be able to contribute, they must be excited above the Fermi surface. This would cost a lot of energy and so the original approximation of low energies would be violated. The figure below shows this process of linearisation.</p>
+
+<figure class="align-center">
+<img src="../images/Luttinger/Linearisation.png" style="width: 70%" class="align-center" />
+<figcaption>Linearising the Fermi gas dispersion about the Fermi points results in the two linear branches of the Tomonaga-Luttinger model. The solid lines indicate that the states are occupied and the dashed lines are unoccupied states, with the occupation in the Tomonaga-Luttinger model extending to $$\epsilon \rightarrow-\infty$$</figcaption>
+</figure>
+
+<p>The reason for this extension to a Dirac sea is that the model has a complete, infinite dimensional Hilbert space with an energy spectrum that is unbounded from above. To have an exact mapping from fermions to bosons this must be the case as bosons can infinitely occupy a single mode.</p>
+
+<p>There are various different ways of mapping this model onto a bosonic one: through functional <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup> [^11], operator <sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup> or phenomenological methods <sup id="fnref:4:1" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup> <sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup>. The operator route is often used as there is an exact Fock space operator identity <sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>, though the phenomenological pathway provides a lot of intuition as to what the bosonic fields correspond to.</p>
+
+<h2 id="bosonisation">Bosonisation</h2>
+<h3 id="functional-integrals">Functional Integrals</h3>
+
+<p>The action of the Tomonaga-Luttinger model without interactions is,</p>
+
+\[\begin{align}
+    S_0 = S_L + S_R = \sum_{\eta}\int  dxdt \ \bar{\psi}_{\eta}(x,t) i \partial_{\eta} \psi_{\eta}(x,t), \quad \quad \partial_{\eta} = \partial_t + \eta v_F \partial_x,
+    \label{eq:4:FermionicBareAction}
+\end{align}\]
+
+<p>where there are separate fermion fields for the different chiralities. The dispersion of the linearised model is linear in momentum and therefore gains a single spatial derivative along with the usual \(p\dot{q}\) term from the action. To reiterate that this description is equivalent to the low-energy model of the quadratic model, consider the chiral fields \(\psi_{\eta}(x,t)\). These fields can be derived from the fields of the quadratic dispersion by considering the general Fourier transform of the field \(\psi(x,t)\) and removing a factor of \(e^{ik_Fx}\) to get in the vicinity of \(k = \pm k_F\),</p>
+
+\[\begin{align}
+    \psi(x,t) &amp;=e^{ik_Fx}\psi_{R}(x,t) + e^{-ik_Fx} \psi_{L}(x,t),\nonumber \\\psi_{\eta}(x,t) &amp;= \int_{-\infty}^{\infty} \frac{d\omega}{2\pi} \int_{\eta k &gt; 0}^{\infty} \frac{dk}{2\pi} e^{i(k-\eta k_F)x- i\omega t}\psi_{k,\omega}. \label{eq:4:chiralfield}
+\end{align}\]
+
+<p>Therefore \(\psi_{\eta}(x,t)\) will only have slow oscillating components when \(k \sim k_F\).</p>
+
+<p>The density operator becomes split into chiral components,</p>
+
+\[\rho = \psi^{\dagger}\psi = \rho_R + \rho_L+ e^{2ik_Fx}\psi^{\dagger}_{L}\psi_R + e^{-2ik_Fx}\psi^{\dagger}_R\psi_L, \quad \quad \text{where} \quad \rho_{\eta} = \psi^{\dagger}_{\eta}\psi_{\eta}.
+\label{eq:4:DensityOperatorOscillating}\]
+
+<p>The cross terms contain an rapidly oscillating component that will cause the term be negligible for any integration over space, such as the one in the action. This cannot be ignored if a large momentum scattering interaction \(2k_F\) is relevant.</p>
+
+<p>Now the foundational equation of bosonisation is introduced, which is a mapping between the fermionic field and a bosonic field \(\theta_{\eta}(x,t)\),</p>
+
+\[\begin{align}
+    \psi_{\eta} = \chi e^{i\theta_{\eta}(x,t)}, \quad \quad \bar{\psi}_{\eta} = \chi e^{-i\theta_{\eta}(x,t)},
+    \label{eq:4:Bosonisation}
+\end{align}\]
+
+<p>where \(\chi\) is a global Majorana field, included to ensure the proper anticommutation of fermionic fields while commuting with the bosonic fields. From an operator perspective, this factor here should also reduce/raise the number of fermions in the system by one, amounting to a shift in \(k_F\). In the thermodynamic limit, this shift is very small so can be ignored. When calculating averages that have an equal number of creation and annihilation operators, the raising and lowering operator take us back to the original particle number subspace and can therefore be left out. This is why despite seeming crucial to this derivation, they do not often appear. Majorana fields have the property that they are their conjugate, so \(\bar{\chi} = \chi\). The anticommutation implies that \(\chi^2 = 0\).</p>
+
+<p>Naively substituting this transformation into the action results in the action becoming zero due to both \(\chi^2=0\) and \(\partial_x\chi=0\) with the latter caused by the global nature of the Majorana field. In all methods of bosonisation, there are spurious zeroes that occur that upon closer inspection, have a finite value. When using functional bosonisation, this is a manifestation of the QFT anomaly. The way to obtain a non-zero action is to look at the measure of the partition function when changing variables. The anomaly arises as the symmetry of the classical action under this chiral transformation \(\psi_{\eta} \rightarrow \psi_{\eta} e^{i\eta\theta_{\eta}}\) (suppressing the variables of the fields from now on) is not obeyed by the Jacobian of the transformation, which affects the measure \(\mathcal{D}\psi_{\eta}\) in the partition function.</p>
+
+<p>To understand how this symmetry is preserved in the measure, consider the gauge transformation \(\psi_{\eta} \rightarrow \tilde{\psi}_{\eta}e^{i\theta}\) on the action, where not using Majorana fields means the action does not vanish. The transformed action becomes,</p>
+
+\[\tilde{S} = \int dx dt \ \tilde{\bar{\psi}}_{\eta}(i\partial_{\eta} + \partial_{\eta}\theta_{\eta}) \tilde{\psi}_{\eta}.\]
+
+<p>The partition functions \(\mathcal{Z}_{\eta} = \int \mathcal{D}\psi_{\eta} e^{iS_{\eta}}\) for the original and transformed action can be calculated as the fields are quadratic in the action. The relation of these to each other defines the Jacobian of the transformation,</p>
+
+\[\mathcal{Z}_{\eta} = J_{\eta} \tilde{\mathcal{Z}}_{\eta}, \implies J_{\eta} = \frac{\det(g^{-1}_{\eta})}{\det(g^{-1}_{\eta} + \partial_{\eta}\theta_{\eta})},
+    \label{eq:4:JacobianDef}\]
+
+<p>where \(g^{-1}_{\eta}\) is the inverse of the Green’s function for the equation of motion,</p>
+
+\[i\partial_{\eta} g_{\eta} = \delta(x-x')\delta(t-t').\]
+
+<p>Upon using the ubiquitous linear algebra identity, \(\ln(\det(A)) = \text{Tr}(\ln(A))\) for a matrix \(A\), the equation can be seen as a disguised exponential and therefore as a contribution to the action. Upon performing the trace over the Green’s functions, the Jacobian becomes,</p>
+
+\[\begin{align}
+    \ln(J_{\eta}) = - \frac{i\eta}{4\pi} \ \text{Tr}(\partial_{\eta}\theta_{\eta}\partial_x\theta_{\eta}).
+    \label{eq:4:JacobianSimplification}
+\end{align}\]
+
+<p>The derivation of this result is presented in a Blog post soon. Defining new fields \(\theta = (\theta_L - \theta_R)/2\) and \(\phi = (\theta_L + \theta_R)/2\), the action which is determined fully by the Jacobian becomes,</p>
+
+\[\begin{align}
+    S_0 &amp;= \frac{1}{4\pi} \int dx dt \ \partial_L \theta_L \partial_x\theta_L - \partial_R\theta_R\partial_x\theta_R \nonumber \\ 
+    &amp;= \frac{1}{2\pi} \int dx dt \ \partial_t\theta\partial_x\phi + \partial_t\phi\partial_x\theta - v_F(\partial_x\theta)^2 - v_F(\partial_x\phi)^2.\label{eq:4:ActionSpinlessLLBeforeIntegrating}
+\end{align}\]
+
+<p>Integrating one of the first two terms by parts and then performing the functional integral over one of the fields gives two possibilities for the action, dependent on what field was integrated out. Any contribution from the quadratic functional integral that is integrated out will be cancelled out by the denominator in an average and therefore can be forgotten. The bosonised action is,</p>
+
+\[\begin{align}
+    S_0 &amp;=  \frac{1}{2\pi v_F} \int dxdt \ (\partial_t \theta)^2 - v_F^2(\partial_x\theta)^2, \label{eq:4:SpinlessLLAction}\\
+    &amp;= \frac{1}{2\pi v_F} \int dxdt \ (\partial_t \phi)^2 - v_F^2(\partial_x\phi)^2.
+\end{align}\]
+
+<p>This dual representation allows whatever action is most convenient to be used. The distinction here seems academic, but upon including interactions the two actions will have different forms. In trying to obtain a representation of the density in this new bosonised form, the anomaly once again rears its ugly head, as \(\rho_{\eta} = \bar{\psi}_{\eta}\psi_{\eta}\) will be zero upon Bosonising. The antidote this time is to introduce a source field prior to bosonisation, which when differentiated gives the density. Carrying it through the derivation, the density becomes,</p>
+
+\[\begin{align}
+    \rho_{\eta} = \frac{\eta}{2\pi} \partial_x \theta_{\eta}, \quad \quad \implies \quad \rho = -\frac{1}{\pi} \partial_x \theta.\label{eq:4:DensityInLL}
+\end{align}\]
+
+<p>This issue can also be resolved by point splitting the fields and being more careful in the limit that the fields are evaluated in the same point<sup id="fnref:10" role="doc-noteref"><a href="#fn:10" class="footnote" rel="footnote">10</a></sup>. From the continuity equation, the current can be found to be,</p>
+
+\[\partial_t \rho = - \partial_x j, \qquad j = \frac{1}{\pi}\partial_t \theta.\]
+
+<p>If this bosonisation procedure was performed with operators, it can be found the the operator fields \(\theta\) and \(\partial_x\phi\) are conjugate variables and satisfy the canonical commutation relations with an extra factor of \(\pi\).</p>
+
+<p><em>Often the definition of fields \(\theta\) and \(\phi\) are swapped depending on the authors - so always check the density and current definitions!</em></p>
+
+<h3 id="operator-interpretation">Operator Interpretation</h3>
+
+<p>Now we will repeat the derivation but from an operator perspective, essentially lifted from Giamarchi<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. There may be some repitition of points but each section is meant to serve as a possible introduction to bosonisation! We are trying to diagonalise and solve a generic interacting Hamiltonian in one dimension, which when the linearised dispersion is included will have the following form.</p>
+
+\[\begin{align}
+    \mathcal{H} &amp;= \sum_{\eta = \pm} \mathcal{H}_{0\eta} + \mathcal{H}_{int}, \quad \quad   \mathcal{H}_{int} = \frac{1}{2} \int \rho(x')V(x'-x)\rho(x) dx'dx
+\end{align}\]
+
+<p>The second section showed that an electron-hole fluctuation would be a good basis so we will now consider a superposition of them at various different momenta,</p>
+
+\[\begin{equation}
+    \rho^{\dagger}(q) = \sum_{k} c^{\dagger}_{k+q}c_k.
+    \label{eq:density}
+\end{equation}\]
+
+<p>The benefit of the electron-hole representation is that it reduces the interaction term in the Hamiltonian from quartic in operators to quadratic in the operators, making it easily solvable. The kinetic energy term still however needs to be formulated in this new basis.</p>
+
+<p>One final complication is that normal ordering of operators must be introduced to compensate for the infinite number of states in the Tomonaga-Luttinger model. In our case this is equivalent to subtracting off the average value of the operator within the vacuum. Therefore the normal ordered density becomes:</p>
+
+\[\begin{align}
+    : \rho^{\dagger}_{\eta}(q) : &amp;= \sum_k c^{\dagger}_{\eta, k+q}c_{\eta,k}, \quad  \quad (q \ne 0) \\
+    &amp;=N_{\eta} = \sum_k c^{\dagger}_{\eta, k}c_{\eta,k} - \langle 0 \vert c^{\dagger}_{\eta, k}c_{\eta,k}\vert 0 \rangle, 
+    \quad (q=0)
+\end{align}\]
+
+<p>which defines the number operator \(N_{\eta}\) for one of the chiralities. Calculating the commutator and taking \(k\) to be quantised, being mindful of the normal ordered nature, gives:</p>
+
+\[\begin{equation}
+    [\rho^{\dagger}_{\eta}(q), \rho^{\dagger}_{\eta'}(q')] = - \delta_{\eta,\eta'}\delta_{q,q'} \frac{\eta q L}{2\pi}
+\end{equation}\]
+
+<p>These are, up to normalisation, the boson commutator relations! The different chiralities will annihilate states with the `opposite’ momentum in the following way:</p>
+
+\[\begin{equation}
+    \rho^{\dagger}_L( p &gt; 0 ) \vert 0 \rangle  = 0, \quad \quad \rho^{\dagger}_R( p &lt; 0 ) \vert 0 \rangle  = 0, 
+\end{equation}\]
+
+<p>This allows boson creation and annihilation operators, with the bosonic canonical commutation operators to be defined:</p>
+
+\[\begin{align}
+    b^{\dagger}_q = \Big(\frac{2\pi}{L\vert q\vert }\Big)^{1/2} \sum_{\eta} \Theta(\eta q)\rho^{\dagger}_{\eta}(q) \\
+    b_q = \Big(\frac{2\pi}{L\vert q\vert}\Big)^{1/2} \sum_{\eta} \Theta(\eta q)\rho^{\dagger}_{\eta}(-q)
+\end{align}\]
+
+<p>where \(\Theta(\eta q)\) is the step function. Commuting these new bosonic operators with the kinetic Hamiltonian part allows us to find a repesentation of it:</p>
+
+\[\begin{equation}
+    H_{kin} \approx \sum_{q\ne 0}v_F\vert q\vert b^{\dagger}_qb_q
+\end{equation}\]
+
+<p>This shows that the kinetic energy, normally expressed quadratically in fermion operators, can be expressed as a term that is quartic in fermion operators and therefore quadratic in the bosonic operators. This finally shows that through considering density fluctuations to be the low energy excitations, we can completely express all terms in the Hamiltonian as bosonisic fluctuations.</p>
+
+<p>To show exactly how the interactions are expressed in terms of the particle-hole fluctuations, the single particle operator that destroy an electron of a specific chirality \(\psi_{\eta}(x)\) must be first investigated. Following the same method as done previously from the Hamiltonian, it can be seen that the operator should have the following form:</p>
+
+\[\begin{equation}
+\psi_{\eta}(x) \approx \exp( \sum_q e^{iqx} \rho^{\dagger}_{\eta}(-q) \frac{2\pi \eta}{qL})
+\label{eq:SingleFermionNoKlein}
+\end{equation}\]
+
+<p>However there is a slight issue with \(\psi_{\eta}\) changing the total particle number and being expressed as an infinite sum of operators, \(\rho^{\dagger}\), that conserve particle number. The introduction of a Klein factor, \(U_{\eta}\), which multiplies the previous definition, resolves this problem. It will commute with the boson operators, and destroys or creates a fermion appropriately.</p>
+
+<p>Adding the Klein factors allows a rigorous mapping between the fermion to the boson basis to be formulated (briefly explained in a following section), though a lot of the time this factor does not impact many of the properties of a 1D material.</p>
+
+<p>Often it is most convenient to work with the fields \(\theta(x)\) and \(\phi(x)\), defined as :</p>
+
+\[\begin{align}
+    \phi(x) &amp;= -(N_R + N_L)\frac{\pi x}{L} - \frac{i\pi}{L}\sum_{p \ne 0}\frac{1}{p}\exp(-ipx) (\rho^{\dagger}_{R}(p) + \rho^{\dagger}_L(p) \\
+    \theta(x) &amp;= (N_R - N_L)\frac{\pi x}{L} + \frac{i\pi}{L}\sum_{p \ne 0}\frac{1}{p}\exp(-ipx) (\rho^{\dagger}_{R}(p) - \rho^{\dagger}_L(p)
+\end{align}\]
+
+<p>These are used as \(\theta(x)\) and \(\nabla\phi(x)\) turn out to be conjugate operators and have a simple interpretation. \(\nabla\phi\) is the (negative) sum of the densities, being the \(q \sim 0\) part of density fluctuations. The other field \(\nabla\theta\) is the difference between the two chiralities - the current!
+Summarising these results we have a Hamiltonian of the following form which describes the kinetic part of a 1D system:</p>
+
+\[\begin{equation}
+    H = \frac{1}{2\pi} \int dx v_F\Big( \pi\nabla\theta(x))^2 + (\nabla\phi(x))^2\Big)
+\end{equation}\]
+
+<p>and the single particle operator has the famous bosonisation form:</p>
+
+\[\begin{equation}
+\psi_{\eta}(x) \sim U_{\eta}e^{i\eta k_Fx}e^{-i(\eta\phi(x) - \theta(x))}
+\end{equation}\]
+
+<p>A point that is not clear when the derivation is presented this way, but is clearer in the functional derivation approach, is that a duality exists in these representations. This means that swapping the \(\phi\) and \(\theta\) around gives the exact same physics. Although this seems redundant at this point, these two representations absorb the interactions in a different way so changing between the two becomes an invaluable tool in calculations.</p>
+
+<h4 id="operator-identity">Operator Identity</h4>
+
+<p>The reason why one dimensional fermion theories can be rewritten using bosonic degrees of freedom is that a one dimensional Fock space can be decomposed into the direct sum of Hilbert spaces. Each of these Hilbert spaces contain a fixed particle number and all have particle-hole excitations so are bosonic in nature. This is an operator identity and is therefore independent of all details of the Hamiltonian and system. This can be seen as a state with a set amount of electrons will not have the number of electrons changed by electron-hole fluctuations but these allow access to all energetic states. The direct sum of these Hilbert spaces produces the Fock space that we work within.</p>
+
+<p>The derivation of this<sup id="fnref:9:1" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>, requires knowledge of coherent states and their properties. These are used to produce a cancellation of a huge number of particle-hole contributions, resulting in the single particle operator having an exponential form. By considering the action of the single particle operator on the \(n\)-particle Hilbert space and relaxing conditions on normal ordering and regularisation, we end up with the famous bosonisation formula</p>
+
+\[\begin{align}
+    \psi = \chi e^{i\theta}
+\end{align}\]
+
+<p>which is the same substitution that was used in the functional method. Here, \(\chi\) is a Klein factor and by following the method through, it can be seen that the action of the Klein factor lowers the number of fermions by one - essentially changing between the fixed particle number Hilbert spaces. As a side note, to get around the QFT anomaly when using operators we ensure normal ordering when evaluating commutation relations.</p>
+
+<h3 id="phenomenological-bosonisation">Phenomenological Bosonisation</h3>
+
+<p>This method of bosonisation does not depend on the details of the system at all and uses very <em>ad hoc</em> assumptions like stating the bosonisation identity, but it gives useful insight into how the fields relate to variables even if it feels like its been reverse engineered! This layout follows Giamarchi<sup id="fnref:1:2" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> again and first introduces a labelling field. This labelling field is a continuous function of the position and takes the value \(2\pi n\) at the \(n\)-th particle, essentially labelling each particle. However in contrast to higher dimensions, this field is well defined as there is a unique way to number the particle (ie going from left to right!) which is not possible in higher dimensions. Rewriting the density operator in terms of this labelling field and using the Poisson summation formula, it can be shown that:</p>
+
+\[\begin{align}
+    \rho(x) = \frac{\nabla\phi_l(x)}{2\pi} \sum_p e^{ip\phi_l(x)} \quad \text{where} \ \ p \in \mathbb{N}
+\end{align}\]
+
+<p>By defining a field \(\phi\) that is relative to the perfect crystalline solution (when each particle is the same distance apart). This gives our new form of the density operator:</p>
+
+\[\begin{align}
+    \rho(x) = \Big( \rho_0 - \frac{\nabla\phi(x)}{\pi} \Big) \sum_p e^{2ip(\pi\rho_0x-\rho(x))}
+\end{align}\]
+
+<p>If the average is taken over large distances (compared to interparticle spacing) then the oscillating terms in the sum will average to zero, leaving the \(p=0\) term. Giving our smeared density of:</p>
+
+\[\begin{align}
+    \rho_{q \sim 0} \approx \rho_0 - \frac{\nabla\phi(x)}{\pi}
+\end{align}\]
+
+<p>Turning our concentration to a single particle creation operator, which can always be written in the bosonisation form:</p>
+
+\[\begin{align}
+    \psi^{\dagger}(x) = \sqrt{\rho(x)} e^{-i\theta(x)}
+\end{align}\]
+
+<p>Evaluating the commutator of the single particle creation and annihilation operators using the above formula gives conditions on our fields - which is that the fields \(\theta\) and \(\nabla\phi/\pi\) are canonically conjugate. The canonically conjugate nature of the fields means that they have a representation in terms of bosonic operators - so its a simple harmonic oscillator!</p>
+
+<p>Substituting our \(\rho\) into the \(\psi\) equation gives a way to represent the excitations of the system in terms of variables that are defined in the continuum limit. From symmetry considerations, the Hamiltonian can be formed and the action found from this.</p>
+<h2 id="including-interactions">Including Interactions</h2>
+
+<p>The strength of this technique is in how it simplifies interactions. It has just been shown that, surprisingly, a kinetic term that is quadratic in fermionic fields is also quadratic in bosonic fields. For terms that are quartic in the fermionic fields, it is obvious that this can be expressed by two bosonic fields. The interaction term in a generic fermionic model is</p>
+
+\[S_{int} = \int dxdx'dtdt' \ \bar{\psi}(x,t)\psi(x,t)V(x,x';t,t')\bar{\psi}(x',t')\psi(x',t) \sim  \int dxdt \rho^2(x,t) . \label{eq:4:SintSpinless}\]
+
+<p>The ‘g-ology’ formalism (rare to get a fun joke in physics!) of interactions in the Tomonaga-Luttinger model is obtained through setting the interactions to be instantaneous and only upon contact, \(V(x,x';t,t') \sim \delta(x-x')\delta(t-t')\). This strongly screened Coulomb approximation manages to retain a lot of the underlying physics despite its apparent restriction. This interaction, however, is not modelled as entirely featureless with a different weighting being given to the terms that appear upon seperating the chiralities into the interacting action,</p>
+
+\[\begin{align}
+    S_{int} = \int dx &amp;dt \  g_4 (\rho_L^2 + \rho_R^2) + g_2 \rho_2\rho_4 \nonumber \\
+    &amp;+ (g_1 \psi^{\dagger}_L\psi_R\psi^{\dagger}_R\psi_L + g_3e^{4ik_Fx} \psi^{\dagger}_L\psi_R\psi^{\dagger}_L\psi_R + \text{h.c.}), \label{eq:4:spinlessInteraction}
+\end{align}\]
+
+<p>where the \(e^{2ik_Fx}\) terms are averaged out. The \(g_3\) term can be relevant if there is umklapp scattering from the presence of a lattice - this is the cause of the Peierls distortion. In the spinless case, where just one fermionic species is considered, \(g_1\) is a rearrangement of \(g_2\) and can therefore be absorbed into the definition of the \(g_2\) terms. When performing the spinful analysis in the next section, this cannot be completely absorbed.</p>
+
+<p>Away from specific fillings of a lattice, there will be no relevant umklapp scattering so the interaction just contains the \(g_2\) and \(g_4\) term. Using the equivalent density for the bosonic fields the action becomes,</p>
+
+\[\begin{align}
+S_{int} = \int dx dt \ \frac{g_4}{4\pi^2}\big( (\partial_x\theta_L)^2 + (\partial_x\theta_R)^2 \big) - \frac{g_2}{4\pi}\partial_x\theta_L\partial_x\theta_R.
+\end{align}\]
+
+<p>Performing the same substitution as before where \(\theta_L = \theta + \phi, \theta_R =  \phi-\theta\) gives a final action of</p>
+
+\[S =\frac{1}{2\pi} \int dx dt \  2\partial_x\phi\partial_t\theta - \Big(v_F +\frac{g_2}{2\pi}+\frac{g_4}{2\pi}\Big)(\partial_x\theta)^2 - \Big(v_F+ \frac{g_4}{2\pi}-\frac{g_2}{2\pi}\Big)(\partial_x\phi)^2.\]
+
+<p>Commonly, the coefficients of the gradient terms are defined  using variables \(\nu\) and \(K\) where</p>
+
+\[\begin{align}
+    \nu K = v_F +\frac{g_2}{2\pi}+\frac{g_4}{2\pi},\quad&amp; \quad  \frac{\nu}{K} = v_F+ \frac{g_4}{2\pi}-\frac{g_2}{2\pi} \nonumber \\
+    \implies K = \sqrt{\frac{2\pi v_F+ g_4 - g_2}{2\pi v_F + g_4 + g_2}}, \quad &amp;\quad \nu = v_F \sqrt{\Big(1 + \frac{g_4}{2\pi v_F}\Big)^2 - \Big(\frac{g_2}{2\pi v_F}\Big)^2}.\label{eq:4:nuKdefinitions}
+\end{align}\]
+
+<p>The action can then be integrated out to give,</p>
+
+\[\begin{align}
+  S &amp;= \frac{K}{2\pi\nu} \int dx dt \ \Big( (\partial_t\phi)^2 - \nu^2 (\partial_x\phi)^2 \Big) \label{eq:4:phiLLaction}\\
+  S &amp;= \frac{1}{2\pi\nu K} \int dx dt\ \Big( (\partial_t\theta)^2 -\nu^2 (\partial_x\theta)^2\Big). \label{eq:4:thetaLLAction}
+\end{align}\]
+
+<p>Finally, we have obtained an explicit formula for the Luttinger parameter \(K\) that was introduced conceptually at the start of the chapter. The above form means that for \(g_4\) and \(g_2\) being positive constants, as they should be for a fermionic model, then \(K\leq 1\). This confirms what was previously show in the first figure, that fermionic models correspond to this region of \(K\). This action can be expressed in terms of an inverse Green’s function by integrating by parts,</p>
+
+\[S = \frac{1}{2\pi\nu K} \int dxdt \ \theta \Big( \partial_t^2 - \nu^2 \partial_x^2\Big) \theta = \frac{1}{2} \int dxdt \ \theta(x,t) G^{-1}(x,x',t,t')\theta(x't').\label{eq:4:LuttingerActionGFForm}\]
+
+<p>The field dependencies have appeared again to make it clear that this expresses the inverse Green’s function in position and real time. From this form, all the other Green’s functions can be found through computing the Fourier transforms.</p>
+
+<p>The overall effect of this renormalisation on the spectrum is that the dispersion becomes \(\varepsilon_q = \eta\nu q\), where \(\nu\) has replaced \(v_F\). In this final form the reason for the dual actions can be seen as the interaction parameter \(K\) is inverted in the two different representations. This means that if the parameter is large in one representation, we can use the dual to express our action in such a way that the parameter is small and a perturbative expansion can be found.</p>
+
+<h2 id="spinful-luttinger-liquids">Spinful Luttinger Liquids</h2>
+
+<p>Including the electron’s spin into the non-interacting Tomonaga-Luttinger model simply doubles the degrees of freedom with 4 types of fermion, one for each chirality and spin.
+Each of these can be bosonised by,</p>
+
+\[\psi_{\eta\sigma} = \chi_{\sigma} e^{i\theta_{\eta\sigma}},\]
+
+<p>where \(\sigma = \{ \uparrow,\downarrow\}\). Following the same procedure of calculating the Jacobian gives the kinetic part of the action as,</p>
+
+\[S_0 = \frac{1}{2\pi v_F}\sum_{\sigma}\int dx dt\ (\partial_t \theta_{\sigma})^2 - v_F^2 (\partial_x\theta_{\sigma})^2,\]
+
+<p>with the new fields \(\theta_{\sigma} = \theta_{L\sigma} - \theta_{R\sigma}\), \(\phi_{\sigma} = \theta_{L\sigma}+\theta_{R\sigma}\). The density is then generalised as</p>
+
+\[\rho_{\eta\sigma} = -\frac{\eta}{2\pi}\partial_x\theta_{\eta\sigma}, \quad \quad \rho_{\sigma} = -\frac{1}{\pi}\partial_x\theta_{\sigma}.\]
+
+<p>The full electron-electron interaction is a generalisation the previous case to where the density fluctuations of a particular spin species will influence other density fluctuations. Splitting the field of each spin into the left and right chiral components gives an interaction term that can be split up into the different possible pairings of chirality. The terms are,</p>
+
+\[\begin{align}
+    S_{int}=S_1 + S_2 + S_4 &amp;\sim \int dxdt \ \sum_{\substack{\eta_1\eta_2\eta_3\eta_4 \\ \sigma_1\sigma_2}} \psi^{\dagger}_{\eta_1\sigma_1}\psi_{\eta_2\sigma_1}\psi^{\dagger}_{\eta_3\sigma_2}\psi_{\eta_4\sigma_2},  \\
+    S_4 &amp;= \int dxdt\sum_{\sigma, \eta} g_{4\perp } \rho_{\eta\sigma}\rho_{\eta\bar{\sigma}} + g_{4\vert\vert} \rho_{\eta\sigma}\rho_{\eta\sigma},\\
+    S_2 &amp;= \int dxdt\sum_{\sigma}g_{2\perp} \rho_{L\sigma}\rho_{R\bar{\sigma}} + g_{2\vert\vert} \rho_{L\sigma}\rho_{R\sigma},\\
+    S_1 &amp;= \int dxdt\sum_{\sigma} g_{1\vert\vert} \psi^{\dagger}_{L\sigma}\psi^{
+    \dagger}_{R\sigma}\psi_{L\sigma}\psi_{R\sigma} + g_{1\perp} \psi^{\dagger}_{L\sigma}\psi^{\dagger}_{R\bar{\sigma}}\psi_{L\bar{\sigma}}\psi_{R\sigma} + \text{h.c},
+\end{align}\]
+
+<p>where the introduction of \(\perp\) and \(\vert\vert\) is to denote whether the interaction is between different spins or the same spins respectively. The umklapp terms that should appear with \(g_3\) are again ignored. Mirroring the spinless case, \(g_{1\vert\vert}\) can be rearranged to give a contribution of the form \(g_{2\vert\vert}\). However, \(g_{1\perp}\) contains interactions between different spin species and cannot be formulated in terms of densities.</p>
+
+<p>Ignoring the \(g_{1\perp}\) term for the moment, the \(g_2\) and \(g_4\) spinful terms have terms that mix the \(\theta_{\uparrow}\) and \(\theta_{\downarrow}\) fields. A rotation is therefore made to diagonalise the Hamiltonian, which introduces charge and spin fields,</p>
+
+\[\begin{align}
+    \theta_{\rho} = \frac{1}{\sqrt{2}}(\theta_{\uparrow} + \theta_{\downarrow}), \quad &amp;\quad \theta_{\sigma} = \frac{1}{\sqrt{2}}(\theta_{\uparrow} - \theta_{\downarrow}), \nonumber \\
+        \phi_{\rho} = \frac{1}{\sqrt{2}}(\phi_{\uparrow} + \phi_{\downarrow}), \quad &amp;\quad \phi_{\sigma} = \frac{1}{\sqrt{2}}(\phi_{\uparrow} - \phi_{\downarrow}) \label{eq:4:spinphithetarotation}
+    .
+\end{align}\]
+
+<p>With these definitions, and the patience to perform some algebra, both the \(g_{2}\) and \(g_4\) terms can be absorbed into a quadratic description. The \(g_1\) term however results in a different kind of term upon bosonising,</p>
+
+\[\bar{\psi}_{L\uparrow}\bar{\psi}_{R\downarrow}\psi_{L\downarrow}\psi_{R\uparrow} \sim e^{-i(\theta_{L\uparrow}+\theta_{R\downarrow} - \theta_{L\downarrow}-\theta_{R\uparrow})} = e^{-2i\sqrt{2}\theta_s} .\]
+
+<p>Adding this to its Hermitian conjugate gives a final action,</p>
+
+\[\begin{align}
+    S &amp;= \frac{1}{2\pi\nu_{\rho} K_{\rho}}\int dx dt (\partial_t\theta_{\rho})^2 + \nu_{\rho}^2 (\partial_x\theta_{\rho})^2\nonumber\\
+    &amp; \quad + \frac{1}{2\pi\nu_{\sigma} K_{\sigma}}\int dx dt (\partial_t\theta_{\sigma})^2 + \nu_{\sigma}^2 (\partial_x\theta_{\sigma})^2 + \int dxdt \ 2g_{1\perp} \cos(2\sqrt{2}\theta_{\sigma}). 
+\end{align}\]
+
+<p>The \(\nu_{a}\) and \(K_{a}\) parameters, where \(a = \{ \rho, \sigma\}\), are given by,</p>
+
+\[\begin{align}
+    K_{a} = \sqrt{\frac{2\pi v_F+ g_{4a} - g_{2a}}{2\pi v_F + g_{4a}+ g_{2a}}}, \quad &amp;\quad \nu_{a} = v_F \sqrt{\Big(1 + \frac{g_{4a}}{2\pi v_F}\Big)^2 - \Big(\frac{g_{2a}}{2\pi v_F}\Big)^2}, \label{eq:4:nuKSpinfull} \\
+   \text{for} \quad g_{2a} = g_{1\vert\vert} - g_{2\vert\vert} \pm g_{2\perp}, \quad &amp;\quad g_{4a} = g_{4\vert\vert} \pm g_{4\perp}, \nonumber
+\end{align}\]
+
+<p>where \(\rho\) corresponds to the positive sign choice and \(\sigma\) for the negative. Note that the action could be equivalently described with \(\phi_{\rho}\) instead of \(\theta_{\rho}\) which amounts to using the form of dual action with the new spinful Luttinger parameters.</p>
+
+<p>Now the spin and charge fields are completely decoupled and unaffected by each other’s dynamics. This is the spin-charge separation mentioned at the beginning of the chapter and presents an example of fractionalisation. The spin sector however now contains a curious cosine term. This will have no affect on the charge transport but will obviously result in different behaviour for the spins.</p>
+
+<p>A final side note is that all of this analysis relied on bosonising the full Tomonaga-Luttinger model with its infinite spectrum but many systems have a finite bandwidth. To mimic this in the bosonic fields, a factor of \((2\pi\alpha)^{-1/2}\) where \(\alpha\) is related to the bandwidth is introduced to the bosonisation formula as well as a restriction on the momentum integrals to being over the bandwidth.</p>
+
+<h2 id="references">References</h2>
+
+<p>[^11] Yurkevich and Lerner, goes into good depth at the functional proceedure - <em>Impurity in the Tomonaga-Luttinger model: a Functional Integral Approach</em>- <a href="https://arxiv.org/abs/cond-mat/0508223">Here</a></p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Giamarchi’s book which is amazing to keep returning to - <em>One-Dimensional Physics</em> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Original Tomonaga paper - <em>Remarks on Bloch’s Method of Sound Waves applied to Many-Fermion Problems</em> - <a href="https://academic.oup.com/ptp/article/5/4/544/1926191"> open access</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Luttinger’s Original paper - <em>An Exactly Soluble Model of a Many‐Fermion System</em> - <a href="https://pubs.aip.org/aip/jmp/article/4/9/1154/229917/An-Exactly-Soluble-Model-of-a-Many-Fermion-System"> open access</a> <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>Haldane’s grouping of the Luttinger Liquid model - <em>‘Luttinger liquid theory’ of one-dimensional quantum fluids</em> - <a href="https://iopscience.iop.org/article/10.1088/0022-3719/14/19/010"> Link to publisher</a> <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:4:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Schonhammer has a great historical overview of the development - <em>Luttinger Liquids: The Basis Concepts</em> - <a href="https://arxiv.org/pdf/cond-mat/0305035.pdf">arxiv paper</a> <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>Lee and Chen, this one is self explanatory - <em>Functional bosonisation of the Tomonaga-Luttinger model</em> - <a href="https://iopscience.iop.org/article/10.1088/0305-4470/21/22/018/pdf">Here</a> <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Voit review, essential reading - <em>One-Dimensional Fermi liquids</em> - <a href="https://arxiv.org/abs/cond-mat/9510014">Here</a> <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Cazalilla - <em>Bosonizing one-dimensional cold atomic gases</em> - <a href="https://arxiv.org/abs/cond-mat/0307033">Here </a> <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>Von Delft and Schoeller, also essential - <em>Bosonization for Beginners — Refermionization for Experts</em> - <a href="https://arxiv.org/abs/cond-mat/9805275"> Here </a> <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:9:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:10" role="doc-endnote">
+      <p>Shankar has a book that covers many topics in reasonable depth - <em>Quantum Field Theory and Condensed Matter</em> <a href="#fnref:10" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

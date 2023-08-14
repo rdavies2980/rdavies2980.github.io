@@ -1,4 +1,4 @@
-I"³<!-- - image_path: ../images/relax.jpg
+I"i<!-- - image_path: ../images/relax.jpg
   title: "Electroneutrality and the Friedel Sum Rule in a Luttinger Liquid"
   excerpt: "Egger and Grabert - Phys Rev Lett 1997"
   url: /Peierls/
@@ -64,6 +64,34 @@
 
           
             <p><a href="/Glaz/" class="btn btn--inverse">More Info</a></p>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+          <div class="archive__item-teaser">
+            <img src="/images/Blackboard.JPG" alt="" />
+            
+          </div>
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Fractional Quantum Hall Effect in an Array of Quantum Wires</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Kane, Mukhopadhyay and Lubensky - Phys Rev B 2002</p>
+
+            </div>
+          
+
+          
+            <p><a href="/Kane2002/" class="btn btn--inverse">More Info</a></p>
           
         </div>
       </div>

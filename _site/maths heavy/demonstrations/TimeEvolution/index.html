@@ -1,0 +1,707 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.21.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Why is everything time ordered? | More is Difficult</title>
+<meta name="description" content="Understanding why time-ordering is needed in the maths of Quantum Field Theory">
+
+
+  <meta name="author" content="Rose Davies">
+  
+  <meta property="article:author" content="Rose Davies">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="More is Difficult">
+<meta property="og:title" content="Why is everything time ordered?">
+<meta property="og:url" content="/maths%20heavy/demonstrations/TimeEvolution/">
+
+
+  <meta property="og:description" content="Understanding why time-ordering is needed in the maths of Quantum Field Theory">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-04-23T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="/maths%20heavy/demonstrations/TimeEvolution/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Rose Davies",
+      "url": "/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="More is Difficult Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          More is Difficult
+          <span class="site-subtitle">Condensed Matter Physics</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/physnote/">Topic Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/books/">Paper Notes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+  <div class="sidebars_underline">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/images/selfie.jpg" alt="Rose Davies" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Rose Davies</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Trying to understand physics and help others do the same!<br />(She/her)</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Contact</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Birmingham, UK</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:rxd440@student.bham.ac.uk">
+            <meta itemprop="email" content="rxd440@student.bham.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label"> Email </span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Why is everything time ordered?">
+    <meta itemprop="description" content="Understanding why time-ordering is needed in the maths of Quantum Field Theory">
+    <meta itemprop="datePublished" content="2023-04-23T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Why is everything time ordered?
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>In Quantum Field Theory, there is this odd little symbol that crops up everywhere - that of the time ordering (super)operator \(\mathcal{T}\). This is an instruction as to what order to act our time-dependent operators on the underlying state, making sure that the earliest time acts first. When starting to study QFT, it can be confusing to understand why this is used in the definition of Green’s functions and why past a certain point in the course it suddenly appears. Many books rely on a physical intepretation of the ordering explaining how it accounts for particles and anti-particles.</p>
+
+<p>Here I’ll consider it as arising as bit of mathematical trickery to make expressions easier to write and a way to put times on equal footing. From this perspective, time ordering is an unavoidable feature of trying to find the time-evolution operator for a time-dependent Hamiltonian. This explains why the ordering crops up halfway through most introductory courses as time-independent Hamiltonians, which normally make up the first few examples in a course, can be solved for without time ordering but by just finding eigenstates. Note that trying to incorporate interactions and using the the interaction picture will produce a time-dependent Hamiltonian; it’s more than just an external field that varies in time.</p>
+
+<p>To find the expression for the time evolution of a time-dependent Hamiltonian, Schrodinger’s equation must be solved <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. Using the evolution operators results in,</p>
+
+\[\begin{equation}
+    i\frac{dU(t,t_r)}{dt} = H(t)U(t,t_r),\end{equation}\]
+
+\[\begin{equation}
+     \quad \rightarrow U(t,t_r) = U(t_r,t_r) - i\int_{t_r}^t dt_1 H(t_1)U(t_1,t_r).
+\end{equation}\]
+
+<p>When no time evolution occurs, the state must not change which implies that \(U(t,t) = 1\). The problem can be solved by inserting \(U(t,t_r)\) into the right hand side iteratively,</p>
+
+\[\begin{equation}
+    U(t,t_r) = 1 -i \int_{t_r}^t dt_1 H(t_1) \Big( 1 - i\int_{t_r}^{t_1} dt_2 H(t_2)U(t_2,t_r)\Big).
+\end{equation}\]
+
+<p>This is an infinite sum so we can express it as such,</p>
+
+\[\begin{equation}
+    U(t,t_r) = \sum_{n=0}^{\infty} (-i)^n \int_{t_r}^t dt_1 \int_{t_r}^{t_1} \cdots \int_{t_r}^{t_{n-1}}dt_{n} \ H(t_1) \cdots H(t_n).
+\end{equation}\]
+
+<p>There are \(n\) integrals at the \(n\)-th order of summation. It is crucial to remember in this derivation that the Hamiltonian is a fully fledged operator whose order cannot be swapped carelessly. The set of \(t_n\) is also ordered so that</p>
+
+\[\begin{equation}t \ge t_1 \ge t_2 \cdots \ge t_n \ge t_r\end{equation}.\]
+
+<p>This is due to the iterative nature of the procedure requiring intermediate times and those intermediate times appearing as the integration limits. This dependence however is difficult to implement and we can re-express this chain of conditional integrals with all the integrals having the same limits. This idea, although it seems like a pointless shift of emphasis, is useful as having \(n\) time intergrals over the same limits to do of a complicated function is often nicer than having a simple function over complicated interdepedent integration limits - remember previous calculus courses youve taken! It also allows all the fields to be treated on the same footing, with time being a label in QFT, so they truely are the same object rather than a weird sub-field. To see how to obtain the same limits on the integral consider the term at second order,</p>
+
+\[\begin{equation}
+  O^{(2)}(t,t_r) = -\int_{t_r}^t dt_1 \int_{t_r}^{t_1} dt_2 H(t_1)H(t_2), \quad \quad \text{ where } \ \ t_1 \ge t_2.
+\end{equation}\]
+
+<p>Let’s introduce a notation for ordering our operators called the time ordering operator \(\mathcal{T}\). It is a tool that ensures that operators at earlier times act first and are therefore on the right side of the equation. This can be explicitly formulated by using Heaviside functions \(\Theta(x)\),</p>
+
+\[\begin{equation}
+  \mathcal{T}\{A(t_1)B(t_2)\} = \theta(t_1 -t_2) A(t_1)B(t_2) \pm \theta(t_2-t_1)B(t_2)A(t_1),
+\end{equation}\]
+
+<p>where the \(\pm\) refers to the sign produced by the commutation relations of bosons or fermions. The second order term is re-written using this operator,</p>
+
+\[\begin{equation}
+  \mathcal{T} \{ \int_{t_r}^t dt_1 \int_{t_r}^{t} dt_2 H(t_1)H(t_2) \} = 2 O^{(2)}(t,t_r)
+\end{equation}\]
+
+<p>which allows the limits on the integral to be the same as the Heaviside function enforces these limits now.</p>
+
+<p>The factor of two must be introduced as the time ordering operator does not specify which time will be smaller. There are two ways of ordering \(t_1\) and \(t_2\), so if we want to obtain just one of the ways then the division by two must occur. This logic continues to the \(m\)-th order, where there are \(m!\) ways of ordering \(m\) times. Each term in the sum can be then be formulate in terms of a time-ordered expression. This leads to the final result,</p>
+
+\[\begin{equation}
+    U(t,t_r) = \mathcal{T}\{ \sum_{n=0}^{\infty} \frac{1}{n!}\int_{t_r}^t dt_1 \cdots dt_n \ H(t_1)\cdots H(t_n) \} = \mathcal{T}\exp( -i \int_{t_r}^t d\tau H(\tau) ).
+\end{equation}\]
+
+<p>The time-ordering that pervades quantum field theory arises due to the time evolution operator being expressed in this way. If we want to evolve any state/operator for the most general Hamiltonian (which is really the most basic thing that we can do!) then we must use the time-ordering operator, or instead have to impose by hand the heirachy of times.</p>
+
+<p>This short derivation should hopefully answer why time-ordering occurs in a roundabout way, by pointing out that one of the most fundamental builiding blocks (the time-evolution operator) involves a strange ordering of times. This is constrasted to other people who simply introduce the time-ordered Green’s function (also known as a Feymann propagator) and to give physical reasons as to why this object makes sense. However that method is useful because to go from what is shown here to the time-ordered Green’s function is rather tricky and lays the groundwork for non-equilibrium quantum field theory. I’ve written a whole section on getting to this point if you are feeling brave as it introduces the idea of time contours and shows why for equilibrium field theory all the subtlety can be ignored.</p>
+
+<p style="text-align: center"><a class="btn btn--QFT btn--large" style="text-align: center" href="/QFT/">QFT Introduction</a></p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>This has all been taken from one of the appendices in my thesis! Can find a full copy here. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#operators" class="page__taxonomy-item" rel="tag">Operators</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#demonstrations" class="page__taxonomy-item" rel="tag">Demonstrations</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#maths-heavy" class="page__taxonomy-item" rel="tag">Maths Heavy</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-04-23T00:00:00+01:00">April 23, 2023</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Why+is+everything+time+ordered%3F%20%2Fmaths%2520heavy%2Fdemonstrations%2FTimeEvolution%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fmaths%2520heavy%2Fdemonstrations%2FTimeEvolution%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fmaths%2520heavy%2Fdemonstrations%2FTimeEvolution%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/maths%20light/overview/RG/" class="pagination--pager" title="Why the Renormalisation Group is Needed
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20light/overview/RG/" rel="permalink">Why the Renormalisation Group is Needed
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Understanding the difference between correlated and uncorrelated systems
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20heavy/techniques/Operators/" rel="permalink">Solving without translational invariance - Operators
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Dealing with localised terms in the Hamiltonian by stitching operators
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20heavy/techniques/Stitching/" rel="permalink">Solving without translational invariance - Green’s functions
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          14 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A method for stitching together a patchwork of Green’s functions
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/maths%20light/arguments/Soliton/" rel="permalink">Showing that solitons carry fractional charge
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          13 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">A short, intuitive reason can be given to understand why the charge of solitons fractionalise.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Contact:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Rose Davies. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

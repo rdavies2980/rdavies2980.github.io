@@ -10,6 +10,12 @@ feature_row:
     url: /Glaz/
     btn_label: "More Info"
     btn_class: "btn--inverse"
+  - image_path: ../images/Blackboard.JPG
+    title: "Fractional Quantum Hall Effect in an Array of Quantum Wires"
+    excerpt: "Kane, Mukhopadhyay and Lubensky - Phys Rev B 2002"
+    url: /Kane2002/
+    btn_label: "More Info"
+    btn_class: "btn--inverse"
 feature_row2:
   - image_path: ../images/chillvibes.jpg
     title: "Applying voltage sources to Luttinger Liquid"
@@ -32,6 +38,7 @@ feature_row1:
     url: /Peierls/
     btn_label: "More Info"
     btn_class: "btn--inverse"
+
 ---
 
 <!-- - image_path: ../images/relax.jpg
